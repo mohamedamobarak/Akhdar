@@ -1,2 +1,19 @@
 @import "tailwindcss";
 
+@theme {
+    /* Custom Colors */
+    --color-main: #81F18E;
+    --color-primary: #004D40;
+    --color-secondary: #D6EFD7;
+    --color-heading: #009867;
+    --color-body: #F5F5F5;
+
+    /* Custom Font */
+    --font-inter: Inter, ui-sans-serif, system-ui, sans-serif;
+
+    /* Custom Font Sizes */
+    --font-size-80: 80px;
+    --font-size-50: 50px;
+    --font-size-45: 45px;
+
+}
