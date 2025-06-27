@@ -1,0 +1,26 @@
+import React from 'react'
+import HeroSection from './components/HeroSection'
+import Header from '../../shared/Header/Header'
+import Footer from '../../shared/Footer/Footer'
+import ConnectingBusinesses from './components/ConnectingBusinesses'
+import MeasureTrackTrust from './components/MeasureTrackTrust'
+import VisionSection from './components/VisionSection'
+
+const ImpactPlatform = () => {
+  return (
+    <>
+    <Header />
+    <main className='flex flex-col gap-32 justify-center px-2 min-h-screen bg-bg md:px-8'>
+        <HeroSection />
+        <ConnectingBusinesses />
+        {/* Customize your own portfolio*/}
+        <MeasureTrackTrust />
+        {/*Show case your impact */}
+        <VisionSection />
+    </main>
+    <Footer />
+  </>
+  )
+}
+
+export default ImpactPlatform
