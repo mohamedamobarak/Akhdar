@@ -9,12 +9,12 @@ const StatementSection = () => {
   const isRTL = lang === 'ar';
   return (
     <section
-      className="flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-14 lg:gap-24 py-8 md:py-16 lg:py-24 px-2 md:px-8"
+      className="flex flex-col-reverse gap-8 justify-center items-center px-2 py-8 md:flex-row md:gap-14 lg:gap-24 md:py-16 lg:py-24 md:px-8"
       dir={isRTL ? 'rtl' : 'ltr'}
       style={{ direction: isRTL ? 'rtl' : 'ltr' }}
     >
       {/* Text Content */}
-      <div className="sm:max-w-lg lg:max-w-4xl ">
+      <div className="sm:max-w-lg lg:max-w-4xl">
         <h2 className={`text-[25px] md:text-[30px] lg:text-[45px] font-[700] text-primary mb-10 md:mb-14 ${isRTL ? 'text-right' : 'text-center md:text-left'}`}>
           {t('aboutus.statement.title')}
         </h2>
@@ -23,11 +23,19 @@ const StatementSection = () => {
         </p>
       </div>
       {/* Image */}
-      <div className="flex-shrink-0">
+      <div className="flex flex-shrink-0 justify-center items-center w-full md:w-auto">
         <img
           src={megaphoneIcon}
           alt="Sustainability Icon"
-          className="w-[190px] h-[144px] md:w-[289.5px] md:h-[219.9px] lg:w-[500px] lg:h-[380px] object-contain"
+          className="
+            w-[140px] h-[100px]
+            sm:w-[180px] sm:h-[130px]
+            md:w-[260px] md:h-[200px]
+            lg:w-[400px] lg:h-[300px]
+            xl:w-[500px] xl:h-[380px]
+            object-contain
+            mx-auto
+          "
         />
       </div>
     </section>
