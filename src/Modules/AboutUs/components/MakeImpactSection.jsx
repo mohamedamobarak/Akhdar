@@ -1,28 +1,19 @@
 import React from 'react'
-
-const impactData = [
-  {
-    title: 'Science-Aligned Climate Action',
-    desc: 'Ensuring carbon reduction strategies follow best practices in sustainability and climate science.'
-  },
-  {
-    title: 'Technology-Driven Carbon Offsetting',
-    desc: 'AKHDAR provides transparent and credible MRV services through  third-party partnerships.'
-  },
-  {
-    title: 'Supporting Nature-Based Solutions',
-    desc: 'Investing in reforestation, mangrove restoration, and desert ecosystem regeneration across Saudi Arabia and the MENA region.'
-  }
-];
+import { useTranslation } from 'react-i18next';
+import i18n from '../../../../public/locales.js';
 
 const MakeImpactSection = () => {
+  const { t } = useTranslation();
+  const lang = i18n.language || 'en';
+  const isRTL = lang === 'ar';
+  const impactData = t('aboutus.impact.items', { returnObjects: true });
   return (
-    <section className=" py-12 px-2 sm:px-0">
+    <section className=" py-12 px-2 sm:px-0" dir={isRTL ? 'rtl' : 'ltr'} style={{ direction: isRTL ? 'rtl' : 'ltr' }}>
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-primary mb-12">We Make an Impact</h2>
-        <div className="flex flex-col sm:flex-row items-center sm:items-center relative">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-primary mb-12">{t('aboutus.impact.title')}</h2>
+        <div className={`flex flex-col sm:flex-row items-center sm:items-center relative ${isRTL ? 'flex-row-reverse' : ''}`}>
           {/* Timeline Line - Desktop */}
-          <div className="hidden sm:flex flex-col items-center justify-center mr-8 h-full">
+          <div className={`hidden sm:flex flex-col items-center justify-center h-full ${isRTL ? 'ml-8' : 'mr-8'}`}> 
             {impactData.map((_, idx) => (
               <React.Fragment key={idx}>
                 <div className="w-7 h-7 flex items-center justify-center">
@@ -37,7 +28,7 @@ const MakeImpactSection = () => {
             ))}
           </div>
           {/* Timeline Line for mobile */}
-          <div className="sm:hidden flex flex-col items-center w-full mb-3 absolute top-0 left-0 h-full">
+          <div className={`sm:hidden flex flex-col items-center w-full mb-3 absolute top-0 ${isRTL ? 'right-0' : 'left-0'} h-full`}>
             {impactData.map((_, idx) => (
               <React.Fragment key={idx}>
                 <div className="w-7 h-7 flex items-center justify-center mx-auto">
@@ -63,8 +54,8 @@ const MakeImpactSection = () => {
                     : {}
                 }
               >
-                <h3 className="font-bold text-[14px]  md:text-2xl  mb-2 text-primary">{item.title}</h3>
-                <p className="text-primary text-base text-[10px]  md:text-lg">{item.desc}</p>
+                <h3 className={`font-bold text-[14px]  md:text-2xl  mb-2 text-primary ${isRTL ? 'text-right' : ''}`}>{item.title}</h3>
+                <p className={`text-primary text-base text-[10px]  md:text-lg ${isRTL ? 'text-right' : ''}`}>{item.desc}</p>
               </div>
             ))}
           </div>
