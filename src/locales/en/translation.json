@@ -1,4 +1,54 @@
 {
   "welcome": "Welcome",
-  "login": "Login"
+  "login": "Login",
+  "aboutus": {
+    "hero": {
+      "title": "Easy Smart Carbon Offsetting",
+      "subtitle": "AKHDAR is a Saudi climate tech startup that helps businesses and individuals offset their carbon footprint using smart, technology-driven solutions."
+    },
+    "statement": {
+      "title": "Akhdar Sustainability Statement",
+      "desc": "At AKHDAR, we recognize that protecting and restoring nature is essential for mitigating climate change. Saudi Arabia's Vision 2030 and 2060 set ambitious targets for reducing emissions and enhancing sustainability, and we are committed to driving this transformation. By enabling businesses to reduce, offset, and track their carbon footprint, AKHDAR supports a science-based carbon reduction pathway aligned with the Paris Agreement and the unsustainable Development Goals (SDGs) for a positive environmental and social impact."
+    },
+    "missionvision": {
+      "title": "Our Mission & Vision",
+      "desc": "AKHDAR's mission is to become Saudi Arabia's leading carbon offset aggregator, helping businesses, organizations, and individuals take meaningful climate action.",
+      "plan": "We Plan to Provide:",
+      "future1": "500,000 tons of CO₂ offset through verified carbon credits",
+      "future2": "50+ certified carbon projects listed on our platform",
+      "future3": "250+ businesses onboarded, integrating carbon offsetting into their sustainability strategies",
+      "byLabel": "By",
+      "yearLabel": "{year}"
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "name1": "Mohamed Al Mulla",
+      "title1": "Chief Executive Officer",
+      "name2": "Member 2 Name",
+      "title2": "Position 2",
+      "name3": "Member 3 Name",
+      "title3": "Position 3",
+      "name4": "Member 4 Name",
+      "title4": "Position 4",
+      "name5": "Member 5 Name",
+      "title5": "Position 5"
+    },
+    "impact": {
+      "title": "We Make an Impact",
+      "items": [
+        {
+          "title": "Science-Aligned Climate Action",
+          "desc": "Ensuring carbon reduction strategies follow best practices in sustainability and climate science."
+        },
+        {
+          "title": "Technology-Driven Carbon Offsetting",
+          "desc": "AKHDAR provides transparent and credible MRV services through third-party partnerships."
+        },
+        {
+          "title": "Supporting Nature-Based Solutions",
+          "desc": "Investing in reforestation, mangrove restoration, and desert ecosystem regeneration across Saudi Arabia and the MENA region."
+        }
+      ]
+    }
+  }
 }
