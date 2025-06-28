@@ -5,6 +5,7 @@ import Footer from '../../shared/Footer/Footer'
 import ConnectingBusinesses from './components/ConnectingBusinesses'
 import MeasureTrackTrust from './components/MeasureTrackTrust'
 import VisionSection from './components/VisionSection'
+import GetStarted from './components/GetStarted'
 
 const ImpactPlatform = () => {
   return (
@@ -17,6 +18,7 @@ const ImpactPlatform = () => {
         <MeasureTrackTrust />
         {/*Show case your impact */}
         <VisionSection />
+        <GetStarted />
     </main>
     <Footer />
   </>

@@ -13,18 +13,18 @@ const VisionSection = () => {
        dir={isRTL ? 'rtl' : 'ltr'}
        style={{ direction: isRTL ? 'rtl' : 'ltr' }}
      >
-       <div className="flex flex-col md:flex-row gap-8 justify-center items-center w-full bg-[#F0F5EF] rounded-[22px] py-10 px-6">
+       <div className="flex flex-col-reverse md:flex-row gap-8  justify-center  w-full bg-[#F0F5EF] rounded-[22px] py-10 px-6">
          {/* Vision 2030 Logo */}
          <div className="flex flex-shrink-0 justify-center items-center mb-6 w-full md:w-auto md:mb-0">
            <img
              src={vision}
              alt="Vision 2030 Kingdom of Saudi Arabia"
-             className="w-[167px] md:w-[243px] lg:w-[523px] h-auto"
+             className="w-[167px] md:w-[243px] lg:w-[370px] h-auto"
         
            />
          </div>
          {/* Text Content */}
-         <div className="flex flex-col items-start max-w-xl h-full text-left">
+         <div className="flex flex-col justify-between items-center max-w-xl h-auto text-center md:items-start md:text-left">
            <h2 className="text-primary text-[20px] md:text-[26px] lg:text-[30px] font-bold mb-2">
              What Impact Will Your Company Create?
            </h2>

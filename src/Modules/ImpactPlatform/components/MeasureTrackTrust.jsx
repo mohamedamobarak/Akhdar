@@ -52,7 +52,7 @@ export default MeasureTrackTrust
 const FeatureCard = ({ image, header, paragraph }) => (
   <div className="flex flex-col items-center max-w-xs text-center">
     <img src={image} alt={header} className="lg:w-[224px] lg:h-[214px] w-[107px] h-[107px] md:w-[103px] md:h-[98px]" />
-    <h3 className="mb-2 font-semibold text-primary text-[20px] lg:text-[45px]">{header}</h3>
-    <p className="text-black font-medium   lg:text-[24px] text-[14px]">{paragraph}</p>
+    <h3 className="mb-2 font-semibold text-primary text-[20px] lg:text-[37px]">{header}</h3>
+    <p className="text-black font-medium   lg:text-[21px] text-[14px]">{paragraph}</p>
   </div>
 );
