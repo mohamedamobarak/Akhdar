@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
+import slider1 from '../../../assets/impact-platform/slider-main-img.png'
+import slider2 from '../../../assets/impact-platform/slider-img-2.png'
+import slider3 from '../../../assets/impact-platform/slider-img-3.png'
+import slider4 from '../../../assets/impact-platform/slider-img-4.png'
+import slider5 from '../../../assets/impact-platform/slider-img-5.png'
 
 const images = [
-  "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=3687&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=3870&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1655249481446-25d575f1c054?w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop",
+  slider1,
+  slider2,
+  slider3,
+  slider4,
+  slider5
 ];
 
 const CarouselShowCase = () => {
@@ -69,7 +73,7 @@ const CarouselShowCase = () => {
             return (
               <div
                 key={index}
-                className={`absolute w-[150px] h-[180px] sm:w-[220px] sm:h-[260px] md:w-[250px] md:h-[350px] lg:w-[300px] lg:h-[400px] bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] cursor-pointer transform ${getCardClass(index)}`}
+                className={`absolute w-[150px] h-[180px] sm:w-[220px] sm:h-[260px] md:w-[250px] md:h-[350px] lg:w-[300px] lg:h-[400px]  rounded-2xl shadow-xl overflow-hidden transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] cursor-pointer transform ${getCardClass(index)}`}
                 onClick={() => updateCarousel(index)}
               >
                 <img

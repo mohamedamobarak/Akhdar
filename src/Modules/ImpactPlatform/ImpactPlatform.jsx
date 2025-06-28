@@ -7,6 +7,7 @@ import MeasureTrackTrust from './components/MeasureTrackTrust'
 import VisionSection from './components/VisionSection'
 import GetStarted from './components/GetStarted'
 import CarouselShowCase from './components/CarouselShowCase'
+import CustomizePortfolio from './components/CustomizePortfolio'
 
 const ImpactPlatform = () => {
   return (
@@ -15,7 +16,7 @@ const ImpactPlatform = () => {
     <main className='flex flex-col gap-32 justify-center px-2 min-h-screen bg-bg md:px-8'>
         <HeroSection />
         <ConnectingBusinesses />
-        {/* Customize your own portfolio*/}
+        <CustomizePortfolio />
         <MeasureTrackTrust />
         <CarouselShowCase />
         <VisionSection />

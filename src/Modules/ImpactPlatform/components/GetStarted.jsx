@@ -79,7 +79,7 @@ const GetStarted = () => {
          dir={isRTL ? 'rtl' : 'ltr'}
          style={{ direction: isRTL ? 'rtl' : 'ltr' }}
        >
-         <h2 className="mb-8 text-2xl font-bold text-center sm:mb-12 md:mb-16 sm:text-3xl md:text-4xl md:text-5xl text-primary">It's easy to get started</h2>
+         <h2 className="mb-8 text-2xl font-bold text-center sm:mb-12 md:mb-16 sm:text-3xl md:text-5xl text-primary">It's easy to get started</h2>
          <div className="grid grid-cols-3 gap-x-0 gap-y-0 w-full max-w-full">
            {/* Row 1: Step 1 */}
            <div className="flex justify-end items-center py-4 pr-2 w-full max-w-full sm:py-6 md:py-8 sm:pr-4 md:pr-6">
