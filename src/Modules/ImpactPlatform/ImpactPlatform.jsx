@@ -6,6 +6,7 @@ import ConnectingBusinesses from './components/ConnectingBusinesses'
 import MeasureTrackTrust from './components/MeasureTrackTrust'
 import VisionSection from './components/VisionSection'
 import GetStarted from './components/GetStarted'
+import CarouselShowCase from './components/CarouselShowCase'
 
 const ImpactPlatform = () => {
   return (
@@ -16,7 +17,7 @@ const ImpactPlatform = () => {
         <ConnectingBusinesses />
         {/* Customize your own portfolio*/}
         <MeasureTrackTrust />
-        {/*Show case your impact */}
+        <CarouselShowCase />
         <VisionSection />
         <GetStarted />
     </main>

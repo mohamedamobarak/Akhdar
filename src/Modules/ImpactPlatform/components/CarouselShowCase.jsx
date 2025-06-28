@@ -1,0 +1,111 @@
+import React, { useEffect, useState } from "react";
+
+const images = [
+  "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=3687&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=3870&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1655249481446-25d575f1c054?w=900&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop",
+];
+
+const CarouselShowCase = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const updateCarousel = (index) => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setCurrentIndex((index + images.length) % images.length);
+    setTimeout(() => setIsAnimating(false), 800);
+  };
+
+  const getCardClass = (index) => {
+    const diff = (index - currentIndex + images.length) % images.length;
+
+    if (diff === 0) return "z-10 scale-105";
+    if (diff === 1) return "z-5 translate-x-24 sm:translate-x-28 md:translate-x-32 lg:translate-x-56 scale-95 opacity-90";
+    if (diff === 2) return "z-1 translate-x-36 sm:translate-x-56 md:translate-x-60 lg:translate-x-96 scale-90 opacity-70";
+    if (diff === images.length - 1) return "z-5 -translate-x-24 sm:-translate-x-28 md:-translate-x-32 lg:-translate-x-56 scale-95 opacity-90";
+    if (diff === images.length - 2) return "z-1 -translate-x-36 sm:-translate-x-56 md:-translate-x-60 lg:-translate-x-96 scale-90 opacity-70";
+
+
+    return "opacity-0 pointer-events-none";
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "ArrowLeft") updateCarousel(currentIndex - 1);
+    if (e.key === "ArrowRight") updateCarousel(currentIndex + 1);
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  });
+
+  return (
+    <div className="w-full max-w-[1100px] mx-auto mt-10 px-4">
+      <div className="mb-8 text-center">
+        <h2 className="mb-2 text-2xl font-bold sm:text-3xl md:text-4xl text-primary">Showcase your Impact with your stakeholders</h2>
+        <p className="mx-auto max-w-2xl text-base text-black sm:text-lg md:text-xl">
+          Share your sustainability journey with confidence through real content from the <span className="text-[#004D408A] font-semibold">field—data, photos, videos, stories, and community updates</span>. Connect meaningfully with customers, investors, and employees.
+        </p>
+      </div>
+      <div className="h-[240px] sm:h-[340px] md:h-[450px] relative overflow-visible flex items-center justify-center">
+        <button
+          onClick={() => updateCarousel(currentIndex - 1)}
+          className="hidden absolute -left-6 top-1/2 z-20 justify-center items-center w-8 h-8 rounded-full transform -translate-y-1/2 cursor-pointer md:flex sm:-left-10 md:-left-8 sm:w-10 sm:h-10 bg-main hover:bg-primary"
+          aria-label="Previous"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 6L9 12L15 18" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+
+        <div className="w-full h-full flex justify-center items-center relative transition-transform duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] perspective-[1000px]">
+          {images.map((src, index) => {
+            const diff = (index - currentIndex + images.length) % images.length;
+            const isCenter = diff === 0;
+            return (
+              <div
+                key={index}
+                className={`absolute w-[150px] h-[180px] sm:w-[220px] sm:h-[260px] md:w-[250px] md:h-[350px] lg:w-[300px] lg:h-[400px] bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] cursor-pointer transform ${getCardClass(index)}`}
+                onClick={() => updateCarousel(index)}
+              >
+                <img
+                  src={src}
+                  alt={`Slide ${index}`}
+                  className={`object-cover w-full h-full transition-all duration-700 ${isCenter ? '':'opacity-60'}`}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <button
+          onClick={() => updateCarousel(currentIndex + 1)}
+          className="hidden absolute -right-6 top-1/2 z-20 justify-center items-center w-8 h-8 rounded-full transform -translate-y-1/2 cursor-pointer md:flex sm:-right-10 md:-right-8 sm:w-10 sm:h-10 bg-main hover:bg-primary"
+          aria-label="Next"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 6L15 12L9 18" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+      </div>
+      {/* Dots below carousel */}
+      <div className="hidden gap-2 justify-center mt-8 md:flex">
+        {images.map((_, i) => (
+          <div
+            key={i}
+            onClick={() => updateCarousel(i)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
+              i === currentIndex ? "bg-primary scale-110" : "bg-main"
+            }`}
+          ></div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default CarouselShowCase;
