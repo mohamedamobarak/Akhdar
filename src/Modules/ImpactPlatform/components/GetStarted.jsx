@@ -177,7 +177,7 @@ const GetStarted = () => {
              {/* Button as final node */}
              <Link to="/signup">
                <button
-                 className="relative z-10 bg-main hover:bg-primary hover:text-white text-black font-semibold rounded-xl px-8 py-3 shadow-md focus:outline-none transition-all duration-200 mt-2 cursor-pointer"
+                 className="relative z-10 bg-main hover:bg-primary hover:text-white text-primary font-semibold rounded-xl px-8 py-3 shadow-md focus:outline-none transition-all duration-200 mt-2 cursor-pointer"
                  style={{ minWidth: '180px' }}
                >
                  Create an Account

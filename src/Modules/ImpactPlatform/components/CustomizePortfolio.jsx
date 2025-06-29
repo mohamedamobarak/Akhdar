@@ -46,7 +46,7 @@ const CustomizePortfolio = () => {
                   <div className="flex relative gap-2 items-center pb-2 mb-0 text-base font-bold text-black border-b border-gray-200">
                     <LeafIcon />
                     Removals
-                    <img src={cursor} alt="Cursor" className="absolute right-0 top-1/2 w-6 h-6 -translate-y-1/2" />
+                    <img src={cursor} alt="Cursor" className="absolute right-0 top-1/2 size-10 -translate-y-1/2" />
                   </div>
                   {/* Biodiversity (inactive) */}
                   <div className="flex gap-2 items-center py-2 text-base font-semibold text-gray-300 border-b border-gray-200">
@@ -79,7 +79,7 @@ const CustomizePortfolio = () => {
                   <div className="flex relative p-1 mb-2 w-full bg-gray-100 rounded-full">
                     <button className="flex-1 py-2 font-bold rounded-full transition-colors duration-200 text-primary">One-off</button>
                     <button className="relative flex-1 py-2 font-bold rounded-full transition-colors duration-200 bg-main text-primary">Monthly
-                      <img src={cursor} alt="Cursor" className="absolute -right-7 top-1/2 w-6 h-6 -translate-y-1/2" />
+                      <img src={cursor} alt="Cursor" className="absolute -right-7 top-1/2 size-10 -translate-y-1/2" />
                     </button>
                   </div>
                   {/* Price row */}
@@ -134,8 +134,8 @@ const CustomizePortfolio = () => {
                           <span className="text-2xl font-bold text-primary">-</span>
                           <span className="flex-1 text-2xl font-bold text-center text-primary">54</span>
                           <span className="relative text-2xl font-bold text-primary">+
-                            <img src={cursor} alt="Cursor" className="absolute left-4 top-1/2 w-7 h-7 -translate-y-1/2 pointer-events-none" />
                           </span>
+                            <img src={cursor} alt="Cursor" className="absolute right-0 top-1/2 size-10 -translate-y-1/2 pointer-events-none" />
                         </div>
                         <div className="flex justify-end w-full">
                           <span className="mt-1 text-xs text-gray-400">ton</span>
