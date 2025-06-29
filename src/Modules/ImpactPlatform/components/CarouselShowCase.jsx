@@ -4,6 +4,7 @@ import slider2 from '../../../assets/impact-platform/slider-img-2.png'
 import slider3 from '../../../assets/impact-platform/slider-img-3.png'
 import slider4 from '../../../assets/impact-platform/slider-img-4.png'
 import slider5 from '../../../assets/impact-platform/slider-img-5.png'
+import { useTranslation } from 'react-i18next';
 
 const images = [
   slider1,
@@ -16,6 +17,10 @@ const images = [
 const CarouselShowCase = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language || 'en';
+  const isRTL = lang === 'ar';
+  const dir = t('impactPlatform.direction') || (isRTL ? 'rtl' : 'ltr');
 
   const updateCarousel = (index) => {
     if (isAnimating) return;
@@ -48,11 +53,11 @@ const CarouselShowCase = () => {
   });
 
   return (
-    <div className="w-full max-w-[1100px] mx-auto mt-10 px-4">
+    <div className="w-full max-w-[1100px] mx-auto mt-10 px-4" dir={dir} style={{ direction: dir }}>
       <div className="mb-8 text-center">
-        <h2 className="mb-2 text-2xl font-bold sm:text-3xl md:text-4xl text-primary">Showcase your Impact with your stakeholders</h2>
+        <h2 className="mb-2 text-2xl font-bold sm:text-3xl md:text-4xl text-primary">{t('impactPlatform.CarouselShowCase.title')}</h2>
         <p className="mx-auto max-w-2xl text-base text-black sm:text-lg md:text-xl">
-          Share your sustainability journey with confidence through real content from the <span className="text-[#004D408A] font-semibold">field—data, photos, videos, stories, and community updates</span>. Connect meaningfully with customers, investors, and employees.
+          {t('impactPlatform.CarouselShowCase.desc')}
         </p>
       </div>
       <div className="h-[240px] sm:h-[340px] md:h-[450px] relative overflow-visible flex items-center justify-center">
