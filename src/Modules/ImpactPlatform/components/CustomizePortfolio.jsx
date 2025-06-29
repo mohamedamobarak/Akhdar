@@ -5,7 +5,9 @@ import cursor from '../../../assets/impact-platform/cursor-icon.svg';
 import BuyCreditCard from './BuyCreditCard.jsx';
 
 const LeafIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 20C6 10 20 6 20 6C20 6 16 20 6 20Z" stroke="#1CBF7A" strokeWidth="2"/></svg>
+<svg width="24" height="20" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.62222 21.4385C1.8508 22.7328 1.52987 23.9512 1.40091 24.6272C1.34207 24.9352 1.05739 25.1346 0.747076 25.0851C0.420941 25.0324 0.187787 24.7237 0.225354 24.395C0.490673 22.0701 1.05125 17.5749 6.93537 12.9971C14.0261 7.48073 19.6698 12.0368 25.2687 6.10061C25.2687 6.10061 22.2594 8.60376 13.0026 8.4215C5.67532 8.27663 2.02704 14.9719 1.94845 15.0767C1.94342 14.9723 1.67539 8.27308 7.49065 4.20119C13.9605 -0.329055 22.8495 6.37165 29.5846 0.114181C29.5846 0.114181 31.0495 12.2504 22.829 18.0065C17.4027 21.806 11.5987 20.0717 7.04912 19.3739C5.26718 19.1003 3.53336 19.9112 2.62222 21.4385Z" fill="#90F29A"/>
+</svg>
 );
 
 const CustomizePortfolio = () => {
@@ -31,7 +33,7 @@ const CustomizePortfolio = () => {
             </div>
           </div>
           {/* Foreground cards */}
-          <div className="flex relative z-10 flex-col gap-8 justify-center items-start w-full md:flex-row md:gap-0">
+          <div className="flex relative z-10 flex-col   gap-44 justify-between items-center w-full lg:flex-row lg:gap-0">
             {/* Project Type */}
             <div className="flex flex-col flex-1 items-center px-2">
               <div className="flex gap-2 items-center mb-4">
@@ -48,19 +50,19 @@ const CustomizePortfolio = () => {
                   </div>
                   {/* Biodiversity (inactive) */}
                   <div className="flex gap-2 items-center py-2 text-base font-semibold text-gray-300 border-b border-gray-200">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 20C6 10 20 6 20 6C20 6 16 20 6 20Z" stroke="#D1D5DB" strokeWidth="2"/></svg>
-                    Biodiversity
+                  <LeafIcon />
+                  Biodiversity
                   </div>
                   {/* Carbon Offsetting (inactive) */}
                   <div className="flex gap-2 items-center pt-2 text-base font-semibold text-gray-300">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 20C6 10 20 6 20 6C20 6 16 20 6 20Z" stroke="#D1D5DB" strokeWidth="2"/></svg>
-                    Carbon Offsetting
+                  <LeafIcon />
+                  Carbon Offsetting
                   </div>
                 </div>
               </div>
             </div>
             {/* Divider */}
-            <div className="hidden md:flex h-64 w-px bg-[#1CBF7A] mx-8 opacity-50" />
+            <div className="hidden lg:flex h-64 w-px bg-[#1CBF7A] mx-8 opacity-50" />
             {/* Contribution frequency */}
             <div className="flex flex-col flex-1 items-center px-2">
               <div className="flex gap-2 items-center mb-4">
@@ -97,10 +99,16 @@ const CustomizePortfolio = () => {
               </div>
             </div>
             {/* Divider */}
-            <div className="hidden md:flex h-64 w-px bg-[#1CBF7A] mx-8 opacity-50" />
+            <div className="hidden lg:flex h-64 w-px bg-[#1CBF7A] mx-8 opacity-50" />
             {/* Offset volume */}
-            <div className="flex flex-col flex-1 items-center px-2">
-              <div className="flex gap-2 items-center mb-4">
+            
+            <div className=" relative flex flex-col flex-1  items-center px-2">
+            <div className="flex absolute  z-0 justify-center items-center pointer-events-none">
+            <div className="opacity-60 blur-[1px] scale-105  translate-y-4">
+              <BuyCreditCard />
+            </div>
+          </div>
+              <div className="flex gap-2 items-center mb-4 z-1">
                 <LeafIcon />
                 <span className="text-xl font-bold text-primary">Offset volume</span>
               </div>

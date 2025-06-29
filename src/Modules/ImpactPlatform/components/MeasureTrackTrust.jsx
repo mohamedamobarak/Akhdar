@@ -29,7 +29,7 @@ const MeasureTrackTrust = () => {
      const isRTL = lang === 'ar';
      return (
        <section
-       className={`flex relative justify-center items-center px-4 mx-auto w-full max-w-7xl text-center`}
+       className={`flex relative justify-center items-center px-4 mx-auto w-full max-w-7xl text-center mt-44 lg:mt-0`}
        dir={isRTL ? 'rtl' : 'ltr'}
        style={{ direction: isRTL ? 'rtl' : 'ltr' }}
      >

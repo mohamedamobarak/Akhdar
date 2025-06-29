@@ -3,6 +3,7 @@ import React from 'react'
 import i18n from '../../../../public/locales.js';
 import headphone from '../../../assets/impact-platform/headphone-icon.svg'
 import cursor from '../../../assets/impact-platform/cursor-icon.svg'
+import { Link } from 'react-router-dom';
 
 const StepText = ({ number, title, description }) => (
   <div className="flex flex-col justify-center items-center md:flex-row">
@@ -164,6 +165,27 @@ const GetStarted = () => {
              </div>
              <span className="mt-2 text-sm text-center text-primary">12/22 Tons are offsetted</span>
            </div>
+         </div>
+         {/* Timeline End Button Row - integrated with timeline */}
+         <div className="grid grid-cols-3 w-full max-w-full">
+           {/* Empty left column */}
+           <div></div>
+           {/* Timeline column with button as final node */}
+           <div className="flex flex-col items-center relative">
+             {/* Vertical line (extends through button) */}
+             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-full bg-main z-0" style={{height: '100%'}} />
+             {/* Button as final node */}
+             <Link to="/signup">
+               <button
+                 className="relative z-10 bg-main hover:bg-primary hover:text-white text-black font-semibold rounded-xl px-8 py-3 shadow-md focus:outline-none transition-all duration-200 mt-2 cursor-pointer"
+                 style={{ minWidth: '180px' }}
+               >
+                 Create an Account
+               </button>
+             </Link>
+           </div>
+           {/* Empty right column */}
+           <div></div>
          </div>
        </section>
      )
