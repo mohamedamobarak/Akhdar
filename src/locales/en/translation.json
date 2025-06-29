@@ -50,5 +50,68 @@
         }
       ]
     }
+  },
+  "impactPlatform": {
+    "direction": "ltr",
+    "HeroSection": {
+      "title1": "Tailored Impact Solutions for Your Business",
+      "title2": "Select from a diverse array of carbon offset initiatives that resonate with your organization's values and sustainability objectives.",
+      "createAccount": "Create Account",
+      "bookDemo": "Book a Demo"
+    },
+    "ConnectingBusinesses": {
+      "title": "Connecting businesses with trusted sustainability projects",
+      "desc": "Akhdar's Impact Platform is your all-in-one hub for climate action, environmental impact tracking and verification, and stakeholder engagement in your organization's broader sustainability journey."
+    },
+    "CustomizePortfolio": {
+      "title": "Customize your own portfolio to your goals",
+      "removals": "Removals",
+      "biodiversity": "Biodiversity",
+      "carbonOffsetting": "Carbon Offsetting",
+      "contributionFrequency": "Contribution frequency",
+      "projectType": "Project Type",
+      "buyCredit": "Buy Credit",
+      "oneOff": "One-off",
+      "monthly": "Monthly",
+      "price": "SAR 0.85",
+      "perCo2": "/ 1 CO2 ton",
+      "vintage": "Vintage",
+      "offsetVolume": "Offset volume",
+      "amount": "Amount",
+      "ton": "ton"
+    },
+    "MeasureTrackTrust": {
+      "title": "Measure, Track, and Trust Your Impact",
+      "measure": "Measure",
+      "measureDesc": "Measure your carbon, and learn how much greenhouse gas emissions your organization produces.",
+      "track": "Track",
+      "trackDesc": "Set your environmental goals, access clear reports to measure progress and improve performance.",
+      "trust": "Trust",
+      "trustDesc": "Share visual proof and updates to highlight your impact and engage stakeholders confidently."
+    },
+    "CarouselShowCase": {
+      "title": "Showcase your sustainability journey",
+      "desc": "Share your real environmental stories from the field—data, photos, videos, and community updates—to connect authentically and effectively with your customers, partners, and investors."
+    },
+    "VisionSection": {
+      "title": "What impact will your company make?",
+      "desc": "Explore a curated selection of environmental projects aligned with global development goals and Saudi Vision 2030. Akhdar's platform ensures full transparency, tangible impact, and the highest value for every contribution toward a sustainable future."
+    },
+    "GetStarted": {
+      "title": "It's easy to get started",
+      "step1": "Book a Consultation",
+      "step1Desc": "Let's discuss your company's carbon offset strategy.",
+      "step2": "Select & Contribute",
+      "step2Desc": "Choose projects that match your sustainability goals.",
+      "projectTypes": "Project type:",
+      "restoration": "Restoration",
+      "cleanEnergy": "Clean Energy",
+      "plasticReduction": "Plastic Reduction",
+      "oceanCleanup": "Ocean Cleanup",
+      "step3": "Monitor & Amplify",
+      "step3Desc": "Track results and share your impact with confidence.",
+      "cta": "Create an Account",
+      "yourOffset": "Your Offset"
+    }
   }
 }

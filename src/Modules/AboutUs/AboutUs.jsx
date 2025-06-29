@@ -11,14 +11,14 @@ const AboutUs = () => {
   return (
     <>
       <Header />
-      <div className='flex flex-col justify-center px-2 min-h-screen bg-bg md:px-8'>
+      <main className='flex flex-col justify-center px-2 min-h-screen bg-bg md:px-8'>
         <HeroSection />
         <StatementSection />
         <OurMissionVision />
         <MeetOurTeam />
         <MakeImpactSection />
         {/* <ContactUs /> */}
-      </div>
+      </main>
       <Footer />
     </>
   );
