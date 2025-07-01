@@ -6,6 +6,7 @@ import StatementSection from './components/StatementSection';
 import OurMissionVision from './components/OurMissionVision';
 import MeetOurTeam from './components/MeetOurTeam';
 import MakeImpactSection from './components/MakeImpactSection';
+import ContactUs from './components/ContactUs';
 
 const AboutUs = () => {
   return (
@@ -17,7 +18,7 @@ const AboutUs = () => {
         <OurMissionVision />
         <MeetOurTeam />
         <MakeImpactSection />
-        {/* <ContactUs /> */}
+        <ContactUs />
       </main>
       <Footer />
     </>
