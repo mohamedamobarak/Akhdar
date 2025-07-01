@@ -4,7 +4,6 @@ import Footer from './../../../shared/Footer/Footer';
 import Header from './../../../shared/Header/Header';
 import IndividualSignUpForm from './IndividualSignUpForm';
 import CompanySignUpForm from './CompanySignUpForm';
-import Input from '../../../components/ui/Input';
 import { Link } from 'react-router-dom';
 
 const SignUp = () => {
