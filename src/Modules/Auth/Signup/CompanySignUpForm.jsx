@@ -14,7 +14,7 @@ import {
 } from '../../../components/ui/select';
 import { Eye, EyeOff } from 'lucide-react';
 import countryList from 'country-list';
-import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
+import { toast, Toaster } from "sonner";
 import ErrorMessage from '../../../components/ErrorMessage';
 
 const industries = [
@@ -49,7 +49,6 @@ const schema = z.object({
 
 const CompanySignUpForm = () => {
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const { register, handleSubmit, control, formState: { errors }, reset } = useForm({
@@ -61,54 +60,102 @@ const CompanySignUpForm = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      setSuccess(true);
+      toast.success("Sign up successful! Welcome aboard.", { position: "top-center" });
       console.log('Company signup data:', data);
       reset();
-      setTimeout(() => setSuccess(false), 3000);
     }, 1200);
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-xl mx-auto">
-      <div className="mb-4">
-        <Input label="Company Name" placeholder="Company Name" {...register('companyName')} aria-invalid={!!errors.companyName} />
-        <ErrorMessage message={errors.companyName?.message} />
-      </div>
-      <div className="flex gap-4">
-        <div className="flex-1 mb-3">
-          <Input label="First Name" placeholder="First Name" {...register('firstName')} aria-invalid={!!errors.firstName} />
-          <ErrorMessage message={errors.firstName?.message} />
+    <>
+      <Toaster position="top-center" />
+      <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-xl mx-auto">
+        <div className="mb-4">
+          <Input label="Company Name" placeholder="Company Name" {...register('companyName')} aria-invalid={!!errors.companyName} />
+          <ErrorMessage message={errors.companyName?.message} />
         </div>
-        <div className="flex-1 mb-3">
-          <Input label="Last Name" placeholder="Last Name" {...register('lastName')} aria-invalid={!!errors.lastName} />
-          <ErrorMessage message={errors.lastName?.message} />
+        <div className="flex gap-4">
+          <div className="flex-1 mb-3">
+            <Input label="First Name" placeholder="First Name" {...register('firstName')} aria-invalid={!!errors.firstName} />
+            <ErrorMessage message={errors.firstName?.message} />
+          </div>
+          <div className="flex-1 mb-3">
+            <Input label="Last Name" placeholder="Last Name" {...register('lastName')} aria-invalid={!!errors.lastName} />
+            <ErrorMessage message={errors.lastName?.message} />
+          </div>
         </div>
-      </div>
-      <div className="flex gap-4">
-        <div className="flex-1 mb-3">
-          <Input label="Email" placeholder="Email" type="email" {...register('email')} aria-invalid={!!errors.email} />
-          <ErrorMessage message={errors.email?.message} />
+        <div className="flex gap-4">
+          <div className="flex-1 mb-3">
+            <Input label="Email" placeholder="Email" type="email" {...register('email')} aria-invalid={!!errors.email} />
+            <ErrorMessage message={errors.email?.message} />
+          </div>
+          <div className="flex-1 mb-3">
+            <Input label="Phone" placeholder="Phone" {...register('phone')} aria-invalid={!!errors.phone} />
+            <ErrorMessage message={errors.phone?.message} />
+          </div>
         </div>
-        <div className="flex-1 mb-3">
-          <Input label="Phone" placeholder="Phone" {...register('phone')} aria-invalid={!!errors.phone} />
-          <ErrorMessage message={errors.phone?.message} />
+        <div className="flex gap-4 mt-2 flex-col sm:flex-row">
+          <div className="w-full mb-3">
+            <label className="block mb-1 text-[16px] font-semibold text-primary">Industry</label>
+            <Controller
+              name="industry"
+              control={control}
+              render={({ field }) => (
+                <Select value={field.value} onValueChange={field.onChange}>
+                  <SelectTrigger className="w-full bg-[#F0F5EF]">
+                    <SelectValue placeholder="Select industry" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectLabel>Industry</SelectLabel>
+                      {industries.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>
+                      ))}
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+              )}
+            />
+            <ErrorMessage message={errors.industry?.message} />
+          </div>
+          <div className="w-full mb-3">
+            <label className="block mb-1 text-[16px] font-semibold text-primary">Company Size</label>
+            <Controller
+              name="companySize"
+              control={control}
+              render={({ field }) => (
+                <Select value={field.value} onValueChange={field.onChange}>
+                  <SelectTrigger className="w-full bg-[#F0F5EF]">
+                    <SelectValue placeholder="Select size" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectLabel>Company Size</SelectLabel>
+                      {companySizes.map((option) => (
+                        <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>
+                      ))}
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+              )}
+            />
+            <ErrorMessage message={errors.companySize?.message} />
+          </div>
         </div>
-      </div>
-      <div className="flex gap-4 mt-2 flex-col sm:flex-row">
-        <div className="w-full mb-3">
-          <label className="block mb-1 text-[16px] font-semibold text-primary">Industry</label>
+        <div className="mt-2 mb-3">
+          <label className="block mb-1 text-[16px] font-semibold text-primary">Country</label>
           <Controller
-            name="industry"
+            name="country"
             control={control}
             render={({ field }) => (
               <Select value={field.value} onValueChange={field.onChange}>
                 <SelectTrigger className="w-full bg-[#F0F5EF]">
-                  <SelectValue placeholder="Select industry" />
+                  <SelectValue placeholder="Select country" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Industry</SelectLabel>
-                    {industries.map((option) => (
+                    <SelectLabel>Country</SelectLabel>
+                    {countries.map((option) => (
                       <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>
                     ))}
                   </SelectGroup>
@@ -116,110 +163,58 @@ const CompanySignUpForm = () => {
               </Select>
             )}
           />
-          <ErrorMessage message={errors.industry?.message} />
+          <ErrorMessage message={errors.country?.message} />
         </div>
-        <div className="w-full mb-3">
-          <label className="block mb-1 text-[16px] font-semibold text-primary">Company Size</label>
-          <Controller
-            name="companySize"
-            control={control}
-            render={({ field }) => (
-              <Select value={field.value} onValueChange={field.onChange}>
-                <SelectTrigger className="w-full bg-[#F0F5EF]">
-                  <SelectValue placeholder="Select size" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Company Size</SelectLabel>
-                    {companySizes.map((option) => (
-                      <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>
-                    ))}
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
-            )}
-          />
-          <ErrorMessage message={errors.companySize?.message} />
-        </div>
-      </div>
-      <div className="mt-2 mb-3">
-        <label className="block mb-1 text-[16px] font-semibold text-primary">Country</label>
-        <Controller
-          name="country"
-          control={control}
-          render={({ field }) => (
-            <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className="w-full bg-[#F0F5EF]">
-                <SelectValue placeholder="Select country" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectLabel>Country</SelectLabel>
-                  {countries.map((option) => (
-                    <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>
-                  ))}
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-          )}
-        />
-        <ErrorMessage message={errors.country?.message} />
-      </div>
-      <div className="flex flex-col sm:flex-row gap-4 mb-3">
-        <div className="flex-1 mb-3">
-          <label className="block mb-1 text-[16px] font-semibold text-primary">Password</label>
-          <div className="relative">
-            <Input
-              placeholder="Password"
-              type={showPassword ? 'text' : 'password'}
-              {...register('password')}
-              aria-invalid={!!errors.password}
-            />
-            <button
-              type="button"
-              tabIndex={-1}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"
-              onClick={() => setShowPassword(v => !v)}
-            >
-              {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-            </button>
+        <div className="flex flex-col sm:flex-row gap-4 mb-3">
+          <div className="flex-1 mb-3">
+            <label className="block mb-1 text-[16px] font-semibold text-primary">Password</label>
+            <div className="relative">
+              <Input
+                placeholder="Password"
+                type={showPassword ? 'text' : 'password'}
+                {...register('password')}
+                aria-invalid={!!errors.password}
+              />
+              <button
+                type="button"
+                tabIndex={-1}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"
+                onClick={() => setShowPassword(v => !v)}
+              >
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              </button>
+            </div>
+            <ErrorMessage message={errors.password?.message} />
           </div>
-          <ErrorMessage message={errors.password?.message} />
-        </div>
-        <div className="flex-1 mb-3">
-          <label className="block mb-1 text-[16px] font-semibold text-primary">Confirm Password</label>
-          <div className="relative">
-            <Input
-              placeholder="Confirm Password"
-              type={showConfirmPassword ? 'text' : 'password'}
-              {...register('confirmPassword')}
-              aria-invalid={!!errors.confirmPassword}
-            />
-            <button
-              type="button"
-              tabIndex={-1}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"
-              onClick={() => setShowConfirmPassword(v => !v)}
-            >
-              {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-            </button>
+          <div className="flex-1 mb-3">
+            <label className="block mb-1 text-[16px] font-semibold text-primary">Confirm Password</label>
+            <div className="relative">
+              <Input
+                placeholder="Confirm Password"
+                type={showConfirmPassword ? 'text' : 'password'}
+                {...register('confirmPassword')}
+                aria-invalid={!!errors.confirmPassword}
+              />
+              <button
+                type="button"
+                tabIndex={-1}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"
+                onClick={() => setShowConfirmPassword(v => !v)}
+              >
+                {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+              </button>
+            </div>
+            <ErrorMessage message={errors.confirmPassword?.message} />
           </div>
-          <ErrorMessage message={errors.confirmPassword?.message} />
         </div>
-      </div>
-      <div className="flex justify-end">
-        <button type="submit" disabled={loading} className="mt-4 py-2 px-16 rounded-xl bg-main text-black font-semibold hover:bg-primary hover:text-white transition cursor-pointer flex items-center justify-center min-w-[120px]">
-          {loading ? <span className="loader mr-2"></span> : null}
-          {loading ? 'Signing up...' : 'Sign up'}
-        </button>
-      </div>
-      {success && (
-        <Alert className="mt-4" variant="default">
-          <AlertTitle>Sign up successful!</AlertTitle>
-          <AlertDescription>Welcome aboard.</AlertDescription>
-        </Alert>
-      )}
-    </form>
+        <div className="flex justify-end">
+          <button type="submit" disabled={loading} className="mt-4 py-2 px-16 rounded-xl bg-main text-black font-semibold hover:bg-primary hover:text-white transition cursor-pointer flex items-center justify-center min-w-[120px]">
+            {loading ? <span className="loader mr-2"></span> : null}
+            {loading ? 'Signing up...' : 'Sign up'}
+          </button>
+        </div>
+      </form>
+    </>
   );
 };
 
