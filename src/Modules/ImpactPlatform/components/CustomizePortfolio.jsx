@@ -32,7 +32,7 @@ const CustomizePortfolio = () => {
           </div>
         </div>
         {/* Foreground cards */}
-        <div className="flex relative z-10 flex-col   gap-44 justify-between items-center w-full lg:flex-row lg:gap-0">
+        <div className="flex relative z-10 flex-col gap-48  sm:gap-44 justify-between items-center w-full lg:flex-row lg:gap-0">
           {/* Project Type */}
           <div className="flex flex-col flex-1 items-center px-2">
             <div className="flex gap-2 items-center mb-4">
