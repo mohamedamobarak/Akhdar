@@ -6,6 +6,7 @@ import { Input } from '../../../components/ui/Input';
 import { Eye, EyeOff } from 'lucide-react';
 import { toast, Toaster } from "sonner";
 import ErrorMessage from '../../../components/ErrorMessage';
+import { useTranslation } from 'react-i18next';
 
 const schema = z.object({
   firstName: z.string().min(2, 'Please enter your first name (at least 2 characters)').max(50, 'First name is too long'),
@@ -27,7 +28,9 @@ const IndividualSignUpForm = () => {
     resolver: zodResolver(schema),
     mode: 'onChange',
   });
-
+  const { t ,i18n} = useTranslation();
+  const lang = i18n.language || 'en';
+  const isRTL = lang === 'ar';
   const onSubmit = (data) => {
     setLoading(true);
     setTimeout(() => {
@@ -44,30 +47,30 @@ const IndividualSignUpForm = () => {
       <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-md mx-auto">
         <div className="flex flex-col sm:flex-row gap-4 mb-3">
           <div className="flex-1 mb-3">
-            <Input label="First Name" placeholder="First Name" {...register('firstName')} aria-invalid={!!errors.firstName} />
+            <Input label={t('signup.inputs.firstName')} placeholder={t('signup.inputs.firstName')} {...register('firstName')} aria-invalid={!!errors.firstName} />
             <ErrorMessage message={errors.firstName?.message} />
           </div>
           <div className="flex-1 mb-3">
-            <Input label="Last Name" placeholder="Last Name" {...register('lastName')} aria-invalid={!!errors.lastName} />
+            <Input label={t('signup.inputs.lastName')} placeholder={t('signup.inputs.lastName')} {...register('lastName')} aria-invalid={!!errors.lastName} />
             <ErrorMessage message={errors.lastName?.message} />
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 mb-3">
           <div className="flex-1 mb-3">
-            <Input label="Email" placeholder="Email" type="email" {...register('email')} aria-invalid={!!errors.email} />
+            <Input label={t('signup.inputs.email')} placeholder={t('signup.inputs.email')} type="email" {...register('email')} aria-invalid={!!errors.email} />
             <ErrorMessage message={errors.email?.message} />
           </div>
           <div className="flex-1 mb-3">
-            <Input label="Phone" placeholder="Phone" {...register('phone')} aria-invalid={!!errors.phone} />
+            <Input label={t('signup.inputs.phone')} placeholder={t('signup.inputs.phone')} {...register('phone')} aria-invalid={!!errors.phone} />
             <ErrorMessage message={errors.phone?.message} />
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 mb-3">
           <div className="flex-1 mb-3">
-            <label className="block mb-1 text-[16px] font-semibold text-primary">Password</label>
+            <label className="block mb-1 text-[16px] font-semibold text-primary">{t('signup.inputs.password')}</label>
             <div className="relative">
               <Input
-                placeholder="Password"
+                placeholder={t('signup.inputs.password')}
                 type={showPassword ? 'text' : 'password'}
                 {...register('password')}
                 aria-invalid={!!errors.password}
@@ -75,7 +78,7 @@ const IndividualSignUpForm = () => {
               <button
                 type="button"
                 tabIndex={-1}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"
+                className={`absolute ${isRTL ?'left-3' : 'right-3'}  top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer`}
                 onClick={() => setShowPassword(v => !v)}
               >
                 {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
@@ -84,10 +87,10 @@ const IndividualSignUpForm = () => {
             <ErrorMessage message={errors.password?.message} />
           </div>
           <div className="flex-1 mb-3">
-            <label className="block mb-1 text-[16px] font-semibold text-primary">Confirm Password</label>
+            <label className="block mb-1 text-[16px] font-semibold text-primary">{t('signup.inputs.confirmPassword')}</label>
             <div className="relative">
               <Input
-                placeholder="Confirm Password"
+                placeholder={t('signup.inputs.confirmPassword')}
                 type={showConfirmPassword ? 'text' : 'password'}
                 {...register('confirmPassword')}
                 aria-invalid={!!errors.confirmPassword}
@@ -95,7 +98,7 @@ const IndividualSignUpForm = () => {
               <button
                 type="button"
                 tabIndex={-1}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"
+                className={`absolute ${isRTL ?'left-3' : 'right-3'} top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer`}
                 onClick={() => setShowConfirmPassword(v => !v)}
               >
                 {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
@@ -107,7 +110,7 @@ const IndividualSignUpForm = () => {
         <div className="flex justify-end">
           <button type="submit" disabled={loading} className="mt-4 py-2 px-16 rounded-xl bg-main text-black font-semibold hover:bg-heading hover:text-white transition cursor-pointer flex items-center justify-center min-w-[120px]">
             {loading ? <span className="loader mr-2"></span> : null}
-            {loading ? 'Signing up...' : 'Sign up'}
+            {loading ? t('signup.inputs.signUpButton') : t('signup.inputs.signUpButton')}
           </button>
         </div>
       </form>

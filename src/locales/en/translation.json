@@ -113,5 +113,43 @@
       "cta": "Create an Account",
       "yourOffset": "Your Offset"
     }
+  },
+  "signup": {
+    "direction": "ltr",
+    "title": "Take the First Step Towards Sustainability",
+    "alreadyHaveAccount": "Already have an account with us?",
+    "loginNow": "Login now",
+    "individuals": "Individuals",
+    "companies": "Companies",
+    "signUp": "Sign up",
+    "errors": {
+      "firstNameMin": "Please enter your first name (at least 2 characters)",
+      "firstNameMax": "First name is too long",
+      "lastNameMin": "Please enter your last name (at least 2 characters)",
+      "lastNameMax": "Last name is too long",
+      "email": "Please enter a valid email address",
+      "phone": "Please enter a valid phone number (at least 8 digits)",
+      "companyNameMin": "Please enter your company name (at least 2 characters)",
+      "companyNameMax": "Company name is too long",
+      "industry": "Please select an industry",
+      "companySize": "Please select a company size",
+      "country": "Please select a country",
+      "passwordMin": "Password must be at least 6 characters",
+      "confirmPasswordMin": "Confirm password must be at least 6 characters",
+      "passwordsNotMatch": "Passwords do not match"
+    },
+    "inputs": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "companyName": "Company Name",
+      "industry": "Industry",
+      "companySize": "Company Size",
+      "country": "Country",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "signUpButton": "Sign up"
+    }
   }
 }
