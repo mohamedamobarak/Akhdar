@@ -33,10 +33,10 @@ const CarouselShowCase = () => {
     const diff = (index - currentIndex + images.length) % images.length;
 
     if (diff === 0) return "z-10 scale-105";
-    if (diff === 1) return "z-5 translate-x-24 sm:translate-x-28 md:translate-x-32 lg:translate-x-56 scale-95 opacity-90";
-    if (diff === 2) return "z-1 translate-x-36 sm:translate-x-56 md:translate-x-60 lg:translate-x-96 scale-90 opacity-70";
-    if (diff === images.length - 1) return "z-5 -translate-x-24 sm:-translate-x-28 md:-translate-x-32 lg:-translate-x-56 scale-95 opacity-90";
-    if (diff === images.length - 2) return "z-1 -translate-x-36 sm:-translate-x-56 md:-translate-x-60 lg:-translate-x-96 scale-90 opacity-70";
+    if (diff === 1) return "z-5 translate-x-20 sm:translate-x-28 md:translate-x-32 lg:translate-x-56 scale-95 opacity-90";
+    if (diff === 2) return "z-1 translate-x-30 sm:translate-x-56 md:translate-x-60 lg:translate-x-96 scale-90 opacity-70";
+    if (diff === images.length - 1) return "z-5 -translate-x-20 sm:-translate-x-28 md:-translate-x-32 lg:-translate-x-56 scale-95 opacity-90";
+    if (diff === images.length - 2) return "z-1 -translate-x-30 sm:-translate-x-56 md:-translate-x-60 lg:-translate-x-96 scale-90 opacity-70";
 
 
     return "opacity-0 pointer-events-none";
@@ -78,7 +78,7 @@ const CarouselShowCase = () => {
             return (
               <div
                 key={index}
-                className={`absolute w-[150px] h-[180px] sm:w-[220px] sm:h-[260px] md:w-[250px] md:h-[350px] lg:w-[300px] lg:h-[400px]  rounded-2xl shadow-xl overflow-hidden transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] cursor-pointer transform ${getCardClass(index)}`}
+                className={`absolute w-[135px] h-[170px] sm:w-[220px] sm:h-[260px] md:w-[250px] md:h-[350px] lg:w-[300px] lg:h-[400px]  rounded-2xl shadow-xl overflow-hidden transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] cursor-pointer transform ${getCardClass(index)}`}
                 onClick={() => updateCarousel(index)}
               >
                 <img

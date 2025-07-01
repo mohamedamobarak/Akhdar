@@ -95,7 +95,20 @@
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
-
+    /* Custom Colors */
+    --color-main: #81F18E;
+    --color-primary: #004D40;
+    --color-secondary: #D6EFD7;
+    --color-heading: #009867;
+    --color-body: #F5F5F5;
+    --color-bg:#F0F5EF;
+    --color-text-hero:#013229;
+    /* Custom Font */
+    --font-inter: Inter, ui-sans-serif, system-ui, sans-serif;
+    /* Custom Font Sizes */
+    --font-size-80: 80px;
+    --font-size-50: 50px;
+    --font-size-45: 45px;
 }
 
 .dark {
@@ -143,4 +156,16 @@
 
     }
 
+}
+
+:root, body {
+  --primary: #004D40;
+  --primary-foreground: #fff;
+  --secondary: #D6EFD7;
+  --secondary-foreground: #004D40;
+  --main: #81F18E;
+  --heading: #009867;
+  --body: #F5F5F5;
+  --bg: #F0F5EF;
+  --text-hero: #013229;
 }

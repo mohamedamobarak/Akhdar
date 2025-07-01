@@ -6,13 +6,12 @@ import { Link } from 'react-router-dom';
 
 const StepText = ({ number, title, description, dir  }) => (
   <div
-    className="flex flex-col gap-2 justify-center items-center md:flex-row "
-    dir={dir === 'en' ? 'ltr' : 'rtl'}
+    className={`flex flex-col gap-2 justify-center items-center md:flex-row ${dir === 'en' ? 'md:flex-row-reverse' : 'md:flex-row'}`}
   >
-    <span className="text-6xl md:text-8xl font-extrabold text-[#81F18E] mr-4">{number}</span>
-    <div className="flex flex-col items-start text-center md:text-left">
-      <span className="text-2xl font-bold text-[#013229] mb-1">{title}</span>
-      <span className={`text-lg text-[#013229] font-normal ${dir === 'en' ? 'text-left' : 'text-right'}`}>{description}</span>
+    <span className="text-6xl md:text-8xl font-extrabold text-main md:mr-4">{number}</span>
+    <div className={`flex flex-col md:items-start text-center  ${dir === 'en' ? 'md:text-left' : 'md:text-right'}`}>
+      <span className="text-xl  sm:text-2xl font-bold text-[#013229] mb-1">{title}</span>
+      <span className={`text-lg text-[#013229] font-normal `}>{description}</span>
     </div>
   </div>
 );
@@ -20,7 +19,7 @@ const StepText = ({ number, title, description, dir  }) => (
 const TimelineColumn = () => (
   <div className="flex relative flex-col justify-center items-center py-0">
     {/* Vertical line */}
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-full bg-[#81F18E] z-0" />
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-full bg-main z-0" />
     {/* Node */}
     <div className="flex relative z-10 justify-center items-center h-full">
       <svg width="48" height="48" viewBox="0 0 48 48">
