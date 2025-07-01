@@ -49,6 +49,34 @@
           "desc": "نستثمر في مشاريع التشجير، واستعادة غابات المانغروف، وتجديد النظم البيئية الصحراوية في المملكة العربية السعودية ومنطقة الشرق الأوسط وشمال أفريقيا."
         }
       ]
+    },
+    "contact": {
+      "title": "اتصل بنا",
+      "success": "تم إرسال رسالتك بنجاح!",
+      "inputs": {
+        "firstName": "الاسم الأول",
+        "firstNamePlaceholder": "محمد",
+        "lastName": "اسم العائلة",
+        "lastNamePlaceholder": "بلال",
+        "email": "البريد الإلكتروني",
+        "emailPlaceholder": "mohamed@gmail.com",
+        "company": "الشركة",
+        "companyPlaceholder": "شركة س",
+        "interest": "أنا مهتم بـ:",
+        "buyingCarbon": "شراء أرصدة الكربون الآن",
+        "esgConsultation": "استشارة ESG",
+        "sellCarbon": "بيع أرصدة الكربون",
+        "measureFootprint": "قياس البصمة الكربونية لشركتك",
+        "other": "أخرى",
+        "messagePlaceholder": "اكتب هنا",
+        "submitButton": "إرسال"
+      },
+      "errors": {
+        "firstNameRequired": "الاسم الأول مطلوب",
+        "lastNameRequired": "اسم العائلة مطلوب",
+        "invalidEmail": "البريد الإلكتروني غير صحيح",
+        "interestRequired": "يرجى اختيار اهتمام"
+      }
     }
   },
   "impactPlatform": {
