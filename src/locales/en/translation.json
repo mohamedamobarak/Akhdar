@@ -49,6 +49,34 @@
           "desc": "Investing in reforestation, mangrove restoration, and desert ecosystem regeneration across Saudi Arabia and the MENA region."
         }
       ]
+    },
+    "contact": {
+      "title": "Contact Us",
+      "success": "Your message has been sent successfully!",
+      "inputs": {
+        "firstName": "First Name",
+        "firstNamePlaceholder": "John",
+        "lastName": "Last Name",
+        "lastNamePlaceholder": "Blake",
+        "email": "E-Mail",
+        "emailPlaceholder": "Johnblake@gmail.com",
+        "company": "Company",
+        "companyPlaceholder": "X Company",
+        "interest": "I am Interested in:",
+        "buyingCarbon": "Buying Carbon Offsets now",
+        "esgConsultation": "ESG consultation",
+        "sellCarbon": "Sell Carbon Offsets",
+        "measureFootprint": "Measure your businesses Carbon Footprint",
+        "other": "Other",
+        "messagePlaceholder": "Write here",
+        "submitButton": "Submit"
+      },
+      "errors": {
+        "firstNameRequired": "First name is required",
+        "lastNameRequired": "Last name is required",
+        "invalidEmail": "Invalid email",
+        "interestRequired": "Please select an interest"
+      }
     }
   },
   "impactPlatform": {
