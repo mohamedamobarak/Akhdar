@@ -11,7 +11,7 @@ function Input({
   return (
     <div className="w-full">
       {label && (
-        <label className="block mb-1 text-[16px] font-semibold text-[var(--color-heading)]">{label}</label>
+        <label className="block mb-1 text-[16px] font-semibold text-primary">{label}</label>
       )}
       <input
         type={type}

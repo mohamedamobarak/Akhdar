@@ -15,6 +15,7 @@ import {
 import { Eye, EyeOff } from 'lucide-react';
 import countryList from 'country-list';
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
+import ErrorMessage from '../../../components/ErrorMessage';
 
 const industries = [
   { value: 'tech', label: 'Tech' },
@@ -71,31 +72,31 @@ const CompanySignUpForm = () => {
     <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-xl mx-auto">
       <div className="mb-4">
         <Input label="Company Name" placeholder="Company Name" {...register('companyName')} aria-invalid={!!errors.companyName} />
-        {errors.companyName && <span className="text-xs text-red-500 mt-1">{errors.companyName.message}</span>}
+        <ErrorMessage message={errors.companyName?.message} />
       </div>
       <div className="flex gap-4">
         <div className="flex-1 mb-3">
           <Input label="First Name" placeholder="First Name" {...register('firstName')} aria-invalid={!!errors.firstName} />
-          {errors.firstName && <span className="text-xs text-red-500 mt-1">{errors.firstName.message}</span>}
+          <ErrorMessage message={errors.firstName?.message} />
         </div>
         <div className="flex-1 mb-3">
           <Input label="Last Name" placeholder="Last Name" {...register('lastName')} aria-invalid={!!errors.lastName} />
-          {errors.lastName && <span className="text-xs text-red-500 mt-1">{errors.lastName.message}</span>}
+          <ErrorMessage message={errors.lastName?.message} />
         </div>
       </div>
       <div className="flex gap-4">
         <div className="flex-1 mb-3">
           <Input label="Email" placeholder="Email" type="email" {...register('email')} aria-invalid={!!errors.email} />
-          {errors.email && <span className="text-xs text-red-500 mt-1">{errors.email.message}</span>}
+          <ErrorMessage message={errors.email?.message} />
         </div>
         <div className="flex-1 mb-3">
           <Input label="Phone" placeholder="Phone" {...register('phone')} aria-invalid={!!errors.phone} />
-          {errors.phone && <span className="text-xs text-red-500 mt-1">{errors.phone.message}</span>}
+          <ErrorMessage message={errors.phone?.message} />
         </div>
       </div>
       <div className="flex gap-4 mt-2 flex-col sm:flex-row">
         <div className="w-full mb-3">
-          <label className="block mb-1 text-[16px] font-semibold text-[var(--color-heading)]">Industry</label>
+          <label className="block mb-1 text-[16px] font-semibold text-primary">Industry</label>
           <Controller
             name="industry"
             control={control}
@@ -115,10 +116,10 @@ const CompanySignUpForm = () => {
               </Select>
             )}
           />
-          {errors.industry && <span className="text-xs text-red-500 mt-1">{errors.industry.message}</span>}
+          <ErrorMessage message={errors.industry?.message} />
         </div>
         <div className="w-full mb-3">
-          <label className="block mb-1 text-[16px] font-semibold text-[var(--color-heading)]">Company Size</label>
+          <label className="block mb-1 text-[16px] font-semibold text-primary">Company Size</label>
           <Controller
             name="companySize"
             control={control}
@@ -138,11 +139,11 @@ const CompanySignUpForm = () => {
               </Select>
             )}
           />
-          {errors.companySize && <span className="text-xs text-red-500 mt-1">{errors.companySize.message}</span>}
+          <ErrorMessage message={errors.companySize?.message} />
         </div>
       </div>
       <div className="mt-2 mb-3">
-        <label className="block mb-1 text-[16px] font-semibold text-[var(--color-heading)]">Country</label>
+        <label className="block mb-1 text-[16px] font-semibold text-primary">Country</label>
         <Controller
           name="country"
           control={control}
@@ -162,38 +163,52 @@ const CompanySignUpForm = () => {
             </Select>
           )}
         />
-        {errors.country && <span className="text-xs text-red-500 mt-1">{errors.country.message}</span>}
+        <ErrorMessage message={errors.country?.message} />
       </div>
       <div className="flex flex-col sm:flex-row gap-4 mb-3">
-        <div className="flex-1 relative mb-3">
-          <Input
-            label="Password"
-            placeholder="Password"
-            type={showPassword ? 'text' : 'password'}
-            {...register('password')}
-            aria-invalid={!!errors.password}
-          />
-          <button type="button" tabIndex={-1} className="absolute right-3 top-8 text-gray-400 cursor-pointer" onClick={() => setShowPassword(v => !v)}>
-            {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-          </button>
-          {errors.password && <span className="text-xs text-red-500 mt-1">{errors.password.message}</span>}
+        <div className="flex-1 mb-3">
+          <label className="block mb-1 text-[16px] font-semibold text-primary">Password</label>
+          <div className="relative">
+            <Input
+              placeholder="Password"
+              type={showPassword ? 'text' : 'password'}
+              {...register('password')}
+              aria-invalid={!!errors.password}
+            />
+            <button
+              type="button"
+              tabIndex={-1}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"
+              onClick={() => setShowPassword(v => !v)}
+            >
+              {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+            </button>
+          </div>
+          <ErrorMessage message={errors.password?.message} />
         </div>
-        <div className="flex-1 relative mb-3">
-          <Input
-            label="Confirm Password"
-            placeholder="Confirm Password"
-            type={showConfirmPassword ? 'text' : 'password'}
-            {...register('confirmPassword')}
-            aria-invalid={!!errors.confirmPassword}
-          />
-          <button type="button" tabIndex={-1} className="absolute right-3 top-8 text-gray-400 cursor-pointer" onClick={() => setShowConfirmPassword(v => !v)}>
-            {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-          </button>
-          {errors.confirmPassword && <span className="text-xs text-red-500 mt-1">{errors.confirmPassword.message}</span>}
+        <div className="flex-1 mb-3">
+          <label className="block mb-1 text-[16px] font-semibold text-primary">Confirm Password</label>
+          <div className="relative">
+            <Input
+              placeholder="Confirm Password"
+              type={showConfirmPassword ? 'text' : 'password'}
+              {...register('confirmPassword')}
+              aria-invalid={!!errors.confirmPassword}
+            />
+            <button
+              type="button"
+              tabIndex={-1}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"
+              onClick={() => setShowConfirmPassword(v => !v)}
+            >
+              {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+            </button>
+          </div>
+          <ErrorMessage message={errors.confirmPassword?.message} />
         </div>
       </div>
       <div className="flex justify-end">
-        <button type="submit" disabled={loading} className="mt-4 py-2 px-16 rounded-xl bg-[var(--color-main)] text-black font-semibold hover:bg-[var(--color-heading)] hover:text-white transition cursor-pointer flex items-center justify-center min-w-[120px]">
+        <button type="submit" disabled={loading} className="mt-4 py-2 px-16 rounded-xl bg-main text-black font-semibold hover:bg-primary hover:text-white transition cursor-pointer flex items-center justify-center min-w-[120px]">
           {loading ? <span className="loader mr-2"></span> : null}
           {loading ? 'Signing up...' : 'Sign up'}
         </button>
