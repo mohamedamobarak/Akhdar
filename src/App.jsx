@@ -5,6 +5,7 @@ import HomePage from './Modules/Home/HomePage';
 import AboutUs from './Modules/AboutUs/AboutUs';
 import ImpactPlatform from './Modules/ImpactPlatform/ImpactPlatform';
 import SignUp from './Modules/Auth/Signup/SignUp';
+import Integration from './Modules/Integration/Integration';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/impact-platform" element={<ImpactPlatform />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/api-integration" element={<Integration />} />
 
       </Routes>
     </Router>
