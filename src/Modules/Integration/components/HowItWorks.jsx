@@ -10,12 +10,12 @@ import { Link } from 'react-router-dom';
 
 const StepText = ({ number, title, description, isRTL  }) => (
   <div
-    className={`flex flex-col gap-2 justify-center items-start md:flex-row ${isRTL ? 'md:flex-row' : 'md:flex-row'}`}
+    className={`flex flex-col gap-2 justify-center items-center md:items-start md:flex-row ${isRTL ? 'md:flex-row' : 'md:flex-row'}`}
   >
     <span className={`text-6xl md:text-8xl font-extrabold text-main ${isRTL ? 'md:ml-4' : 'md:mr-4'}`}>{number}</span>
-    <div className={`flex flex-col md:items-start text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
+    <div className={`flex flex-col md:items-start items-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
       <span className={`text-xl sm:text-2xl font-bold text-[#013229] mb-1 ${isRTL ? 'text-right' : 'text-left'}`}>{title}</span>
-      <span className={`text-sm md:text-lg text-[#013229] font-normal ${isRTL ? 'text-right ' : 'text-left'}`}>{description}</span>
+      <span className={`text-sm text-center md:text-lg text-[#013229] font-normal ${isRTL ? 'md:text-right ' : 'md:text-left'}`}>{description}</span>
     </div>
   </div>
 );
