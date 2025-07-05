@@ -1,6 +1,7 @@
 import React from 'react'
 import greenLeaf from '../../../assets/api-integration/green-leaf.svg';
 import { useTranslation } from 'react-i18next';
+import i18n from '../../../../public/locales.js';
 
 const TimelineCircle = () => (
   <div className="flex items-center justify-center mb-2">
@@ -12,19 +13,20 @@ const TimelineCircle = () => (
 );
 
 const ProvideSolutions = () => {
-  const { i18n } = useTranslation();
+  const { t } = useTranslation();
   const lang = i18n.language || 'en';
   const isRTL = lang === 'ar';
-  const dir = isRTL ? 'rtl' : 'ltr';
+  const dir = t('integration.direction') || (isRTL ? 'rtl' : 'ltr');
+  const industries = t('integration.provideSolutions.industries', { returnObjects: true });
 
   return (
     <section
-      className="flex flex-col w-full min-h-screen bg-[#F0F5EF] px-4 mx-auto py-12"
+      className="flex flex-col w-full min-h-screen bg-[#F0F5EF] px-4 mx-auto py-6"
       dir={dir}
       style={{ direction: dir }}
     >
       <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
-        We Provide Solutions for <br className="hidden lg:block" />Different Industries
+        {t('integration.provideSolutions.title')}
       </h2>
       <div className="relative w-full max-w-6xl mx-auto min-h-[600px] hidden lg:block">
         {/* SVG Curved Lines */}
@@ -44,33 +46,33 @@ const ProvideSolutions = () => {
         {/* Top left: E-Commerce */}
         <div className="absolute flex flex-col items-center text-center w-80 top-[12%] left-[6%]" >
           <TimelineCircle />
-          <h3 className="text-xl font-bold text-primary mb-1">E-Commerce</h3>
-          <p className="text-base text-[#013229] max-w-xs">
-            Offer carbon-neutral products, enhancing customer satisfaction and brand loyalty by supporting sustainable shopping choice.
+          <h3 className="text-xl font-bold text-primary mb-1 text-center">{industries[0].name}</h3>
+          <p className="text-base text-[#013229] max-w-xs text-center">
+            {industries[0].description}
           </p>
         </div>
         {/* Top right: Fintech */}
         <div className="absolute flex flex-col items-center text-center w-80 top-[12%] right-[6%]" >
           <TimelineCircle />
-          <h3 className="text-xl font-bold text-primary mb-1">Fintech</h3>
-          <p className="text-base text-[#013229] max-w-xs">
-            Seamlessly offer carbon offsetting services to meet growing consumer demand for climate-conscious financial products
+          <h3 className="text-xl font-bold text-primary mb-1 text-center">{industries[1].name}</h3>
+          <p className="text-base text-[#013229] max-w-xs text-center">
+            {industries[1].description}
           </p>
         </div>
         {/* Bottom left: Logistics */}
         <div className="absolute flex flex-col items-center text-center w-80  bottom-[22%] left-[6%]" >
           <TimelineCircle />
-          <h3 className="text-xl font-bold text-primary mb-1">Logistics</h3>
-          <p className="text-base text-[#013229] max-w-xs">
-            Offset their carbon emissions in real-time, providing transparency and accountability in their supply chains while enhancing your sustainability commitments
+          <h3 className="text-xl font-bold text-primary mb-1 text-center">{industries[2].name}</h3>
+          <p className="text-base text-[#013229] max-w-xs text-center">
+            {industries[2].description}
           </p>
         </div>
         {/* Bottom right: Mobile Apps */}
         <div className="absolute flex flex-col items-center text-center w-80 bottom-[18%] right-[6%]">
           <TimelineCircle />
-          <h3 className="text-xl font-bold text-primary mb-1">Mobile Apps</h3>
-          <p className="text-base text-[#013229] max-w-xs">
-            Enable real-time carbon emission offsets directly from your app, ensuring transparency and accountability across your supply chain while strengthening your sustainability goals.
+          <h3 className="text-xl font-bold text-primary mb-1 text-center">{industries[3].name}</h3>
+          <p className="text-base text-[#013229] max-w-xs text-center">
+            {industries[3].description}
           </p>
         </div>
       </div>
@@ -78,34 +80,15 @@ const ProvideSolutions = () => {
       <div className="flex flex-col lg:hidden items-center w-full gap-8">
         <img src={greenLeaf} alt="Green Leaf" className="w-40 h-40 mx-auto mb-4" />
         <div className="flex flex-col items-center gap-8">
-          <div className="flex flex-col items-center text-center">
-            <TimelineCircle />
-            <h3 className="text-lg font-bold text-primary mt-2">E-Commerce</h3>
-            <p className="text-base text-[#013229] max-w-xs">
-              Offer carbon-neutral products, enhancing customer satisfaction and brand loyalty by supporting sustainable shopping choice.
-            </p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <TimelineCircle />
-            <h3 className="text-lg font-bold text-primary mt-2">Logistics</h3>
-            <p className="text-base text-[#013229] max-w-xs">
-              Offset their carbon emissions in real-time, providing transparency and accountability in their supply chains while enhancing your sustainability commitments
-            </p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <TimelineCircle />
-            <h3 className="text-lg font-bold text-primary mt-2">Fintech</h3>
-            <p className="text-base text-[#013229] max-w-xs">
-              Seamlessly offer carbon offsetting services to meet growing consumer demand for climate-conscious financial products
-            </p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <TimelineCircle />
-            <h3 className="text-lg font-bold text-primary mt-2">Mobile Apps</h3>
-            <p className="text-base text-[#013229] max-w-xs">
-              Enable real-time carbon emission offsets directly from your app, ensuring transparency and accountability across your supply chain while strengthening your sustainability goals.
-            </p>
-          </div>
+          {industries.map((industry, index) => (
+            <div key={index} className="flex flex-col items-center text-center">
+              <TimelineCircle />
+              <h3 className="text-lg font-bold text-primary mt-2 text-center">{industry.name}</h3>
+              <p className="text-base text-[#013229] max-w-xs text-center">
+                {industry.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

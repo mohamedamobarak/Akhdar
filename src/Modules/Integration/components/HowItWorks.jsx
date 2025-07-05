@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
+import i18n from '../../../../public/locales.js';
 import bgleaf from '../../../assets/api-integration/bg-leaf.svg'
 import congrats from '../../../assets/api-integration/congrats.svg'
 import labtop from '../../../assets/api-integration/labtop.png'
@@ -7,14 +8,14 @@ import land from '../../../assets/api-integration/land.png'
 import productCard from '../../../assets/api-integration/productCart.png'
 import { Link } from 'react-router-dom';
 
-const StepText = ({ number, title, description, dir  }) => (
+const StepText = ({ number, title, description, isRTL  }) => (
   <div
-    className={`flex flex-col gap-2 justify-center items-start md:flex-row ${dir === 'en' ? 'md:flex-row-reverse' : 'md:flex-row'}`}
+    className={`flex flex-col gap-2 justify-center items-start md:flex-row ${isRTL ? 'md:flex-row' : 'md:flex-row'}`}
   >
-    <span className="text-6xl md:text-8xl font-extrabold text-main md:mr-4">{number}</span>
-    <div className={`flex flex-col md:items-start text-center  ${dir === 'en' ? 'md:text-left' : 'md:text-right'}`}>
-      <span className="text-xl  sm:text-2xl font-bold text-[#013229] mb-1 text-left">{title}</span>
-      <span className={`text-sm md:text-lg text-[#013229] font-normal text-left `}>{description}</span>
+    <span className={`text-6xl md:text-8xl font-extrabold text-main ${isRTL ? 'md:ml-4' : 'md:mr-4'}`}>{number}</span>
+    <div className={`flex flex-col md:items-start text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
+      <span className={`text-xl sm:text-2xl font-bold text-[#013229] mb-1 ${isRTL ? 'text-right' : 'text-left'}`}>{title}</span>
+      <span className={`text-sm md:text-lg text-[#013229] font-normal ${isRTL ? 'text-right ' : 'text-left'}`}>{description}</span>
     </div>
   </div>
 );
@@ -37,7 +38,10 @@ const TimelineColumn = () => (
 
 const HowItWorks = () => {
   const { t } = useTranslation();
-  const dir = t('impactPlatform.direction') || (t('impactPlatform.direction') === 'rtl' ? 'rtl' : 'ltr');
+  const lang = i18n.language || 'en';
+  const isRTL = lang === 'ar';
+  const dir = t('integration.direction') || (isRTL ? 'rtl' : 'ltr');
+  const steps = t('integration.howItWorks.steps', { returnObjects: true });
   // Progress ring values
   const progress = 35.3;
 
@@ -47,15 +51,17 @@ const HowItWorks = () => {
       dir={dir}
       style={{ direction: dir }}
     >
-      <h2 className="mb-8 text-2xl font-bold text-center sm:mb-12 md:mb-16 sm:text-3xl md:text-5xl text-primary">How It Works?</h2>
+      <h2 className="mb-8 text-2xl font-bold text-center sm:mb-12 md:mb-16 sm:text-3xl md:text-5xl text-primary">
+        {t('integration.howItWorks.title')}
+      </h2>
       <div className="grid grid-cols-3 gap-x-0 gap-y-0 w-full max-w-full">
         {/* Row 1: Step 1 */}
         <div className="flex justify-end items-center py-4 pr-0 md:pr-2 w-full max-w-full ">
           <StepText
-            number={1}
-            title="Integrate"
-            description="Seamlessly embed AKHDAR’s API into your e-commerce store or platform in under 10 minutes and start enabling carbon offsetting for your customers instantly."
-            dir={dir}
+            number={steps[0].number}
+            title={steps[0].title}
+            description={steps[0].description}
+            isRTL={isRTL}
           />
         </div>
         {/* Timeline column */}
@@ -111,9 +117,9 @@ const HowItWorks = () => {
             />
             {/* Text content */}
             <div className="flex flex-col items-center text-center">
-              <span className="font-bold text-sm md:text-2xl text-primary mb-1">Congratulations!</span>
-              <span className="text-main text-sm md:text-lg font-medium mb-2">You have offset 1.8t of<br />CO2</span>
-              <span className="text-[#D6EFD7] text-base mt-2">Keep up!</span>
+              <span className="font-bold text-sm md:text-2xl text-primary mb-1">{t('integration.howItWorks.congratulations')}</span>
+              <span className="text-main text-sm md:text-lg font-medium mb-2">{t('integration.howItWorks.offsetMessage')}</span>
+              <span className="text-[#D6EFD7] text-base mt-2">{t('integration.howItWorks.keepUp')}</span>
             </div>
           </div>
         </div>
@@ -122,20 +128,20 @@ const HowItWorks = () => {
         {/* Dropdown column */}
         <div className="flex flex-col justify-center items-center py-4 pl-0 md:pl-2 w-full max-w-full ">
         <StepText
-            number={2}
-            title="Contribute"
-            description="With every transaction, a micro-contribution is sent to verified carbon offset projects. Track and display your climate impact in real time, reinforcing your commitment to sustainability."
-            dir={dir}
+            number={steps[1].number}
+            title={steps[1].title}
+            description={steps[1].description}
+            isRTL={isRTL}
           />
         </div>
 
         {/* Row 3: Step 3 */}
         <div className="flex justify-end items-center py-4 pr-0 md:pr-2 w-full max-w-full ">
             <StepText
-            number={3}
-            title="Showcase Your Impact"
-            description="Embed our live carbon reduction tracker directly onto your website and watch it update with every offset. Our customizable impact dashboard allows you to share detailed sustainability insights with your customers."
-            dir={dir}
+            number={steps[2].number}
+            title={steps[2].title}
+            description={steps[2].description}
+            isRTL={isRTL}
           />
         </div>
         {/* Timeline column */}
@@ -152,7 +158,7 @@ const HowItWorks = () => {
               />
             {/* Content above image */}
             <div className="absolute z-20 flex flex-col items-center justify-between w-full h-full py-6">
-              <span className="text-primary font-semibold text-sm sm:text-base mb-2 mt-2 z-30">You are Offsetting</span>
+              <span className="text-primary font-semibold text-sm sm:text-base mb-2 mt-2 z-30">{t('integration.howItWorks.youAreOffsetting')}</span>
               {/* Progress ring with bgleaf background */}
               <div className="relative flex items-center justify-center w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 z-30">
                 {/* bgleaf background */}
@@ -196,11 +202,11 @@ const HowItWorks = () => {
                 </svg>
                 <div className="absolute flex flex-col items-center justify-center w-full h-full" style={{ zIndex: 3 }}>
                   <span className="text-lg sm:text-xl md:text-3xl font-bold text-primary">CO₂</span>
-                  <span className="text-[10px] sm:text-base md:text-lg text-primary font-semibold">100t offset</span>
+                  <span className="text-[10px] sm:text-base md:text-md text-primary font-semibold">{t('integration.howItWorks.offsetAmount')}</span>
                 </div>
               </div>
               <span className="mt-2 text-sm sm:text-base text-white drop-shadow font-medium z-30" style={{ textShadow: '0 1px 8px #0006' }}>
-                of your footprint.
+                {t('integration.howItWorks.ofYourFootprint')}
               </span>
             </div>
           </div>
@@ -220,7 +226,7 @@ const HowItWorks = () => {
               className="relative z-10 bg-main hover:bg-primary hover:text-white text-primary font-semibold rounded-xl px-8 py-3 shadow-md focus:outline-none transition-all duration-200 mt-2 cursor-pointer"
               style={{ minWidth: '180px' }}
             >
-              Talk to Us
+              {t('integration.howItWorks.talkToUs')}
             </button>
           </Link>
         </div>
@@ -232,6 +238,3 @@ const HowItWorks = () => {
 }  
 
 export default HowItWorks
-
-
-

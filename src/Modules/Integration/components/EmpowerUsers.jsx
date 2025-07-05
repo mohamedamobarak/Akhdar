@@ -2,14 +2,15 @@ import React from 'react'
 import phone from '../../../assets/api-integration/phone.png';
 import shippingMethod from '../../../assets/api-integration/shipping-Method.png'
 import { useTranslation } from 'react-i18next';
+import i18n from '../../../../public/locales.js';
 import { Link } from 'react-router-dom';
 
 
 const EmpowerUsers = () => {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const lang = i18n.language || 'en';
     const isRTL = lang === 'ar';
-    const dir =isRTL ? 'rtl' : 'ltr'
+    const dir = t('integration.direction') || (isRTL ? 'rtl' : 'ltr')
    
   return (
     <section
@@ -20,10 +21,12 @@ const EmpowerUsers = () => {
       {/* First row */}
       <div className="flex flex-col md:flex-row w-full max-w-5xl mx-auto mb-12 gap-6 md:gap-0">
         {/* Left: Text */}
-        <div className="flex-1 flex flex-col justify-center items-center md:items-start md:pr-8">
-          <h2 className="text-4xl font-bold text-primary mb-2 text-center md:text-start">Empower Your Users!</h2>
-          <p className="text-lg text-black text-center md:text-start">
-            Akhdar's API lets you give your users the ability to take climate action that's important to them.
+        <div className={`flex-1 flex flex-col justify-center items-center md:items-start ${isRTL ? 'md:pl-8' : 'md:pr-8'}`}>
+          <h2 className={`text-4xl font-bold text-primary mb-2 text-center ${isRTL ? 'md:text-right' : 'md:text-start'}`}>
+            {t('integration.empowerUsers.empowerTitle')}
+          </h2>
+          <p className={`text-lg text-black text-center ${isRTL ? 'md:text-right' : 'md:text-start'}`}>
+            {t('integration.empowerUsers.empowerDescription')}
           </p>
         </div>
         {/* Right: Image */}
@@ -39,10 +42,12 @@ const EmpowerUsers = () => {
           <img src={phone} alt="phone" className="w-64 md:w-72 h-auto" />
         </div>
         {/* Right: Text */}
-        <div className="flex-1 flex flex-col justify-center items-center md:items-start md:pl-8">
-          <h2 className="text-4xl font-bold text-primary mb-2 text-center md:text-start">Share Your Impact!</h2>
-          <p className="text-lg text-black text-center md:text-start">
-            Akhdar make it easy to share your impact with your customers in language they can understand.
+        <div className={`flex-1 flex flex-col justify-center items-center md:items-start ${isRTL ? 'md:pr-8' : 'md:pl-8'}`}>
+          <h2 className={`text-4xl font-bold text-primary mb-2 text-center ${isRTL ? 'md:text-right' : 'md:text-start'}`}>
+            {t('integration.empowerUsers.shareTitle')}
+          </h2>
+          <p className={`text-lg text-black text-center ${isRTL ? 'md:text-right' : 'md:text-start'}`}>
+            {t('integration.empowerUsers.shareDescription')}
           </p>
         </div>
       </div>
