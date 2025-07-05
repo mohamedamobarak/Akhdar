@@ -99,7 +99,7 @@ export default function EGSInteractiveForm() {
                     placeholder={t('companyName')}
                     className={`input input-bordered w-full border border-gray-300 rounded-lg px-3 py-2 block ${isArabic ? 'text-right' : 'text-left'}`}
                   />
-                  {errors.companyName && <span className="text-red-500 text-xs">{errors.companyName.message}</span>}
+                  {errors.companyName && <span className="text-red-500 text-xs">{t('egsErrors.companyNameRequired')}</span>}
                 </div>
                 {/* First Name, Last Name, Email, Phone in grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -111,7 +111,7 @@ export default function EGSInteractiveForm() {
                       placeholder={t('firstName')}
                       className={`input input-bordered w-full border border-gray-300 rounded-lg px-3 py-2 block ${isArabic ? 'text-right' : 'text-left'}`}
                     />
-                    {errors.firstName && <span className="text-red-500 text-xs">{errors.firstName.message}</span>}
+                    {errors.firstName && <span className="text-red-500 text-xs">{t('egsErrors.firstNameRequired')}</span>}
                   </div>
                   <div className="flex flex-col mb-2">
                     <label className={`block mb-1 text-sm text-primary ${isArabic ? 'text-right' : 'text-left'}`}>{t('lastName')}</label>
@@ -121,7 +121,7 @@ export default function EGSInteractiveForm() {
                       placeholder={t('lastName')}
                       className={`input input-bordered w-full border border-gray-300 rounded-lg px-3 py-2 block ${isArabic ? 'text-right' : 'text-left'}`}
                     />
-                    {errors.lastName && <span className="text-red-500 text-xs">{errors.lastName.message}</span>}
+                    {errors.lastName && <span className="text-red-500 text-xs">{t('egsErrors.lastNameRequired')}</span>}
                   </div>
                   <div className="flex flex-col mb-2">
                     <label className={`block mb-1 text-sm text-primary ${isArabic ? 'text-right' : 'text-left'}`}>{t('email')}</label>
@@ -131,7 +131,7 @@ export default function EGSInteractiveForm() {
                       placeholder={t('email')}
                       className={`input input-bordered w-full border border-gray-300 rounded-lg px-3 py-2 block ${isArabic ? 'text-right' : 'text-left'}`}
                     />
-                    {errors.email && <span className="text-red-500 text-xs">{errors.email.message}</span>}
+                    {errors.email && <span className="text-red-500 text-xs">{errors.email.type === 'email' ? t('egsErrors.emailInvalid') : t('egsErrors.emailRequired')}</span>}
                   </div>
                   <div className="flex flex-col mb-2">
                     <label className={`block mb-1 text-sm text-primary ${isArabic ? 'text-right' : 'text-left'}`}>{t('phone')}</label>
@@ -141,7 +141,7 @@ export default function EGSInteractiveForm() {
                       placeholder={t('phone')}
                       className={`input input-bordered w-full border border-gray-300 rounded-lg px-3 py-2 block ${isArabic ? 'text-right' : 'text-left'}`}
                     />
-                    {errors.phone && <span className="text-red-500 text-xs">{errors.phone.message}</span>}
+                    {errors.phone && <span className="text-red-500 text-xs">{t('egsErrors.phoneRequired')}</span>}
                   </div>
                 </div>
                 {/* Industry, Company Size, Country selects styled and below */}
@@ -164,7 +164,7 @@ export default function EGSInteractiveForm() {
                         className="text-[#7CE495] text-xl"
                       />
                     </span>
-                    {errors.industry && <span className="text-red-500 text-xs">{errors.industry.message}</span>}
+                    {errors.industry && <span className="text-red-500 text-xs">{t('egsErrors.industryRequired')}</span>}
                   </div>
                   {/* Company Size */}
                   <div className="relative">
@@ -184,7 +184,7 @@ export default function EGSInteractiveForm() {
                         className="text-[#7CE495] text-xl"
                       />
                     </span>
-                    {errors.companySize && <span className="text-red-500 text-xs">{errors.companySize.message}</span>}
+                    {errors.companySize && <span className="text-red-500 text-xs">{t('egsErrors.companySizeRequired')}</span>}
                   </div>
                 </div>
                 {/* Country */}
@@ -205,7 +205,7 @@ export default function EGSInteractiveForm() {
                       className="text-[#7CE495] text-xl"
                     />
                   </span>
-                  {errors.country && <span className="text-red-500 text-xs">{errors.country.message}</span>}
+                  {errors.country && <span className="text-red-500 text-xs">{t('egsErrors.countryRequired')}</span>}
                 </div>
               </div>
               {/* Emission Reporting */}
@@ -230,7 +230,7 @@ export default function EGSInteractiveForm() {
                     /> {t('no')}
                   </label>
                 </div>
-                {errors.trackingEmissions && <span className="text-red-500 text-xs">{errors.trackingEmissions.message}</span>}
+                {errors.trackingEmissions && <span className="text-red-500 text-xs">{t('egsErrors.trackingEmissionsRequired')}</span>}
                 <h4 className="text-gray-500 mb-2">{t('emissionScopes')}</h4>
                 <div className="flex flex-row gap-2">
                   <label className="flex items-center gap-2">
@@ -282,7 +282,7 @@ export default function EGSInteractiveForm() {
                     /> {t('scope3')}
                   </label>
                 </div>
-                {errors.emissionScopes && <span className="text-red-500 text-xs">{errors.emissionScopes.message}</span>}
+                {errors.emissionScopes && <span className="text-red-500 text-xs">{t('egsErrors.emissionScopesRequired')}</span>}
               </div>
               {/* Life Cycle Analysis (LCA) */}
               <div>
@@ -306,7 +306,7 @@ export default function EGSInteractiveForm() {
                     /> {t('no')}
                   </label>
                 </div>
-                {errors.lca && <span className="text-red-500 text-xs">{errors.lca.message}</span>}
+                {errors.lca && <span className="text-red-500 text-xs">{t('egsErrors.lcaRequired')}</span>}
               </div>
               {/* Sustainable Procurement */}
               <div>
@@ -329,7 +329,7 @@ export default function EGSInteractiveForm() {
                     /> {t('no')}
                   </label>
                 </div>
-                {errors.procurement && <span className="text-red-500 text-xs">{errors.procurement.message}</span>}
+                {errors.procurement && <span className="text-red-500 text-xs">{t('egsErrors.procurementRequired')}</span>}
               </div>
               {/* Decarbonization Strategy */}
               <div>
@@ -352,7 +352,7 @@ export default function EGSInteractiveForm() {
                     /> {t('no')}
                   </label>
                 </div>
-                {errors.decarbonization && <span className="text-red-500 text-xs">{errors.decarbonization.message}</span>}
+                {errors.decarbonization && <span className="text-red-500 text-xs">{t('egsErrors.decarbonizationRequired')}</span>}
               </div>
               {/* Consent */}
               <div className="flex items-center gap-2 mb-4">
@@ -363,7 +363,7 @@ export default function EGSInteractiveForm() {
                 />
                 <span>{t('agreePrivacy')}</span>
               </div>
-              {errors.privacyConsent && <span className="text-red-500 text-xs">{errors.privacyConsent.message}</span>}
+              {errors.privacyConsent && <span className="text-red-500 text-xs">{t('egsErrors.privacyConsentRequired')}</span>}
               {/* Submit Button */}
               <button type="submit" className="w-full bg-main text-white py-3 rounded-xl font-bold text-lg hover:bg-green-700 transition">
                 {t('submit')}

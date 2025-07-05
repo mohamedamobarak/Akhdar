@@ -210,5 +210,22 @@
   "lcaQuestion": "Would you like to analyze the life cycle of your products?",
   "procurement": "Sustainable Procurement",
   "decarbonization": "Decarbonization Strategy",
-  "agreePrivacy": "I agree to the privacy policy."
+  "agreePrivacy": "I agree to the privacy policy.",
+  "egsErrors": {
+    "companyNameRequired": "Company name is required",
+    "firstNameRequired": "First name is required",
+    "lastNameRequired": "Last name is required",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email address",
+    "phoneRequired": "Phone number is required",
+    "industryRequired": "Industry is required",
+    "companySizeRequired": "Company size is required",
+    "countryRequired": "Country is required",
+    "trackingEmissionsRequired": "Please select your emissions tracking status",
+    "emissionScopesRequired": "Please select at least one scope",
+    "lcaRequired": "Please select LCA status",
+    "procurementRequired": "Please select procurement status",
+    "decarbonizationRequired": "Please select decarbonization status",
+    "privacyConsentRequired": "You must agree to the privacy policy"
+  }
 }

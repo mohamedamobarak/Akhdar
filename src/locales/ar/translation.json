@@ -150,22 +150,6 @@
     "individuals": "الأفراد",
     "companies": "الشركات",
     "signUp": "إنشاء حساب",
-    "errors": {
-      "firstNameMin": "يرجى إدخال الاسم الأول (على الأقل حرفان)",
-      "firstNameMax": "الاسم الأول طويل جدًا",
-      "lastNameMin": "يرجى إدخال اسم العائلة (على الأقل حرفان)",
-      "lastNameMax": "اسم العائلة طويل جدًا",
-      "email": "يرجى إدخال بريد إلكتروني صحيح",
-      "phone": "يرجى إدخال رقم هاتف صحيح (على الأقل 8 أرقام)",
-      "companyNameMin": "يرجى إدخال اسم الشركة (على الأقل حرفان)",
-      "companyNameMax": "اسم الشركة طويل جدًا",
-      "industry": "يرجى اختيار القطاع",
-      "companySize": "يرجى اختيار حجم الشركة",
-      "country": "يرجى اختيار الدولة",
-      "passwordMin": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
-      "confirmPasswordMin": "يجب أن تكون تأكيد كلمة المرور 6 أحرف على الأقل",
-      "passwordsNotMatch": "كلمتا المرور غير متطابقتين"
-    },
     "inputs": {
       "firstName": "الاسم الأول",
       "lastName": "اسم العائلة",
@@ -217,5 +201,22 @@
   "consent": "الموافقة",
   "agreePrivacy": "أوافق على سياسة الخصوصية.",
   "submit": "إرسال",
-  "emissionReporting": "تقرير الانبعاثات"
+  "emissionReporting": "تقرير الانبعاثات",
+  "egsErrors": {
+    "companyNameRequired": "اسم الشركة مطلوب",
+    "firstNameRequired": "الاسم الأول مطلوب",
+    "lastNameRequired": "اسم العائلة مطلوب",
+    "emailRequired": "البريد الإلكتروني مطلوب",
+    "emailInvalid": "البريد الإلكتروني غير صحيح",
+    "phoneRequired": "رقم الجوال مطلوب",
+    "industryRequired": "القطاع مطلوب",
+    "companySizeRequired": "حجم الشركة مطلوب",
+    "countryRequired": "الدولة مطلوبة",
+    "trackingEmissionsRequired": "يرجى اختيار حالة تتبع الانبعاثات",
+    "emissionScopesRequired": "يرجى اختيار نطاق واحد على الأقل",
+    "lcaRequired": "يرجى اختيار حالة تحليل دورة الحياة",
+    "procurementRequired": "يرجى اختيار حالة المشتريات المستدامة",
+    "decarbonizationRequired": "يرجى اختيار حالة استراتيجية إزالة الكربون",
+    "privacyConsentRequired": "يجب الموافقة على سياسة الخصوصية"
+  }
 }
