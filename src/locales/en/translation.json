@@ -55,11 +55,11 @@
       "success": "Your message has been sent successfully!",
       "inputs": {
         "firstName": "First Name",
-        "firstNamePlaceholder": "John",
+        "firstNamePlaceholder": "Mohamed",
         "lastName": "Last Name",
-        "lastNamePlaceholder": "Blake",
+        "lastNamePlaceholder": "Hassan",
         "email": "E-Mail",
-        "emailPlaceholder": "Johnblake@gmail.com",
+        "emailPlaceholder": "Mohamedhassan@gmail.com",
         "company": "Company",
         "companyPlaceholder": "X Company",
         "interest": "I am Interested in:",
@@ -76,7 +76,8 @@
         "lastNameRequired": "Last name is required",
         "invalidEmail": "Invalid email",
         "interestRequired": "Please select an interest"
-      }
+      },
+      "error": "Something went wrong. Please try again."
     }
   },
   "impactPlatform": {

@@ -12,11 +12,15 @@ const HeroSection = ({
   firstButtonLink,
   firstButtonLabel,
   secondButtonLabel,
+  firstLineEn,
+  firstLineAr,
+  secondLineEn,
+  secondLineAr,
 }) => {
-  const { t, i18n } = useTranslation();
+  const {  i18n } = useTranslation();
   const lang = i18n.language || 'en';
   const isRTL = lang === 'ar';
-  const dir = t('impactPlatform.direction') || (isRTL ? 'rtl' : 'ltr');
+  const dir =  (isRTL ? 'rtl' : 'ltr');
 
   // Refs for animation targets
   const containerRef = useRef(null);
@@ -31,8 +35,8 @@ const HeroSection = ({
     const h1Element = h1Ref.current;
 
     // Define the two lines manually for better control
-    const firstLine = isRTL ? "حلول تأثير مصممة خصيصًا": "Tailored Impact Solutions for";
-    const secondLine =  isRTL ? "لاحتياجات أعمالك" : "Your Business";
+    const firstLine = isRTL ? firstLineAr : firstLineEn;
+    const secondLine =  isRTL ? secondLineAr : secondLineEn;
 
     // Clear original content and create two line spans
     h1Element.innerHTML = '';
@@ -127,7 +131,8 @@ const HeroSection = ({
           {paragraph}
         </p>
        {/* buttons */}
-      <div
+       {firstButtonLink && firstButtonLabel && (
+        <div
         ref={buttonsRef}
         className="flex flex-row gap-7 justify-center mt-8"
       >
@@ -143,6 +148,9 @@ const HeroSection = ({
           {secondButtonLabel}
         </button>
       </div>
+       )
+}
+      
       </div>
     </section>
   );
@@ -152,9 +160,13 @@ HeroSection.propTypes = {
   backgroundImage: PropTypes.string.isRequired,
   heading: PropTypes.node.isRequired,
   paragraph: PropTypes.node.isRequired,
-  firstButtonLink: PropTypes.string.isRequired,
-  firstButtonLabel: PropTypes.node.isRequired,
-  secondButtonLabel: PropTypes.node.isRequired,
+  firstButtonLink: PropTypes.string,
+  firstButtonLabel: PropTypes.node,
+  secondButtonLabel: PropTypes.node,
+  firstLineEn: PropTypes.string.isRequired,
+  firstLineAr: PropTypes.string.isRequired,
+  secondLineEn: PropTypes.string.isRequired,
+  secondLineAr: PropTypes.string.isRequired,
 };
 
 export default HeroSection; 

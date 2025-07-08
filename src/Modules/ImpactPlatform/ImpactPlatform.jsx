@@ -24,6 +24,10 @@ const ImpactPlatform = () => {
           firstButtonLink="/signup"
           firstButtonLabel={t('impactPlatform.HeroSection.createAccount')}
           secondButtonLabel={t('impactPlatform.HeroSection.bookDemo')}
+          firstLineEn="Tailored Impact"
+          firstLineAr="حلول تأثير مصممة"
+          secondLineEn="Solutions for Your Business"
+          secondLineAr="لاحتياجات أعمالك"
         />
         <ConnectingBusinesses />
         <CustomizePortfolio />
