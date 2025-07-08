@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useTranslation } from 'react-i18next';
 import i18n from '../../../../public/locales.js';
 import cursor from '../../../assets/impact-platform/cursor-icon.svg';
 import BuyCreditCard from './BuyCreditCard.jsx';
+import { useGSAP } from '@gsap/react';
+import { gsapAnimation } from '@/lib/animations';
 
 const LeafIcon = () => (
 <svg width="24" height="20" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,19 +16,33 @@ const CustomizePortfolio = () => {
   const { t } = useTranslation();
   const lang = i18n.language || 'en';
   const isRTL = lang === 'ar';
+
+  // Animation refs
+  const containerRef = useRef(null);
+  const columnsRef = useRef([]);
+  const BuyCreditCardRef = useRef(null);
+
+  useGSAP(() => {
+    if (!columnsRef.current) return;
+    gsapAnimation(BuyCreditCardRef.current, { y: 300, opacity: 0 }, { y: 0, opacity: 1, duration: 1,delay:1, ease: 'power2.out' });
+    gsapAnimation(columnsRef.current, { y: 300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' }, { stagger: 0.25 });
+
+  }, { scope: containerRef });
+
   return (
     <section
       className="flex flex-col items-center px-2 sm:px-4 mx-auto w-full max-w-7xl min-h-[80vh] bg-transparent"
       dir={isRTL ? 'rtl' : 'ltr'}
       style={{ direction: isRTL ? 'rtl' : 'ltr' }}
+      ref={containerRef}
     >
       <h2 className="mt-12 mb-4 text-2xl font-bold text-center sm:text-3xl md:text-4xl text-primary">{t('impactPlatform.CustomizePortfolio.title')}</h2>
       <p className="text-center max-w-2xl mx-auto text-base sm:text-lg text-[#013229] mb-12">
-        {t('impactPlatform.CustomizePortfolio.desc')}
+        {t('impactPlatform.HeroSection.title2')}
       </p>
-      <div className="relative flex flex-col items-center w-full min-h-[500px] ">
+      <div className="relative flex flex-col items-center w-full min-h-[500px]  ">
         {/* Blurred BuyCreditCard in the background */}
-        <div className="flex absolute inset-0 z-0 justify-center items-center pointer-events-none">
+        <div ref={BuyCreditCardRef} className="flex absolute inset-0 z-0 justify-center items-center pointer-events-none">
           <div className="opacity-60 blur-[1px] scale-105  translate-y-4">
             <BuyCreditCard />
           </div>
@@ -34,7 +50,7 @@ const CustomizePortfolio = () => {
         {/* Foreground cards */}
         <div className="flex relative z-10 flex-col gap-48  sm:gap-44 justify-between items-center w-full lg:flex-row lg:gap-0">
           {/* Project Type */}
-          <div className="flex flex-col flex-1 items-center px-2">
+          <div className="flex flex-col flex-1 items-center px-2" ref={el => columnsRef.current[0] = el}>
             <div className="flex gap-2 items-center mb-4">
               <LeafIcon />
               <span className="text-xl font-bold text-primary">{t('impactPlatform.CustomizePortfolio.projectType')}</span>
@@ -61,9 +77,9 @@ const CustomizePortfolio = () => {
             </div>
           </div>
           {/* Divider */}
-          <div className="hidden lg:flex h-64 w-px bg-[#1CBF7A] mx-8 opacity-50" />
+          <div className="hidden lg:flex h-64 w-px bg-[#1CBF7A] mx-8 opacity-50"  ref={el => columnsRef.current[1] = el} />
           {/* Contribution frequency */}
-          <div className="flex flex-col flex-1 items-center px-2">
+          <div className="flex flex-col flex-1 items-center px-2" ref={el => columnsRef.current[2] = el}>
             <div className="flex gap-2 items-center mb-4">
               <LeafIcon />
               <span className="text-xl font-bold text-primary">{t('impactPlatform.CustomizePortfolio.contributionFrequency')}</span>
@@ -98,9 +114,9 @@ const CustomizePortfolio = () => {
             </div>
           </div>
           {/* Divider */}
-          <div className="hidden lg:flex h-64 w-px bg-[#1CBF7A] mx-8 opacity-50" />
+          <div className="hidden lg:flex h-64 w-px bg-[#1CBF7A] mx-8 opacity-50"  ref={el => columnsRef.current[3] = el}  />
           {/* Offset volume */}
-          <div className=" relative flex flex-col flex-1  items-center px-2">
+          <div className=" relative flex flex-col flex-1  items-center px-2" ref={el => columnsRef.current[4] = el}>
             <div className="flex absolute  z-0 justify-center items-center pointer-events-none">
               <div className="opacity-60 blur-[1px] scale-105  translate-y-4">
                 <BuyCreditCard />
