@@ -29,7 +29,7 @@ const HeroSection = ({
   const buttonsRef = useRef(null);
 
   useGSAP(() => {
-    if (!h1Ref.current || !paragraphRef.current || !buttonsRef.current) return;
+    if (!h1Ref.current || !paragraphRef.current) return;
 
     // Split H1 text into two lines and animate from opposite directions
     const h1Element = h1Ref.current;
@@ -76,7 +76,7 @@ const HeroSection = ({
       delay: 0.2,
     });
 
-    // Paragraph from bottom using gsapAnimation utility
+    // Animate paragraph
     gsapAnimation(paragraphRef.current, {
       y: 100,
       opacity: 0,
@@ -85,23 +85,24 @@ const HeroSection = ({
       opacity: 1,
       duration: 0.5,
       ease: 'power2.out',
-      delay: 0.8,
+      delay: firstButtonLink && firstButtonLabel ? 0.8 : 0.6,
     });
 
-    // Buttons from bottom with stagger using gsapAnimation utility
-    gsapAnimation(buttonsRef.current.children, {
-      y: 100,
-      opacity: 0,
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 0.5,
-      ease: 'power2.out',
-      delay: 0.8,
-    }, {
-      stagger: 0.35
-    });
-
+    // Animate buttons only if they exist
+    if (firstButtonLink && firstButtonLabel && buttonsRef.current) {
+      gsapAnimation(buttonsRef.current.children, {
+        y: 100,
+        opacity: 0,
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.out',
+        delay: 0.8,
+      }, {
+        stagger: 0.35
+      });
+    }
   }, { scope: containerRef })
   return (
     <section
@@ -156,17 +157,6 @@ const HeroSection = ({
   );
 };
 
-HeroSection.propTypes = {
-  backgroundImage: PropTypes.string.isRequired,
-  heading: PropTypes.node.isRequired,
-  paragraph: PropTypes.node.isRequired,
-  firstButtonLink: PropTypes.string,
-  firstButtonLabel: PropTypes.node,
-  secondButtonLabel: PropTypes.node,
-  firstLineEn: PropTypes.string.isRequired,
-  firstLineAr: PropTypes.string.isRequired,
-  secondLineEn: PropTypes.string.isRequired,
-  secondLineAr: PropTypes.string.isRequired,
-};
+
 
 export default HeroSection; 

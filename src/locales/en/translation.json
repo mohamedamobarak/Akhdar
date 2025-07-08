@@ -69,7 +69,8 @@
         "measureFootprint": "Measure your businesses Carbon Footprint",
         "other": "Other",
         "messagePlaceholder": "Write here",
-        "submitButton": "Submit"
+        "submitButton": "Send Message",
+        "submitting": "Sending..."
       },
       "errors": {
         "firstNameRequired": "First name is required",
