@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
+import { useGSAP } from '@gsap/react';
+import { gsapAnimation } from '@/lib/animations';
+import { Link } from 'react-router-dom';
 
 const HeroSection = ({
   backgroundImage,
@@ -19,8 +22,6 @@ const HeroSection = ({
   const isRTL = lang === 'ar';
   const dir =  (isRTL ? 'rtl' : 'ltr');
 
-<<<<<<< Updated upstream
-=======
   // Refs for animation targets
   const containerRef = useRef(null);
   const h1Ref = useRef(null);
@@ -102,9 +103,9 @@ const HeroSection = ({
     });
 
   }, { scope: containerRef })
->>>>>>> Stashed changes
   return (
     <section
+      ref={containerRef}
       className="flex relative justify-center items-center px-4 w-full h-screen text-center"
       dir={dir}
       style={{ direction: dir }}
@@ -117,24 +118,19 @@ const HeroSection = ({
       />
       {/* Text content */}
       <div className="relative z-10 px-6 mx-auto max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl">
-        <h1 className="text-[30px] md:text-[51px] lg:text-[75px] font-bold text-primary mb-4">
+        <h1
+          ref={h1Ref}
+          className="text-[30px] md:text-[51px] lg:text-[75px] font-bold text-primary mb-4"
+        >
           {heading}
         </h1>
-        <p className="text-black text-[16px] md:text-[20px] lg:text-[24px] font-medium py-2">
+        <p
+          ref={paragraphRef}
+          className="text-black text-[16px] md:text-[20px] lg:text-[24px] font-medium py-2"
+        >
           {paragraph}
         </p>
        {/* buttons */}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      <div className="flex flex-row gap-7 justify-center mt-8">
-        <a
-          href={firstButtonLink}
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
        {firstButtonLink && firstButtonLabel && (
         <div
         ref={buttonsRef}
@@ -142,11 +138,10 @@ const HeroSection = ({
       >
         <Link
           to={firstButtonLink}
->>>>>>> Stashed changes
           className="px-8 md:px-12 py-3 md:py-4 text-primary text-base md:text-lg bg-main rounded-[19px] text-center font-medium hover:bg-primary hover:text-white transition-all duration-300 min-w-[150px]"
         >
           {firstButtonLabel}
-        </a>
+        </Link>
         <button
           className="px-6 md:px-8 py-3 md:py-4 bg-[#E6E6E6] text-primary text-base md:text-lg rounded-[19px] text-center font-medium cursor-pointer hover:bg-primary hover:text-white transition-all duration-300 min-w-[150px]"
         >
@@ -165,9 +160,13 @@ HeroSection.propTypes = {
   backgroundImage: PropTypes.string.isRequired,
   heading: PropTypes.node.isRequired,
   paragraph: PropTypes.node.isRequired,
-  firstButtonLink: PropTypes.string.isRequired,
-  firstButtonLabel: PropTypes.node.isRequired,
-  secondButtonLabel: PropTypes.node.isRequired,
+  firstButtonLink: PropTypes.string,
+  firstButtonLabel: PropTypes.node,
+  secondButtonLabel: PropTypes.node,
+  firstLineEn: PropTypes.string.isRequired,
+  firstLineAr: PropTypes.string.isRequired,
+  secondLineEn: PropTypes.string.isRequired,
+  secondLineAr: PropTypes.string.isRequired,
 };
 
 export default HeroSection; 
