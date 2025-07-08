@@ -174,9 +174,9 @@ const ContactUs = () => {
                     <Button 
                         type="submit" 
                         className="bg-green-900 cursor-pointer text-white px-24 py-3 rounded-xl text-md font-semibold hover:bg-green-700 transition"
-                        disabled={mutation.isLoading}
+                        disabled={mutation.isPending}
                     >
-                        {mutation.isLoading ? (
+                        {mutation.isPending ? (
                             <>
                                 <span className="loader mr-2"></span>
                                 {t('aboutus.contact.inputs.submitting') || 'Submitting...'}
