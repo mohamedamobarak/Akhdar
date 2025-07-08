@@ -30,8 +30,8 @@ const SignUp = () => {
   // Initial mount animation
   useGSAP(() => {
     if (!textRef.current || !formRef.current) return;
-    gsapAnimation(textRef.current, { x: textInitX, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: 'back.out(1.7)' }, { disableScrollTrigger: true });
-    gsapAnimation(formRef.current, { x: formInitX, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: 'back.out(1.7)' }, { disableScrollTrigger: true });
+    gsapAnimation(textRef.current, { x: textInitX, opacity: 0 }, { x: 0, opacity: 1, duration: 0.9, ease: 'back.out(1.7)' }, { disableScrollTrigger: true });
+    gsapAnimation(formRef.current, { x: formInitX, opacity: 0 }, { x: 0, opacity: 1, duration: 0.9, ease: 'back.out(1.7)' }, { disableScrollTrigger: true });
   }, { scope: sectionRef });
 
   // Animate on tab switch
@@ -44,15 +44,15 @@ const SignUp = () => {
     gsapAnimation(formRef.current, { x: 0, opacity: 1 }, { x: formFromX, opacity: 0, duration: 0.3, ease: 'power2.in' }, { disableScrollTrigger: true });
     // Fade in both after short delay
     setTimeout(() => {
-      gsapAnimation(textRef.current, { x: textFromX, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: 'back.out(1.7)' }, { disableScrollTrigger: true });
-      gsapAnimation(formRef.current, { x: formFromX, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: 'back.out(1.7)' }, { disableScrollTrigger: true });
+      gsapAnimation(textRef.current, { x: textFromX, opacity: 0 }, { x: 0, opacity: 1, duration: 0.9, ease: 'back.out(1.7)' }, { disableScrollTrigger: true });
+      gsapAnimation(formRef.current, { x: formFromX, opacity: 0 }, { x: 0, opacity: 1, duration: 0.9, ease: 'back.out(1.7)' }, { disableScrollTrigger: true });
     }, 300);
   }, [tab, isRTL]);
 
   return (
     <>
       <Header />
-      <main ref={sectionRef} dir={dir} className="relative min-h-screen flex flex-col md:flex-row items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${bgImg})` }}>
+      <main ref={sectionRef} dir={dir} className="relative overflow-x-hidden min-h-screen flex flex-col md:flex-row items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${bgImg})` }}>
         <div
           ref={textRef}
           className="flex-1 flex flex-col items-center justify-center px-4 md:px-12 lg:px-16 py-8"
