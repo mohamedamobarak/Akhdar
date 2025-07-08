@@ -59,17 +59,18 @@
         "lastName": "اسم العائلة",
         "lastNamePlaceholder": "حسن",
         "email": "البريد الإلكتروني",
-        "emailPlaceholder": "mohamedhassan@gmail.com",
+        "emailPlaceholder": "mohamed@gmail.com",
         "company": "الشركة",
         "companyPlaceholder": "شركة س",
-        "interest": "أنا مهتم بـ:",
-        "buyingCarbon": "شراء أرصدة الكربون الآن",
+        "interest": "مهتم بـ:",
+        "buyingCarbon": "شراء تعويضات الكربون الآن",
         "esgConsultation": "استشارة ESG",
-        "sellCarbon": "بيع أرصدة الكربون",
+        "sellCarbon": "بيع تعويضات الكربون",
         "measureFootprint": "قياس البصمة الكربونية لشركتك",
         "other": "أخرى",
         "messagePlaceholder": "اكتب هنا",
-        "submitButton": "إرسال"
+        "submitButton": "إرسال الرسالة",
+        "submitting": "جاري الإرسال..."
       },
       "errors": {
         "firstNameRequired": "الاسم الأول مطلوب",

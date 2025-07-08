@@ -8,7 +8,7 @@ import MakeImpactSection from './components/MakeImpactSection';
 import ContactUs from './components/ContactUs';
 import backgroundImage from '../../assets/about-us/bg-cover.png';
 import { useTranslation } from 'react-i18next';
-import HeroSection from '@/components/HeroSection';
+import HeroSection from '../../components/HeroSection';
 
 const AboutUs = () => {
   const { t } = useTranslation();
@@ -21,7 +21,7 @@ const AboutUs = () => {
           backgroundImage={backgroundImage}
           heading={t('aboutus.hero.title')}
           paragraph={t('aboutus.hero.subtitle')}
-          firstLineEn="EasySmart"
+          firstLineEn="Easy Smart"
           firstLineAr= " حلول ذكية لتعويض"
           secondLineEn=" Carbon Offsetting"
           secondLineAr=" الكربون بسهولة"
