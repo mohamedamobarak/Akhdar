@@ -74,9 +74,10 @@
       "errors": {
         "firstNameRequired": "الاسم الأول مطلوب",
         "lastNameRequired": "اسم العائلة مطلوب",
-        "invalidEmail": "البريد الإلكتروني غير صحيح",
+        "invalidEmail": "البريد الإلكتروني غير صالح",
         "interestRequired": "يرجى اختيار اهتمام"
-      }
+      },
+      "error": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
     }
   },
   "impactPlatform": {

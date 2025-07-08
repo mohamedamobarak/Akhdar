@@ -76,7 +76,8 @@
         "lastNameRequired": "Last name is required",
         "invalidEmail": "Invalid email",
         "interestRequired": "Please select an interest"
-      }
+      },
+      "error": "Something went wrong. Please try again."
     }
   },
   "impactPlatform": {

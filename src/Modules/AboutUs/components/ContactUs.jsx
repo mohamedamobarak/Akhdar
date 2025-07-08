@@ -12,7 +12,7 @@ import { useMutation } from '@tanstack/react-query';
 
 const sendContactUs = async (payload) => {
     const response = await axios.post(
-        'https://ha858aeok8.execute-api.eu-north1.amazonaws.com/DEV/SendContactUsWithInterestReply',
+        'https://ha858aeok8.execute-api.eu-north-1.amazonaws.com/DEV/SendContactUsWithInterestReply',
         payload
     );
     return response;
@@ -75,8 +75,15 @@ const ContactUs = () => {
             }
         },
         onError: (error) => {
+            // Try to extract a detailed error message from Axios error
+            let errorMsg = t('aboutus.contact.error') || 'Something went wrong. Please try again.';
+            if (error?.response?.data?.error) {
+                errorMsg = error.response.data.error;
+            } else if (error?.message) {
+                errorMsg = error.message;
+            }
+            toast.error(errorMsg, { position: 'top-center' });
             console.error('Contact form submission error:', error);
-            toast.error(t('aboutus.contact.error') || 'Something went wrong. Please try again.', { position: 'top-center' });
         }
     });
 
@@ -89,7 +96,7 @@ const ContactUs = () => {
             company: data.company,
             email: data.email,
             interest: selectedInterest,
-            notes: data.message
+            message: data.message
         };
         mutation.mutate(payload);
     }
