@@ -176,7 +176,12 @@ const ContactUs = () => {
                         className="bg-green-900 cursor-pointer text-white px-24 py-3 rounded-xl text-md font-semibold hover:bg-green-700 transition"
                         disabled={mutation.isLoading}
                     >
-                        {mutation.isLoading ? t('aboutus.contact.inputs.submitting') || 'Submitting...' : t('aboutus.contact.inputs.submitButton')}
+                        {mutation.isLoading ? (
+                            <>
+                                <span className="loader mr-2"></span>
+                                {t('aboutus.contact.inputs.submitting') || 'Submitting...'}
+                            </>
+                        ) : t('aboutus.contact.inputs.submitButton')}
                     </Button>
                 </div>
             </form>
