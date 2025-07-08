@@ -126,10 +126,13 @@ const HeroSection = ({
        {/* buttons */}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <div className="flex flex-row gap-7 justify-center mt-8">
         <a
           href={firstButtonLink}
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
        {firstButtonLink && firstButtonLabel && (
