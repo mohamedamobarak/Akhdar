@@ -7,7 +7,7 @@ import smallGear from '../../../assets/ESG/small_gear.png';
 function Hero() {
   const { t } = useTranslation();
   return (
-    <section className="relative ">
+    <section className="relative mb-[92px] md:mb-[164px] lg:mb-[290px] ">
       <div className="absolute top-0 z-0 left-1/5 flex items-center justify-center gap-1.5">
       <img
         src={gearImg}
