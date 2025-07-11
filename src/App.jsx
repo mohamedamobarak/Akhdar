@@ -6,6 +6,7 @@ import AboutUs from './Modules/AboutUs/AboutUs';
 import ImpactPlatform from './Modules/ImpactPlatform/ImpactPlatform';
 import SignUp from './Modules/Auth/Signup/SignUp';
 import Integration from './Modules/Integration/Integration';
+import CalcCompany from './Modules/CalcCompany/CalcCompany';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/impact-platform" element={<ImpactPlatform />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/api-integration" element={<Integration />} />
+        <Route path="/calc-company" element={<CalcCompany />} />
 
       </Routes>
     </Router>
