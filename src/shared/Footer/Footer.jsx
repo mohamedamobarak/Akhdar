@@ -65,7 +65,7 @@ const Footer = () => {
           <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 ml-0 md:ml-16">
             {Object.entries(footerLinks).map(([category, links]) => (
               <div key={category}>
-                <h3 className="font-medium mb-4 whitespace-nowrap">{category}</h3>
+                <h3 className="font-medium mb-4 whitespace-nowrap ">{category}</h3>
                 <ul className="space-y-2">
                   {Object.entries(links).map(([label, path]) => (
                     <li key={label}>
