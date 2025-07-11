@@ -15,8 +15,8 @@ export default function CarbonImpactDashboard() {
     labels: ["Scope 1", "Scope 2", "Scope 3"],
     datasets: [
       {
-        data: [20, 30, 10],
-        backgroundColor: ["#A8E6A1", "#81F18E", "#6CDB7B"],
+        data: [20, 70, 10],
+        backgroundColor: ["#F6F7F6","#A8E6A1"],
         borderWidth: 0,
         cutout: "75%",
       },

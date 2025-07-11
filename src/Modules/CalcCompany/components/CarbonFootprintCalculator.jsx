@@ -12,7 +12,9 @@ const CarbonFootprintCalculator = () => {
   const [activeTab, setActiveTab] = useState('Companies');
 
   return (
-    <div className="max-w-4xl mx-auto py-1 bg-gray-50 min-h-screen">
+    <div className="bg-[#f5fbf7]">
+
+    <div className=" max-w-4xl mx-auto py-1 bg-gray-50 min-h-screen">
       {/* Toggle Buttons */}
       <div className="flex justify-center mb-12">
         <div className="bg-gray-300 rounded-full p-1 flex">
@@ -128,6 +130,7 @@ const CarbonFootprintCalculator = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

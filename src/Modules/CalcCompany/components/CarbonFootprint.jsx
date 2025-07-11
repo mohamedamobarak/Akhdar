@@ -8,7 +8,9 @@ const CarbonFootprint = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-[#f5fbf7] min-h-screen max-w-4xl mx-auto  px-6 py-12 flex flex-col gap-24">
+        <div className="bg-[#f5fbf7]">
+
+    <div className="min-h-screen max-w-4xl mx-auto  px-6 py-12 flex flex-col gap-24">
       {/* Section 1 */}
       <div className="flex flex-col md:flex-row items-start gap-6">
         {/* Text Content */}
@@ -64,6 +66,7 @@ const CarbonFootprint = () => {
           />
         </div>
       </div>
+    </div>
     </div>
   );
 };
