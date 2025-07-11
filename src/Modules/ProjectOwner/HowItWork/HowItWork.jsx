@@ -1,36 +1,41 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+
 import ProjectOwner1 from '../../../assets/project-owner/projectOwner1.png';
 import ProjectOwner2 from '../../../assets/project-owner/projectOwner2.png';
 import ProjectOwner3 from '../../../assets/project-owner/projectOwner3.png';
 import ProjectOwner4 from '../../../assets/project-owner/projectOwner4.png';
 
 const HowItWorks = () => {
+  const { t } = useTranslation();
+
   const images = [ProjectOwner1, ProjectOwner2, ProjectOwner3, ProjectOwner4];
+
   const steps = [
     {
       number: 1,
-      title: "Submit Your Project",
-      description: "Share project details and expected carbon reductions",
-      side: "right"
+      title: t('howItWorks.steps.1.title'),
+      description: t('howItWorks.steps.1.description'),
+      side: 'right',
     },
     {
       number: 2,
-      title: "Project Design",
-      description: "High-Quality PDD Creation",
-      side: "left"
+      title: t('howItWorks.steps.2.title'),
+      description: t('howItWorks.steps.2.description'),
+      side: 'left',
     },
     {
       number: 3,
-      title: "Implementation",
-      description: "Streamlining Recurring Collaborations",
-      side: "right"
+      title: t('howItWorks.steps.3.title'),
+      description: t('howItWorks.steps.3.description'),
+      side: 'right',
     },
     {
       number: 4,
-      title: "Commercialization",
-      description: "Selling to the Market with a Unified Dashboard",
-      side: "left"
-    }
+      title: t('howItWorks.steps.4.title'),
+      description: t('howItWorks.steps.4.description'),
+      side: 'left',
+    },
   ];
 
   return (
@@ -39,7 +44,7 @@ const HowItWorks = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-teal-700 mb-4">
-            How It Works?
+            {t('howItWorks.title')}
           </h1>
         </div>
 
@@ -60,7 +65,7 @@ const HowItWorks = () => {
                 <div
                   className={`flex flex-nowrap items-center ${
                     step.side === 'left'
-                      ? 'flex-row-reverse sm:ml-10  justify-evenly  lg:justify-center'
+                      ? 'flex-row-reverse sm:ml-10 justify-evenly lg:justify-center'
                       : ''
                   }`}
                 >
@@ -101,7 +106,7 @@ const HowItWorks = () => {
                           <h3 className="text-sm sm:text-lg md:text-xl font-bold text-gray-800 mb-2">
                             {step.title}
                           </h3>
-                          <p className="text-xs sm:text-base text-gray-600 leading-relaxed  text-center">
+                          <p className="text-xs sm:text-base text-gray-600 leading-relaxed text-center">
                             {step.description}
                           </p>
                         </div>
@@ -112,7 +117,7 @@ const HowItWorks = () => {
                   {/* Image */}
                   <div
                     className={`${
-                      step.side === 'left' ? '  md:w-auto md:mr-56 mr-2' : ' md:mr-20 ml-11'
+                      step.side === 'left' ? 'md:w-auto md:mr-56 mr-2' : 'md:mr-20 ml-11'
                     }`}
                   >
                     <img
@@ -130,7 +135,7 @@ const HowItWorks = () => {
         {/* CTA */}
         <div className="text-center mt-20">
           <button className="bg-green-400 hover:bg-green-500 text-white font-semibold py-3 px-8 rounded-lg text-sm sm:text-base md:text-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
-            Talk to Us
+            {t('howItWorks.cta')}
           </button>
         </div>
       </div>
