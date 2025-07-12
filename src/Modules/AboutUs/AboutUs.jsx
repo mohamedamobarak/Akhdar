@@ -16,7 +16,7 @@ const AboutUs = () => {
   return (
     <>
       <Header />
-      <main className='flex flex-col justify-center px-2 min-h-screen bg-bg md:px-8'>
+      <main className='flex flex-col justify-center px-2 min-h-screen bg-bg md:px-8 overflow-x-hidden'>
       <HeroSection
           backgroundImage={backgroundImage}
           heading={t('aboutus.hero.title')}
