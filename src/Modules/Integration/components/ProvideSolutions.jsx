@@ -64,7 +64,7 @@ const ProvideSolutions = () => {
     // Generate SVG paths
     const paths = `
       <path d="M ${topLeftX} ${topLeftY} Q ${(topLeftX + centerX) / 2} ${topLeftY - 5} ${centerX} ${centerY}"
-            stroke="#81F18E" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" class="opacity-90" />
+            stroke="#81F18E" stroke-width="5" fill="none" vector-effect="non-scaling-stroke" class="opacity-90" />
       <path d="M ${topRightX} ${topRightY} Q ${(topRightX + centerX) / 2} ${topRightY - 5} ${centerX} ${centerY}"
             stroke="#81F18E" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" class="opacity-90" />
       <path d="M ${bottomLeftX} ${bottomLeftY} L ${centerX} ${centerY}"
