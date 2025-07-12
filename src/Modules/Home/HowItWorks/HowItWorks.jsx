@@ -60,7 +60,7 @@ const HowItWorks = () => {
             </div>
 
             {/* Step 2 */}
-            <div className="relative flex flex-col md:flex-row items-center">
+            <div className="relative flex flex-col md:flex-row items-center ">
               <div className="flex-1 md:pr-12 order-1 mb-6 md:mb-0">
                 <div className="w-full max-w-sm mx-auto md:ml-auto">
                   <img 
