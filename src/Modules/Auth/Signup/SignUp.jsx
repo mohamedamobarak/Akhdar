@@ -52,7 +52,7 @@ const SignUp = () => {
   return (
     <>
       <Header />
-      <main ref={sectionRef} dir={dir} className="relative overflow-x-hidden min-h-screen flex flex-col md:flex-row items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${bgImg})` }}>
+      <main ref={sectionRef} dir={dir} className="relative overflow-x-hidden min-h-[900px] flex flex-col md:flex-row items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${bgImg})`, backgroundAttachment: 'fixed' }}>
         <div
           ref={textRef}
           className="flex-1 flex flex-col items-center justify-center px-4 md:px-12 lg:px-16 py-8"
