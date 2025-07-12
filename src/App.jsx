@@ -1,27 +1,28 @@
 import React from 'react'
 import './App.css'
-import Header from './Modules/Shared/Header/Header'
-import HeroSection from './Modules/Home/Hero/HeroSection'
-import Benefits from './Modules/Home/Benefits/Benefits'
-import HowItWorks from './Modules/Home/HowItWorks/HowItWorks'
-import Features from './Modules/Home/Features/Features'
-import Partners from './Modules/Home/Partners/Partners'
-import Footer from './shared/Footer/Footer'
-import { useTranslation } from 'react-i18next';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './Modules/Home/HomePage';
+import AboutUs from './Modules/AboutUs/AboutUs';
+import ImpactPlatform from './Modules/ImpactPlatform/ImpactPlatform';
+import SignUp from './Modules/Auth/Signup/SignUp';
+import Integration from './Modules/Integration/Integration';
+import CalcCompany from './Modules/CalcCompany/CalcCompany';
+import ProjectOwner from './Modules/ProjectOwner/ProjectOwner';
 
 function App() {
-    const { t } = useTranslation();
-
   return (
-    <>
-      <Header/>
-      <HeroSection/>
-      <Benefits/>
-      <HowItWorks/>
-      <Features/>
-      <Partners/>
-      <Footer/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/project" element={<ProjectOwner />} />
+        <Route path="/impact-platform" element={<ImpactPlatform />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/api-integration" element={<Integration />} />
+        <Route path="/calc-company" element={<CalcCompany />} />
+
+      </Routes>
+    </Router>
   )
 }
 export default App
