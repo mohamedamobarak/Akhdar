@@ -1,5 +1,7 @@
 import React from 'react'
 import globe from "../../../assets/ESG/Earthh.png"; // Adjust path as needed
+import fogg from "../../../assets/ESG/fogg.png"; // Adjust path as needed
+import foggMiddle from "../../../assets/ESG/foggmiddle.png"; // Adjust path as needed
 const years = [
   { year: "2025", top: "92%", left: "20%", active: true },
   { year: "2026", top: "62.5%", left: "1.5%" },
@@ -42,15 +44,47 @@ function NetZeroJourney() {
     };
   };
   return (
-    <>
-    <h3 className='text-primary  font-bold text-[45px] text-ceter mb-8'>The Way to Become a Net-Zero Company</h3>
-    <h3 className='text-primary  font-bold text-[45px] text-ceter mb-8'>The Way to Become a Net-Zero Company</h3>
-    <div className="relative w-[387.6px] h-[387.6px] mx-auto text-center flex items-center justify-center ">
+    <div className='max-w-[1166px] m-auto'>
+    <h3 className='text-primary  font-bold lg:text-[45px] text-center mb-4'>The Way to Become a Net-Zero Company</h3>
+    <h3 className='font-medium lg:text-2xl text-center mb-8'>Join forward-thinking businesses and individuals investing in a greener future. Adjust your timeline and discover the best carbon credit options for your journey to net zero.</h3>
+    <h3 className='font-medium lg:text-2xl text-center mb-16'>Select your offset strategy and see the impact unfold!</h3>
+    <div className="relative w-[387.6px] h-[387.6px] mx-auto text-center flex items-center justify-center px-3">
       {/* Globe Image */}
+     {Array.from({ length: 4 }).map((_, i) => (
+  <img
+    key={i}
+    src={fogg}
+    alt="Fog overlay"
+    className="absolute w-full h-full object-cover pointer-events-none brightness-[80%]"
+    style={{
+      transform: `rotate(${-i * 60}deg) translateX(50px)`,   // push it out
+      transformOrigin: "50% 50%",                            // pivot at centre
+      opacity: 0.8                                           // optional: soften
+    }}
+  />
+))}
+ {Array.from({ length: 3 }).map((_, i) => (
+  <img
+    key={i}
+    src={fogg}
+    alt="Fog overlay"
+    className="absolute w-full h-full object-cover pointer-events-none brightness-[80%]"
+    style={{
+      transform: `rotate(${-i * 90}deg) translateX(40px)`,   // push it out
+      transformOrigin: "50% 50%",                            // pivot at centre
+      opacity: 0.8                                           // optional: soften
+    }}
+  />
+))}
+<img
+    src={foggMiddle}
+    alt="Fog overlay"
+    className="absolute w-full h-full object-cover top-0 left-0 z-30 brightness-[30%]"
+  />
       <img
         src={globe}
         alt="Earth"
-        className="  w-[283.79px] h-[283.79] object-contain z-10 relative"
+        className=" brightness-[60%]  w-[283.79px] h-[283.79] object-contain z-20 relative"
       />
 
       {/* Year Labels */}
@@ -80,8 +114,6 @@ function NetZeroJourney() {
                 <div
             className="absolute text-sm whitespace-nowrap"
             style={{
-            //   top: item.top,
-            //   left: item.left,
               color: item.active ? "var(--color-main)" : "#004D40",
               fontWeight: "bold" ,
               ...getTextPosition(item.year, index)
@@ -91,7 +123,6 @@ function NetZeroJourney() {
           </div>
           </div>
           </div>
-          {/* {item.year} */}
         </div>
       ))}
 
@@ -112,7 +143,22 @@ function NetZeroJourney() {
         />
       </div>
     </div>
-        </>
+    <div className="bg-primary lg:px-24 lg:my-8 md:px-8 md:py-5 flex justify-between items-center rounded-2xl">
+          <div>
+          <p className="text-main font-[600] lg:text-2xl md:text-[14.48px]  mb-4">
+            Offset Now (2025)
+          </p>
+          <p className="text-[#FDFBF1] font-medium lg:text-xl md:text-[12.06px] mb-4 ]">
+          Take immediate action by purchasing verified carbon credits to balance your current emissions.
+          </p>
+          </div>
+          <button
+  className="bg-main rounded-[13px] px-[24px] py-[12px] text-[22px] font-medium"
+>
+  Book a Meeting
+</button>
+    </div>
+        </div>
 
   )
 }
