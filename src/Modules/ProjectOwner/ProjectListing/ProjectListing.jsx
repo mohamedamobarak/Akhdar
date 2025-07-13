@@ -45,21 +45,21 @@ const ProjectListing = () => {
 
           {/* Desktop Layout */}
           <div className="hidden md:block relative w-full h-[500px]">
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-30 h-30 lg:w-64 lg:h-64 lg:border-4 border-green-400 rounded-full flex items-center justify-center bg-green-50 z-20">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-30 h-30 lg:w-64 lg:h-64 lg:border-4 border-green-400 rounded-full flex items-center justify-center  z-20">
               <img src={leaf} alt="AKHDAR Logo" className="w-full h-auto object-contain" />
 
               {/* Connection Dots */}
               <div className="absolute top-10 left-5 border-2 rounded-full border-green-300 transform -translate-y-1/2 shadow-lg">
                 <div className="w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
               </div>
-              <div className="absolute top-10 right-5 transform -translate-y-1/2 border-2 border-green-300 shadow-lg">
-                <div className="w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
+              <div className="absolute top-10 right-5 transform rounded-full -translate-y-1/2 border-2 border-green-300 shadow-lg">
+                <div className="w-4 h-4 bg-green-400  border-2 rounded-full border-white"></div>
               </div>
-              <div className="absolute bottom-10 left-5 transform translate-y-1/2 border-2 border-green-300 shadow-lg">
-                <div className="w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
+              <div className="absolute bottom-10 left-5 transform rounded-full translate-y-1/2 border-2 border-green-300 shadow-lg">
+                <div className="w-4 h-4 bg-green-400  border-2 rounded-full border-white"></div>
               </div>
-              <div className="absolute bottom-10 right-5 transform translate-y-1/2 border-2 border-green-300 shadow-lg">
-                <div className="w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
+              <div className="absolute bottom-10 right-5 transform rounded-full translate-y-1/2 border-2 border-green-300 shadow-lg">
+                <div className="w-4 h-4 bg-green-400  border-2 rounded-full border-white"></div>
               </div>
             </div>
 
