@@ -7,6 +7,8 @@ import { Input } from '@/components/ui/Input'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import { Toaster, toast } from 'sonner'
+import { puplicAxiosInstance } from '@/services/api/apiInstance'
+import { CONTACT_URLS } from '@/services/api/apiConfig'
 
 const ContactSalesForm = () => {
   const { t } = useTranslation()
@@ -19,7 +21,7 @@ const ContactSalesForm = () => {
     notes: z.string().optional(),
   })
 
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+  const { register, handleSubmit, formState: { errors,isSubmitting }, reset } = useForm({mode:`onChange`},{
     resolver: zodResolver(schema),
     defaultValues: {
       firstName: '',
@@ -30,9 +32,10 @@ const ContactSalesForm = () => {
     },
   })
 
-  const onSubmit = () => {
+  const onSubmit =async (data) => {
     try {
       // Send form data to server
+      await puplicAxiosInstance.post(CONTACT_URLS.CONTACT_WITHOUT_INTEREST, data)
       toast.success(t('contactSales.success'))
       reset()
     } catch (error) {
@@ -46,7 +49,7 @@ const ContactSalesForm = () => {
   return (
     <>
       <Toaster position="top-center" />
-      <div className='bg-[#F6F7F6] px-1 pt-1 pb-8'>
+      <div id="contact" className='bg-[#F6F7F6] px-1 pt-1 pb-8'>
 
         <form
           onSubmit={handleSubmit(onSubmit)}

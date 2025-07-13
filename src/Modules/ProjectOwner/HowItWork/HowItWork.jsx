@@ -72,7 +72,7 @@ const HowItWorks = () => {
                   {/* Content Card */}
                   <div
                     className={`relative w-5/12 ${
-                      step.side === 'left' ? '-mr-4' : 'md:ml-14 ml-5'
+                      step.side === 'left' ? '-me-0 me-auto ms-1' : 'md:ms-14 ms-5'
                     }`}
                   >
                     <div
@@ -85,14 +85,14 @@ const HowItWorks = () => {
                           step.side === 'left'
                             ? 'rounded-br-4xl border-l-0'
                             : 'right-0 rounded-bl-4xl border-r-0'
-                        } top-0 border border-t-0 w-4 h-4 bg-[#F6F7F6]`}
+                        } top-0 border border-t-0 w-4 h-4 bg-gray-100`}
                       ></div>
                       <div
                         className={`absolute ${
                           step.side === 'left'
                             ? 'rounded-tr-4xl border-l-0'
                             : 'right-0 rounded-tl-4xl border-r-0'
-                        } bottom-0 border border-b-0 w-4 h-4 bg-[#F6F7F6]`}
+                        } bottom-0 border border-b-0 w-4 h-4 bg-gray-100`}
                       ></div>
                     </div>
                     <div className="bg-white rounded-xl md:p-6 p-1 shadow-lg border border-gray-200">
@@ -117,7 +117,7 @@ const HowItWorks = () => {
                   {/* Image */}
                   <div
                     className={`${
-                      step.side === 'left' ? 'md:w-auto md:mr-56 mr-2' : 'md:mr-20 ml-11'
+                      step.side === 'left' ? 'md:w-auto md:me-56 me-2' : 'md:me-20 ms-auto'
                     }`}
                   >
                     <img
