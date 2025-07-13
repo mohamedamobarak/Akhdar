@@ -32,12 +32,6 @@ const CarbonOffsetInterface = () => {
       title: t("offset.steps.offset.title"),
       description: t("offset.steps.offset.description"),
       buttonText: t("offset.steps.offset.button")
-    },
-    {
-      id: 4,
-      title: t("offset.steps.track.title"),
-      description: t("offset.steps.track.description"),
-      buttonText: t("offset.steps.track.button")
     }
   ];
 

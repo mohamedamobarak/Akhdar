@@ -5,7 +5,7 @@ const CalcHome = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="bg-[#F6F7F6] min-h-[400px] flex items-center">
+        <section className="bg-[#f5fbf7] min-h-[400px] flex items-center">
             <div className="hero-layer"></div>
             <div className="container mx-auto px-4 py-20 text-center">
                 <h1 className="text-[#003B2D] text-2xl sm:text-3xl md:text-5xl font-bold max-w-3xl mx-auto leading-tight mb-4">
