@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaChevronDown, FaChevronUp, FaLink } from 'react-icons/fa';
 import faq from '../../../assets/project-owner/faq.png';
 
 const FAQItem = ({ question, answer, isOpen, onToggle }) => (
@@ -89,9 +89,10 @@ export default function CarbonOffsetFAQ() {
             <button className="cursor-pointer bg-green-500 hover:bg-green-600 text-white font-medium px-7 py-2 rounded-lg transition-colors">
               {t('faq.getStartedButton')}
             </button>
-            <button className="cursor-pointer bg-white hover:bg-gray-50 text-gray-700 font-medium px-8 py-3 rounded-lg border border-gray-200 transition-colors">
-              {t('faq.fillFormButton')}
-            </button>
+            
+            <a href="#contact" className="cursor-pointer bg-white hover:bg-gray-50 text-gray-700 font-medium px-8 py-2 rounded-lg border border-gray-200 transition-colors">
+                {t('faq.fillFormButton')}
+            </a>
           </div>
         </div>
       </div>
