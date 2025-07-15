@@ -1,0 +1,6 @@
+.calcBgImg{
+    background-image: url('../../assets/calc-company/anthony.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
