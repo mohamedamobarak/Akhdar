@@ -180,95 +180,143 @@
       "password": "Password",
       "confirmPassword": "Confirm Password",
       "signUpButton": "Sign up"
-    }
-  },
-  "integration": {
-    "direction": "ltr",
-    "hero": {
-      "title": "Embed Carbon offsetting into Every Transaction with AKHDAR API",
-      "subtitle": "Effortlessly integrate carbon offsetting into transactions, enhance sustainability, and showcase your commitment to the environment.",
-      "getStarted": "Get Started",
-      "learnMore": "Learn More"
     },
-    "whyIntegrate": {
-      "title": "Why Integrate With AKHDAR?",
-      "subtitle": "Akhdar has facilitated thousands of transactions, contributing to global biodiversity and advancing climate action.",
-      "stats": [
-        {
-          "icon": "🌱",
-          "percentage": "+10%",
-          "description": "Increase in sales conversion with sustainability initiatives at checkout"
-        },
-        {
-          "icon": "🌍",
-          "percentage": "+29%",
-          "description": "Increase in customer acquisition using climate action incentives"
-        },
-        {
-          "icon": "🏆",
-          "percentage": "+23%",
-          "description": "Increase in average order experienced by climate positive brands"
-        }
-      ]
+    "startSustainability": "Take the First Step Towards Sustainability",
+    "formSubtitle": "Start your EGS journey with our interactive form. Fill out your company information and discover your sustainability impact.",
+    "companyInfo": "1- Company information",
+    "companyName": "Company Name",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "industry": "2- Industry",
+    "companySize": "3- Company Size",
+    "country": "4- Country",
+    "selectIndustry": "Select Industry",
+    "selectSize": "Select Size",
+    "selectCountry": "Select Country",
+    "small": "Small",
+    "medium": "Medium",
+    "large": "Large",
+    "saudi": "Saudi Arabia",
+    "egypt": "Egypt",
+    "uae": "UAE",
+    "option1": "Dummy Option 1",
+    "option2": "Dummy Option 2",
+    "option3": "Dummy Option 3",
+    "emissionReporting": "Emission Reporting",
+    "trackingEmissions": "Are you currently tracking your carbon emissions?",
+    "emissionScopes": "Which emission scopes do you track?",
+    "lcaTitle": "Life Cycle Analysis (LCA)",
+    "lcaQuestion": "Would you like to analyze the life cycle of your products?",
+    "procurement": "Sustainable Procurement",
+    "decarbonization": "Decarbonization Strategy",
+    "agreePrivacy": "I agree to the privacy policy.",
+    "egsErrors": {
+      "companyNameRequired": "Company name is required",
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "phoneRequired": "Phone number is required",
+      "industryRequired": "Industry is required",
+      "companySizeRequired": "Company size is required",
+      "countryRequired": "Country is required",
+      "trackingEmissionsRequired": "Please select your emissions tracking status",
+      "emissionScopesRequired": "Please select at least one scope",
+      "lcaRequired": "Please select LCA status",
+      "procurementRequired": "Please select procurement status",
+      "decarbonizationRequired": "Please select decarbonization status",
+      "privacyConsentRequired": "You must agree to the privacy policy"
     },
-    "howItWorks": {
-      "title": "How It Works?",
-      "steps": [
-        {
-          "number": "1",
-          "title": "Integrate",
-          "description": "Seamlessly embed AKHDAR's API into your e-commerce store or platform in under 10 minutes and start enabling carbon offsetting for your customers instantly."
-        },
-        {
-          "number": "2",
-          "title": "Contribute",
-          "description": "With every transaction, a micro-contribution is sent to verified carbon offset projects. Track and display your climate impact in real time, reinforcing your commitment to sustainability."
-        },
-        {
-          "number": "3",
-          "title": "Showcase Your Impact",
-          "description": "Embed our live carbon reduction tracker directly onto your website and watch it update with every offset. Our customizable impact dashboard allows you to share detailed sustainability insights with your customers."
-        }
-      ],
-      "congratulations": "Congratulations!",
-      "offsetMessage": "You have offset 1.8t of CO2",
-      "keepUp": "Keep up!",
-      "youAreOffsetting": "You are Offsetting",
-      "co2": "CO₂",
-      "offsetAmount": "100t offset",
-      "ofYourFootprint": "of your footprint.",
-      "talkToUs": "Talk to Us"
-    },
-    "empowerUsers": {
-      "empowerTitle": "Empower Your Users!",
-      "empowerDescription": "Akhdar's API lets you give your users the ability to take climate action that's important to them.",
-      "shareTitle": "Share Your Impact!",
-      "shareDescription": "Akhdar make it easy to share your impact with your customers in language they can understand."
-    },
-    "provideSolutions": {
-      "title": "We Provide Solutions for Different Industries",
-      "industries": [
-        {
-          "name": "E-Commerce",
-          "description": "Offer carbon-neutral products, enhancing customer satisfaction and brand loyalty by supporting sustainable shopping choice."
-        },
-        {
-          "name": "Fintech",
-          "description": "Seamlessly offer carbon offsetting services to meet growing consumer demand for climate-conscious financial products"
-        },
-        {
-          "name": "Logistics",
-          "description": "Offset their carbon emissions in real-time, providing transparency and accountability in their supply chains while enhancing your sustainability commitments"
-        },
-        {
-          "name": "Mobile Apps",
-          "description": "Enable real-time carbon emission offsets directly from your app, ensuring transparency and accountability across your supply chain while strengthening your sustainability goals."
-        }
-      ]
-    },
-    "trackYourCarbon": {
-      "title": "Track your carbon, support climate action, and sell sustainably.",
-      "cta": "Talk to Us"
+    "integration": {
+      "direction": "ltr",
+      "hero": {
+        "title": "Embed Carbon offsetting into Every Transaction with AKHDAR API",
+        "subtitle": "Effortlessly integrate carbon offsetting into transactions, enhance sustainability, and showcase your commitment to the environment.",
+        "getStarted": "Get Started",
+        "learnMore": "Learn More"
+      },
+      "whyIntegrate": {
+        "title": "Why Integrate With AKHDAR?",
+        "subtitle": "Akhdar has facilitated thousands of transactions, contributing to global biodiversity and advancing climate action.",
+        "stats": [
+          {
+            "icon": "🌱",
+            "percentage": "+10%",
+            "description": "Increase in sales conversion with sustainability initiatives at checkout"
+          },
+          {
+            "icon": "🌍",
+            "percentage": "+29%",
+            "description": "Increase in customer acquisition using climate action incentives"
+          },
+          {
+            "icon": "🏆",
+            "percentage": "+23%",
+            "description": "Increase in average order experienced by climate positive brands"
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "How It Works?",
+        "steps": [
+          {
+            "number": "1",
+            "title": "Integrate",
+            "description": "Seamlessly embed AKHDAR's API into your e-commerce store or platform in under 10 minutes and start enabling carbon offsetting for your customers instantly."
+          },
+          {
+            "number": "2",
+            "title": "Contribute",
+            "description": "With every transaction, a micro-contribution is sent to verified carbon offset projects. Track and display your climate impact in real time, reinforcing your commitment to sustainability."
+          },
+          {
+            "number": "3",
+            "title": "Showcase Your Impact",
+            "description": "Embed our live carbon reduction tracker directly onto your website and watch it update with every offset. Our customizable impact dashboard allows you to share detailed sustainability insights with your customers."
+          }
+        ],
+        "congratulations": "Congratulations!",
+        "offsetMessage": "You have offset 1.8t of CO2",
+        "keepUp": "Keep up!",
+        "youAreOffsetting": "You are Offsetting",
+        "co2": "CO₂",
+        "offsetAmount": "100t offset",
+        "ofYourFootprint": "of your footprint.",
+        "talkToUs": "Talk to Us"
+      },
+      "empowerUsers": {
+        "empowerTitle": "Empower Your Users!",
+        "empowerDescription": "Akhdar's API lets you give your users the ability to take climate action that's important to them.",
+        "shareTitle": "Share Your Impact!",
+        "shareDescription": "Akhdar make it easy to share your impact with your customers in language they can understand."
+      },
+      "provideSolutions": {
+        "title": "We Provide Solutions for Different Industries",
+        "industries": [
+          {
+            "name": "E-Commerce",
+            "description": "Offer carbon-neutral products, enhancing customer satisfaction and brand loyalty by supporting sustainable shopping choice."
+          },
+          {
+            "name": "Fintech",
+            "description": "Seamlessly offer carbon offsetting services to meet growing consumer demand for climate-conscious financial products"
+          },
+          {
+            "name": "Logistics",
+            "description": "Offset their carbon emissions in real-time, providing transparency and accountability in their supply chains while enhancing your sustainability commitments"
+          },
+          {
+            "name": "Mobile Apps",
+            "description": "Enable real-time carbon emission offsets directly from your app, ensuring transparency and accountability across your supply chain while strengthening your sustainability goals."
+          }
+        ]
+      },
+      "trackYourCarbon": {
+        "title": "Track your carbon, support climate action, and sell sustainably.",
+        "cta": "Talk to Us"
+      }
     }
   },
 
