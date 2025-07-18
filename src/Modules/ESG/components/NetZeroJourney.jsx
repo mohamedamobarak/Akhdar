@@ -1,4 +1,6 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
+import i18n from '../../../../public/locales.js';
 import globe from "../../../assets/ESG/Earthh.png"; // Adjust path as needed
 import fogg from "../../../assets/ESG/fogg.png"; // Adjust path as needed
 import foggMiddle from "../../../assets/ESG/foggmiddle.png"; // Adjust path as needed
@@ -12,6 +14,10 @@ const years = [
 { year: "2031 & Beyond", top: "92%", left: "80%" },
 ];
 function NetZeroJourney() {
+  const { t } = useTranslation();
+  const lang = i18n.language || 'en';
+  const isRTL = lang === 'ar';
+
     const getTextPosition = (year) => {
     // Left side years (2025, 2026, 2027) - text to the left
     if (['2025', '2026', '2027'].includes(year)) {
@@ -44,11 +50,11 @@ function NetZeroJourney() {
     };
   };
   return (
-    <div className='max-w-[1166px] m-auto'>
-    <h3 className='text-primary  font-bold lg:text-[45px] text-center mb-4'>The Way to Become a Net-Zero Company</h3>
-    <h3 className='font-medium lg:text-2xl text-center mb-8'>Join forward-thinking businesses and individuals investing in a greener future. Adjust your timeline and discover the best carbon credit options for your journey to net zero.</h3>
-    <h3 className='font-medium lg:text-2xl text-center mb-16'>Select your offset strategy and see the impact unfold!</h3>
-    <div className="relative w-[387.6px] h-[387.6px] mx-auto text-center flex items-center justify-center px-3">
+    <div className='max-w-full overflow-x-hidden px-4 md:max-w-4xl lg:max-w-[1166px] m-auto' dir={isRTL ? 'rtl' : 'ltr'} style={{ direction: isRTL ? 'rtl' : 'ltr' }}>
+    <h3 className='text-primary  font-bold lg:text-[45px] text-center mb-4'>{t('esg.netZeroJourney.title')}</h3>
+    <h3 className='font-medium lg:text-2xl text-center mb-8'>{t('esg.netZeroJourney.subtitle1')}</h3>
+    <h3 className='font-medium lg:text-2xl text-center mb-16'>{t('esg.netZeroJourney.subtitle2')}</h3>
+    <div className="relative w-[387.6px] h-[387.6px] mx-auto text-center flex items-center justify-center px-3" dir="ltr" style={{ direction: 'ltr' }}>
       {/* Globe Image */}
      {Array.from({ length: 4 }).map((_, i) => (
   <img
@@ -143,19 +149,19 @@ function NetZeroJourney() {
         />
       </div>
     </div>
-    <div className="bg-primary lg:px-24 lg:my-8 md:px-8 md:py-5 flex justify-between items-center rounded-2xl">
+    <div className="bg-primary px-4 py-2 lg:px-24 lg:my-8 md:px-8 md:py-5 flex justify-between items-center rounded-2xl">
           <div>
-          <p className="text-main font-[600] lg:text-2xl md:text-[14.48px]  mb-4">
-            Offset Now (2025)
+          <p className="text-main font-[600] text-[10px] lg:text-2xl md:text-[14.48px]  mb-4">
+            {t('esg.netZeroJourney.offsetNow.title')}
           </p>
-          <p className="text-[#FDFBF1] font-medium lg:text-xl md:text-[12.06px] mb-4 ]">
-          Take immediate action by purchasing verified carbon credits to balance your current emissions.
+          <p className="text-[#FDFBF1] font-medium text-[8px] lg:text-xl md:text-[12.06px] ">
+          {t('esg.netZeroJourney.offsetNow.description')}
           </p>
           </div>
           <button
-  className="bg-main rounded-[13px] px-[24px] py-[12px] text-[22px] font-medium"
+  className="bg-main rounded-[13px] px-[10px] lg:px-[24px] py-[6px] lg:py-[12px] text-[8px] lg:text-[22px] md:text-[13.27] font-medium whitespace-nowrap"
 >
-  Book a Meeting
+  {t('esg.netZeroJourney.offsetNow.button')}
 </button>
     </div>
         </div>
