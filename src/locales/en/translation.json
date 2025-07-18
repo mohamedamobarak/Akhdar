@@ -1,6 +1,21 @@
 {
   "welcome": "Welcome",
   "login": "Login",
+  "Login": {
+    "direction": "ltr",
+    "NoAccount": "Don't have an account yet?",
+    "createOne": "Create one for free.",
+    "email": "Email",
+    "password": "Password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot your password?",
+    "loginButton": "Login",
+    "loggingIn": "Logging in...",
+    "login": "Login",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Please enter a valid email address",
+    "passwordRequired": "Password is required"
+  },
   "aboutus": {
     "hero": {
       "title": "Easy Smart Carbon Offsetting",
@@ -180,161 +195,209 @@
       "password": "Password",
       "confirmPassword": "Confirm Password",
       "signUpButton": "Sign up"
+    },
+    "startSustainability": "Take the First Step Towards Sustainability",
+    "formSubtitle": "Start your EGS journey with our interactive form. Fill out your company information and discover your sustainability impact.",
+    "companyInfo": "1- Company information",
+    "companyName": "Company Name",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "industry": "2- Industry",
+    "companySize": "3- Company Size",
+    "country": "4- Country",
+    "selectIndustry": "Select Industry",
+    "selectSize": "Select Size",
+    "selectCountry": "Select Country",
+    "small": "Small",
+    "medium": "Medium",
+    "large": "Large",
+    "saudi": "Saudi Arabia",
+    "egypt": "Egypt",
+    "uae": "UAE",
+    "option1": "Dummy Option 1",
+    "option2": "Dummy Option 2",
+    "option3": "Dummy Option 3",
+    "emissionReporting": "Emission Reporting",
+    "trackingEmissions": "Are you currently tracking your carbon emissions?",
+    "emissionScopes": "Which emission scopes do you track?",
+    "lcaTitle": "Life Cycle Analysis (LCA)",
+    "lcaQuestion": "Would you like to analyze the life cycle of your products?",
+    "procurement": "Sustainable Procurement",
+    "decarbonization": "Decarbonization Strategy",
+    "agreePrivacy": "I agree to the privacy policy.",
+    "egsErrors": {
+      "companyNameRequired": "Company name is required",
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "phoneRequired": "Phone number is required",
+      "industryRequired": "Industry is required",
+      "companySizeRequired": "Company size is required",
+      "countryRequired": "Country is required",
+      "trackingEmissionsRequired": "Please select your emissions tracking status",
+      "emissionScopesRequired": "Please select at least one scope",
+      "lcaRequired": "Please select LCA status",
+      "procurementRequired": "Please select procurement status",
+      "decarbonizationRequired": "Please select decarbonization status",
+      "privacyConsentRequired": "You must agree to the privacy policy"
+    },
+    "integration": {
+      "direction": "ltr",
+      "hero": {
+        "title": "Embed Carbon offsetting into Every Transaction with AKHDAR API",
+        "subtitle": "Effortlessly integrate carbon offsetting into transactions, enhance sustainability, and showcase your commitment to the environment.",
+        "getStarted": "Get Started",
+        "learnMore": "Learn More"
+      },
+      "whyIntegrate": {
+        "title": "Why Integrate With AKHDAR?",
+        "subtitle": "Akhdar has facilitated thousands of transactions, contributing to global biodiversity and advancing climate action.",
+        "stats": [
+          {
+            "icon": "🌱",
+            "percentage": "+10%",
+            "description": "Increase in sales conversion with sustainability initiatives at checkout"
+          },
+          {
+            "icon": "🌍",
+            "percentage": "+29%",
+            "description": "Increase in customer acquisition using climate action incentives"
+          },
+          {
+            "icon": "🏆",
+            "percentage": "+23%",
+            "description": "Increase in average order experienced by climate positive brands"
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "How It Works?",
+        "steps": [
+          {
+            "number": "1",
+            "title": "Integrate",
+            "description": "Seamlessly embed AKHDAR's API into your e-commerce store or platform in under 10 minutes and start enabling carbon offsetting for your customers instantly."
+          },
+          {
+            "number": "2",
+            "title": "Contribute",
+            "description": "With every transaction, a micro-contribution is sent to verified carbon offset projects. Track and display your climate impact in real time, reinforcing your commitment to sustainability."
+          },
+          {
+            "number": "3",
+            "title": "Showcase Your Impact",
+            "description": "Embed our live carbon reduction tracker directly onto your website and watch it update with every offset. Our customizable impact dashboard allows you to share detailed sustainability insights with your customers."
+          }
+        ],
+        "congratulations": "Congratulations!",
+        "offsetMessage": "You have offset 1.8t of CO2",
+        "keepUp": "Keep up!",
+        "youAreOffsetting": "You are Offsetting",
+        "co2": "CO₂",
+        "offsetAmount": "100t offset",
+        "ofYourFootprint": "of your footprint.",
+        "talkToUs": "Talk to Us"
+      },
+      "empowerUsers": {
+        "empowerTitle": "Empower Your Users!",
+        "empowerDescription": "Akhdar's API lets you give your users the ability to take climate action that's important to them.",
+        "shareTitle": "Share Your Impact!",
+        "shareDescription": "Akhdar make it easy to share your impact with your customers in language they can understand."
+      },
+      "provideSolutions": {
+        "title": "We Provide Solutions for Different Industries",
+        "industries": [
+          {
+            "name": "E-Commerce",
+            "description": "Offer carbon-neutral products, enhancing customer satisfaction and brand loyalty by supporting sustainable shopping choice."
+          },
+          {
+            "name": "Fintech",
+            "description": "Seamlessly offer carbon offsetting services to meet growing consumer demand for climate-conscious financial products"
+          },
+          {
+            "name": "Logistics",
+            "description": "Offset their carbon emissions in real-time, providing transparency and accountability in their supply chains while enhancing your sustainability commitments"
+          },
+          {
+            "name": "Mobile Apps",
+            "description": "Enable real-time carbon emission offsets directly from your app, ensuring transparency and accountability across your supply chain while strengthening your sustainability goals."
+          }
+        ]
+      },
+      "trackYourCarbon": {
+        "title": "Track your carbon, support climate action, and sell sustainably.",
+        "cta": "Talk to Us"
+      }
     }
   },
-  "integration": {
-    "direction": "ltr",
-    "hero": {
-      "title": "Embed Carbon offsetting into Every Transaction with AKHDAR API",
-      "subtitle": "Effortlessly integrate carbon offsetting into transactions, enhance sustainability, and showcase your commitment to the environment.",
-      "getStarted": "Get Started",
-      "learnMore": "Learn More"
-    },
-    "whyIntegrate": {
-      "title": "Why Integrate With AKHDAR?",
-      "subtitle": "Akhdar has facilitated thousands of transactions, contributing to global biodiversity and advancing climate action.",
-      "stats": [
-        {
-          "icon": "🌱",
-          "percentage": "+10%",
-          "description": "Increase in sales conversion with sustainability initiatives at checkout"
-        },
-        {
-          "icon": "🌍",
-          "percentage": "+29%",
-          "description": "Increase in customer acquisition using climate action incentives"
-        },
-        {
-          "icon": "🏆",
-          "percentage": "+23%",
-          "description": "Increase in average order experienced by climate positive brands"
-        }
-      ]
-    },
-    "howItWorks": {
-      "title": "How It Works?",
-      "steps": [
-        {
-          "number": "1",
-          "title": "Integrate",
-          "description": "Seamlessly embed AKHDAR's API into your e-commerce store or platform in under 10 minutes and start enabling carbon offsetting for your customers instantly."
-        },
-        {
-          "number": "2",
-          "title": "Contribute",
-          "description": "With every transaction, a micro-contribution is sent to verified carbon offset projects. Track and display your climate impact in real time, reinforcing your commitment to sustainability."
-        },
-        {
-          "number": "3",
-          "title": "Showcase Your Impact",
-          "description": "Embed our live carbon reduction tracker directly onto your website and watch it update with every offset. Our customizable impact dashboard allows you to share detailed sustainability insights with your customers."
-        }
-      ],
-      "congratulations": "Congratulations!",
-      "offsetMessage": "You have offset 1.8t of CO2",
-      "keepUp": "Keep up!",
-      "youAreOffsetting": "You are Offsetting",
-      "co2": "CO₂",
-      "offsetAmount": "100t offset",
-      "ofYourFootprint": "of your footprint.",
-      "talkToUs": "Talk to Us"
-    },
-    "empowerUsers": {
-      "empowerTitle": "Empower Your Users!",
-      "empowerDescription": "Akhdar's API lets you give your users the ability to take climate action that's important to them.",
-      "shareTitle": "Share Your Impact!",
-      "shareDescription": "Akhdar make it easy to share your impact with your customers in language they can understand."
-    },
-    "provideSolutions": {
-      "title": "We Provide Solutions for Different Industries",
-      "industries": [
-        {
-          "name": "E-Commerce",
-          "description": "Offer carbon-neutral products, enhancing customer satisfaction and brand loyalty by supporting sustainable shopping choice."
-        },
-        {
-          "name": "Fintech",
-          "description": "Seamlessly offer carbon offsetting services to meet growing consumer demand for climate-conscious financial products"
-        },
-        {
-          "name": "Logistics",
-          "description": "Offset their carbon emissions in real-time, providing transparency and accountability in their supply chains while enhancing your sustainability commitments"
-        },
-        {
-          "name": "Mobile Apps",
-          "description": "Enable real-time carbon emission offsets directly from your app, ensuring transparency and accountability across your supply chain while strengthening your sustainability goals."
-        }
-      ]
-    },
-    "trackYourCarbon": {
-      "title": "Track your carbon, support climate action, and sell sustainably.",
-      "cta": "Talk to Us"
-    }
-  },
-
   "calcHome": {
-  "title": "We Make Calculating Your Carbon Footprint Easy!",
-  "description1": "At AKHDAR, our Carbon Footprint Calculator helps individuals, businesses, and organizations estimate their carbon emissions. It considers factors like energy use, transportation, waste, and lifestyle choices to give you an estimate of your greenhouse gas emissions (CO2e).",
-  "description2": "Use our calculator to better understand your impact on the environment and start your journey toward sustainability."
-},
-"carbonFootprint": {
-  "section1": {
-    "title": "Drive Business Growth with\nCarbon Footprint Management",
-    "description": "Embracing sustainability can distinguish your business and create growth opportunities. Reducing your carbon footprint enhances your brand and aids the fight against climate change."
-  },
-  "section2": {
-    "title": "Stay Compliant and Reduce\nEmissions with Akhdar",
-    "description": "Environmental regulations like carbon taxes and the EU’s Carbon Border Adjustment Mechanism (CBAM) are here. These require businesses to manage their emissions. At AKHDAR, we help you reduce your carbon footprint, stay compliant, and make meaningful sustainability efforts."
-  },
-  "section3": {
-    "title": "Achieve Your Sustainability Goal!"
-  }
-}
-,"carbonCalc": {
-  "tabs": {
-    "individuals": "Individuals",
-    "companies": "Companies"
-  },
-  "methodology": {
-    "title": "AKHDAR's Carbon Footprint\nCalculation Methodology",
-    "description": "At AKHDAR, we follow globally recognized standards to ensure accurate and transparent carbon footprint calculations. We use the Greenhouse Gas (GHG) Protocol, the most widely adopted method, to help businesses measure, report, and reduce their emissions effectively."
-  },
-  "input": {
-    "label": "How Many KW Consumed?",
-    "placeholder": "Enter value"
-  },
-  "buttons": {
-    "back": "Back",
-    "next": "Next"
+    "title": "We Make Calculating Your Carbon Footprint Easy!",
+    "description1": "At AKHDAR, our Carbon Footprint Calculator helps individuals, businesses, and organizations estimate their carbon emissions. It considers factors like energy use, transportation, waste, and lifestyle choices to give you an estimate of your greenhouse gas emissions (CO2e).",
+    "description2": "Use our calculator to better understand your impact on the environment and start your journey toward sustainability."
   },
   "carbonFootprint": {
-  "title": "How Do I Calculate my Company’s Carbon Footprint?",
-  "scope1": {
-    "title": "Scope 1 - GHG Direct Emissions",
-    "description": "Combustion of fuels in its facilities and fuels for company’s vehicles fleet"
+    "section1": {
+      "title": "Drive Business Growth with\nCarbon Footprint Management",
+      "description": "Embracing sustainability can distinguish your business and create growth opportunities. Reducing your carbon footprint enhances your brand and aids the fight against climate change."
+    },
+    "section2": {
+      "title": "Stay Compliant and Reduce\nEmissions with Akhdar",
+      "description": "Environmental regulations like carbon taxes and the EU’s Carbon Border Adjustment Mechanism (CBAM) are here. These require businesses to manage their emissions. At AKHDAR, we help you reduce your carbon footprint, stay compliant, and make meaningful sustainability efforts."
+    },
+    "section3": {
+      "title": "Achieve Your Sustainability Goal!"
+    }
   },
-  "scope2": {
-    "title": "Scope 2 - GHG Indirect Emissions",
-    "description": "Generated by electricity used in processes"
+  "carbonCalc": {
+    "tabs": {
+      "individuals": "Individuals",
+      "companies": "Companies"
+    },
+    "methodology": {
+      "title": "AKHDAR's Carbon Footprint\nCalculation Methodology",
+      "description": "At AKHDAR, we follow globally recognized standards to ensure accurate and transparent carbon footprint calculations. We use the Greenhouse Gas (GHG) Protocol, the most widely adopted method, to help businesses measure, report, and reduce their emissions effectively."
+    },
+    "input": {
+      "label": "How Many KW Consumed?",
+      "placeholder": "Enter value"
+    },
+    "buttons": {
+      "back": "Back",
+      "next": "Next",
+      "submit": "Submit",
+      "submitting": "Submitting..."
+    },
+    "carbonFootprint": {
+      "title": "How Do I Calculate my Company’s Carbon Footprint?",
+      "scope1": {
+        "title": "Scope 1 - GHG Direct Emissions",
+        "description": "Combustion of fuels in its facilities and fuels for company’s vehicles fleet"
+      },
+      "scope2": {
+        "title": "Scope 2 - GHG Indirect Emissions",
+        "description": "Generated by electricity used in processes"
+      },
+      "scope3": {
+        "title": "Scope 3 - Other Indirect Emissions",
+        "description": "Generated by suppliers and distributors"
+      }
+    },
+    "success": "Your carbon footprint data has been submitted successfully!",
+    "error": "There was an error submitting your data. Please try again."
   },
-  "scope3": {
-    "title": "Scope 3 - Other Indirect Emissions",
-    "description": "Generated by suppliers and distributors"
-  }
-}
-
-}
-,
-"dashboard": {
-  "shareImpact": "Share Your Impact!",
-  "totalEmission": "Total CO2 emission",
-  "emissionPerEmployee": "Emissions per employee",
-  "carbonBreakdown": "Your Carbon Footprint",
-  "scope1": "Scope 1",
-  "scope2": "Scope 2",
-  "scope3": "Scope 3"
-}
-,
+  "dashboard": {
+    "shareImpact": "Share Your Impact!",
+    "totalEmission": "Total CO2 emission",
+    "emissionPerEmployee": "Emissions per employee",
+    "carbonBreakdown": "Your Carbon Footprint",
+    "scope1": "Scope 1",
+    "scope2": "Scope 2",
+    "scope3": "Scope 3"
+  },
   "offset": {
     "title": "How to Offset Carbon Emissions?",
     "step": "Step",
@@ -360,125 +423,120 @@
         "button": "Track"
       }
     }
-  }
-
-, "sustainabilityCard": {
+  },
+  "sustainabilityCard": {
     "title": "Empower Your Customers with Sustainability",
     "description": "AKHDAR takes a holistic approach to sustainability, offering innovative business solutions for voluntary carbon offsetting and climate donations across B2B and B2B2C models.",
     "button": "Book a Meeting"
-},
+  },
   "faq": {
-  "title": "FAQs",
-  "q1": "What types of projects can I list?",
-  "a1": "We accept a wide range of carbon-offsetting projects, including reforestation, renewable energy, and carbon capture.",
-  "q2": "How do I track my project's impact?",
-  "a2": "Our platform provides comprehensive tracking tools and regular reports to monitor your project's environmental impact and carbon offset metrics.",
-  "q3": "How do I sell carbon credits?",
-  "a3": "You can list your verified carbon credits on our marketplace, set competitive prices, and connect with buyers looking for quality offset projects.",
-  "getStartedTitle": "Get Started",
-  "getStartedDesc": "Sign up today to list your project and make a positive impact on the environment.",
-  "getStartedButton": "Get Started",
-  "fillFormButton": "Fill form"
-},
-"contactSales": {
-  "title": "Contact Sales to become a partner",
-  "firstName": "First Name",
-  "firstNamePlaceholder": "John",
-  "lastName": "Last Name",
-  "lastNamePlaceholder": "Doe",
-  "email": "Work Email",
-  "emailPlaceholder": "you@example.com",
-  "region": "What region is the project located in?",
-  "regionPlaceholder": "Region",
-  "notes": "Additional Notes",
-  "notesPlaceholder": "Add any notes here...",
-  "submit": "Submit",
-  "success": "Submitted successfully!",
-  "error": "Something went wrong. Please try again later.",
-  "errors": {
-    "firstName": "First name is required",
-    "lastName": "Last name is required",
-    "email": "Invalid email",
-    "region": "Region is required"
-  }
-}
-,
-"howItWorks": {
-  "title": "How It Works?",
-  "cta": "Talk to Us",
-  "steps": {
-    "1": {
-      "title": "Submit Your Project",
-      "description": "Share project details and expected carbon reductions"
-    },
-    "2": {
-      "title": "Project Design",
-      "description": "High-Quality PDD Creation"
-    },
-    "3": {
-      "title": "Implementation",
-      "description": "Streamlining Recurring Collaborations"
-    },
-    "4": {
-      "title": "Commercialization",
-      "description": "Selling to the Market with a Unified Dashboard"
-    }
-  }
-}
-,"maximizeImpact": {
-  "title": "Maximize your impact with AKHDAR",
-  "description": "AKHDAR connects your sustainability project whether it's reforestation, renewable energy, or carbon offset with businesses looking to make a positive impact. We're here to support your mission and expand your reach.",
-  "metrics": {
-    "trees": {
-      "title": "Trees Planted"
-    },
-    "plastic": {
-      "title": "Plastic Collected",
-      "unit": "kg"
-    },
-    "carbon": {
-      "title": "Carbon Absorbed",
-      "unit": "kg of CO₂"
+    "title": "FAQs",
+    "q1": "What types of projects can I list?",
+    "a1": "We accept a wide range of carbon-offsetting projects, including reforestation, renewable energy, and carbon capture.",
+    "q2": "How do I track my project's impact?",
+    "a2": "Our platform provides comprehensive tracking tools and regular reports to monitor your project's environmental impact and carbon offset metrics.",
+    "q3": "How do I sell carbon credits?",
+    "a3": "You can list your verified carbon credits on our marketplace, set competitive prices, and connect with buyers looking for quality offset projects.",
+    "getStartedTitle": "Get Started",
+    "getStartedDesc": "Sign up today to list your project and make a positive impact on the environment.",
+    "getStartedButton": "Get Started",
+    "fillFormButton": "Fill form"
+  },
+  "contactSales": {
+    "title": "Contact Sales to become a partner",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "John",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Doe",
+    "email": "Work Email",
+    "emailPlaceholder": "you@example.com",
+    "region": "What region is the project located in?",
+    "regionPlaceholder": "Region",
+    "notes": "Additional Notes",
+    "notesPlaceholder": "Add any notes here...",
+    "submit": "Submit",
+    "success": "Submitted successfully!",
+    "error": "Something went wrong. Please try again later.",
+    "errors": {
+      "firstName": "First name is required",
+      "lastName": "Last name is required",
+      "email": "Invalid email",
+      "region": "Region is required"
     }
   },
-  "lastUpdate": "Last update: {{date}}",
-  "sponsors": {
-    "title": "Sponsors",
-    "columns": {
-      "name": "Sponsors",
-      "currency": "Currency",
-      "amount": "Collection"
+  "howItWorks": {
+    "title": "How It Works?",
+    "cta": "Talk to Us",
+    "steps": {
+      "1": {
+        "title": "Submit Your Project",
+        "description": "Share project details and expected carbon reductions"
+      },
+      "2": {
+        "title": "Project Design",
+        "description": "High-Quality PDD Creation"
+      },
+      "3": {
+        "title": "Implementation",
+        "description": "Streamlining Recurring Collaborations"
+      },
+      "4": {
+        "title": "Commercialization",
+        "description": "Selling to the Market with a Unified Dashboard"
+      }
     }
+  },
+  "maximizeImpact": {
+    "title": "Maximize your impact with AKHDAR",
+    "description": "AKHDAR connects your sustainability project whether it's reforestation, renewable energy, or carbon offset with businesses looking to make a positive impact. We're here to support your mission and expand your reach.",
+    "metrics": {
+      "trees": {
+        "title": "Trees Planted"
+      },
+      "plastic": {
+        "title": "Plastic Collected",
+        "unit": "kg"
+      },
+      "carbon": {
+        "title": "Carbon Absorbed",
+        "unit": "kg of CO₂"
+      }
+    },
+    "lastUpdate": "Last update: {{date}}",
+    "sponsors": {
+      "title": "Sponsors",
+      "columns": {
+        "name": "Sponsors",
+        "currency": "Currency",
+        "amount": "Collection"
+      }
+    }
+  },
+  "ownerMain": {
+    "heading": "Monetize Your Carbon Reduction Efforts",
+    "description": "List your sustainability projects, generate carbon credits, and connect with buyers seamlessly.",
+    "startButton": "Start Your Journey",
+    "fillFormButton": "Fill form"
+  },
+  "projectListing": {
+    "heading": "Why List your Project on AKHDAR?",
+    "benefits": [
+      {
+        "title": "Boost Your Visibility",
+        "description": "Gain access to a network of buyers and companies interested in sustainability."
+      },
+      {
+        "title": "Seamless Transactions",
+        "description": "With a robust platform designed for efficient trading of carbon credits, we simplify the process for both buyers and sellers."
+      },
+      {
+        "title": "Track and Verify",
+        "description": "Through trusted partners, we provide full MRV services to ensure your project's transparency and credibility."
+      },
+      {
+        "title": "Aligned with Saudi Vision 2030",
+        "description": "Your projects will contribute directly to the Kingdom's ambitious climate and sustainability goals, further increasing their value."
+      }
+    ]
   }
-
-}
-,"ownerMain": {
-  "heading": "Monetize Your Carbon Reduction Efforts",
-  "description": "List your sustainability projects, generate carbon credits, and connect with buyers seamlessly.",
-  "startButton": "Start Your Journey",
-  "fillFormButton": "Fill form"
-}
-,"projectListing": {
-  "heading": "Why List your Project on AKHDAR?",
-  "benefits": [
-    {
-      "title": "Boost Your Visibility",
-      "description": "Gain access to a network of buyers and companies interested in sustainability."
-    },
-    {
-      "title": "Seamless Transactions",
-      "description": "With a robust platform designed for efficient trading of carbon credits, we simplify the process for both buyers and sellers."
-    },
-    {
-      "title": "Track and Verify",
-      "description": "Through trusted partners, we provide full MRV services to ensure your project's transparency and credibility."
-    },
-    {
-      "title": "Aligned with Saudi Vision 2030",
-      "description": "Your projects will contribute directly to the Kingdom's ambitious climate and sustainability goals, further increasing their value."
-    }
-  ]
-}
-
-
 }
