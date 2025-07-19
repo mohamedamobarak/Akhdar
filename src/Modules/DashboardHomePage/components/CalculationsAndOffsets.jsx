@@ -67,7 +67,7 @@ const CalculationsAndOffsets = () => {
 
   return (
     <section className="p-8">
-      <h2 className="text-4xl font-bold text-primary mb-8 text-center">Calculations and offsets</h2>
+      <h2 className=" text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-8 text-center">Calculations and offsets</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {/* Your Carbon Emission */}
@@ -110,7 +110,7 @@ const CalculationsAndOffsets = () => {
               >
                 <div className="bg-white rounded-2xl p-6 md:p-8 w-full max-w-full">
                   {/* Modal Legend */}
-                  <div className="flex gap-8 mb-6 items-center ml-22">
+                  <div className="flex gap-8 mb-6 items-center ml-0 md:ml-22">
                     <div className="flex items-center font-bold gap-2"><span className="w-3 h-3 rounded-full" style={{background:'#004D40'}}></span><span className="font-semibold text-sm">Gas</span></div>
                     <div className="flex items-center font-bold gap-2"><span className="w-3 h-3 rounded-full" style={{background:'#81F18E'}}></span><span className="font-semibold text-sm">Travel</span></div>
                     <div className="flex items-center font-bold gap-2"><span className="w-3 h-3 rounded-full" style={{background:'#D6EFD7'}}></span><span className="font-semibold text-sm">Car</span></div>
@@ -119,17 +119,12 @@ const CalculationsAndOffsets = () => {
                   <div className="space-y-6">
                     {carbonEmissionHistory.slice(0,3).map((entry) => {
                       const total = entry.breakdown.reduce((sum, b) => sum + b.value, 0);
-                      const percentOfBar = Math.min((total / 100) * 100, 100); // If your values are out of 100, else adjust accordingly
                       return (
                         <div key={entry.id} className="flex items-center gap-4">
                           <span className="text-black font-bold text-sm min-w-[80px]">{new Date(entry.date).toLocaleDateString('en-GB')}</span>
                           <div className="flex-1 flex items-center h-10 rounded-xl overflow-hidden relative">
                             <div
-                              className="flex h-10 rounded-xl overflow-hidden"
-                              style={{
-                                width: `${percentOfBar}%`,
-                                transition: 'width 0.3s',
-                              }}
+                              className="flex h-10 rounded-xl overflow-hidden w-full"
                             >
                               {['Gas','Travel','Car'].map((cat) => {
                                 const item = entry.breakdown.find(b => b.category === cat);

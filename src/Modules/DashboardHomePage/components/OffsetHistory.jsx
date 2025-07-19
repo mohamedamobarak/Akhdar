@@ -11,7 +11,7 @@ const OffsetHistory = () => {
       {/* Your Offset History */}
       <div className="p-8">
         <div className="flex justify-between items-center my-12 min-h-11 ">
-          <h2 className="text-4xl font-bold text-primary">Your Offset History</h2>
+          <h2 className=" text-2xl lg:text-4xl font-bold text-primary">Your Offset History</h2>
           <button className="text-primary bg-[#E6E6E6] cursor-pointer mr-0 lg:mr-16  px-6 py-2 rounded-lg hover:border-b-4 hover:border-b-black transition-colors">
             Download
           </button>

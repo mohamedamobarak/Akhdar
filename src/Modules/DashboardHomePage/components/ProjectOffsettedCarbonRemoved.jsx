@@ -10,7 +10,7 @@ const ProjectOffsettedCarbonRemoved = () => {
     return (
       <section className="p-8">
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-2xl font-bold text-primary">Project Offsetted &Carbon Removed</h2>
+          <h2 className=" text-xl lg:text-2xl font-bold text-primary">Project Offsetted &Carbon Removed</h2>
           <button className="text-primary border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors">
             Export PDF
           </button>
@@ -33,8 +33,8 @@ const ProjectOffsettedCarbonRemoved = () => {
   return (
     <section className="p-8">
       <div className="flex justify-between items-center mb-8 h-22">
-        <h2 className="text-2xl font-bold text-primary">Project Offsetted &Carbon Removed</h2>
-        <button className="text-primary bg-[#E6E6E6] cursor-pointer mr-0 lg:mr-16  px-6 py-2 rounded-lg hover:border-b-4 hover:border-b-black transition-colors">
+        <h2 className=" text-lg lg:text-2xl font-bold text-primary">Project Offsetted &Carbon Removed</h2>
+        <button className=" text-sm  text-primary bg-[#E6E6E6] cursor-pointer mr-0 lg:mr-16  px-6 py-2 rounded-lg hover:border-b-4 hover:border-b-black transition-colors">
         Export PDF
         </button>
       </div>

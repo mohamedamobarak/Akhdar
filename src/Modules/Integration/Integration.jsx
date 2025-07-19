@@ -21,7 +21,7 @@ const Integration = () => {
           paragraph={t('integration.hero.subtitle')}
           firstButtonLink="#whyIntegrate" 
           firstButtonLabel={t('integration.hero.getStarted')}
-          secondButtonLabel={t('integration.hero.bookDemo')}
+          secondButtonLabel={t('integration.hero.learnMore')}
           secondButtonLink="/about#contact-us" 
           firstLineEn="Embed Carbon offsetting into Every"
           firstLineAr="تضمين تعويض الكربون في كل معاملة"

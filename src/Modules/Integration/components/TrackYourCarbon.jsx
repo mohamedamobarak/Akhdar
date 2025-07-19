@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { useTranslation } from 'react-i18next';
 import i18n from '../../../../public/locales.js';
+import { Link } from "react-router-dom";
 
 const TrackYourCarbon = () => {
   const { t } = useTranslation();
@@ -17,9 +18,9 @@ const TrackYourCarbon = () => {
       <h3 className="font-medium text-black text-center text-3xl max-w-xl my-12">
         {t('integration.trackYourCarbon.title')}
       </h3>
-      <Button className='bg-main text-center text-black hover:bg-primary cursor-pointer px-16 py-5 hover:text-white translation-color '>
+      <Link to="/about#contact-us" className='bg-main rounded-xl transation-all duration-300 text-center font-medium  text-black hover:bg-primary cursor-pointer px-16 py-3 hover:text-white translation-color '>
         {t('integration.trackYourCarbon.cta')}
-      </Button>
+      </Link>
     </section>
   )
 }
