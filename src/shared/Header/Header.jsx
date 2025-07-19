@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[#F6F7F6] min-h-[160px] flex items-center">
+    <header className="bg-[#F6F7F6]  flex items-center">
       <nav className="container flex justify-between items-center px-4 mx-auto">
         {/* Left Side: Logo + Nav Links */}
         <div className="flex gap-10 items-center">
