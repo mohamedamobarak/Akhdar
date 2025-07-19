@@ -2,7 +2,7 @@ import React from 'react';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { HiMail } from 'react-icons/hi';
 
-const Footer = () => {
+const Footer = ({ rounded = true }) => {
   const footerLinks = {
     'About Us': {
       'Mission & Vision': '#',
@@ -36,7 +36,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#003B2D] text-white py-12 rounded-t-[30px]">
+    <footer className={`bg-[#003B2D] text-white py-12 ${rounded ? 'rounded-t-[30px]' : ''}`}>
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
           {/* Logo and Social Links */}
