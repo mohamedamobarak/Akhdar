@@ -29,11 +29,45 @@
       "title": "Our Mission & Vision",
       "desc": "AKHDAR's mission is to become Saudi Arabia's leading carbon offset aggregator, helping businesses, organizations, and individuals take meaningful climate action.",
       "plan": "We Plan to Provide:",
+      "byLabel": "By",
+      "yearLabel": "{year}",
+      "timeline": {
+        "2027": {
+          "year": "2027",
+          "goals": [
+            "1.2 million tons of CO₂ offset through carbon credits",
+            "600+ businesses actively using our platform",
+            "120+ certified carbon projects funded"
+          ]
+        },
+        "2029": {
+          "year": "2029",
+          "goals": [
+            "2.5 million tons of CO₂ offset",
+            "1,200+ businesses onboarded",
+            "250+ certified carbon projects operational"
+          ]
+        },
+        "2030": {
+          "year": "2030",
+          "goals": [
+            "5 million+ tons of CO₂ offset",
+            "2,500+ businesses contributing to net-zero goals",
+            "500+ carbon projects listed on our platform"
+          ]
+        },
+        "2026": {
+          "year": "2026",
+          "goals": [
+            "500,000 tons of CO₂ offset through verified carbon credits",
+            "50+ certified carbon projects listed on our platform",
+            "250+ businesses onboarded, integrating carbon offsetting into their sustainability strategies"
+          ]
+        }
+      },
       "future1": "500,000 tons of CO₂ offset through verified carbon credits",
       "future2": "50+ certified carbon projects listed on our platform",
-      "future3": "250+ businesses onboarded, integrating carbon offsetting into their sustainability strategies",
-      "byLabel": "By",
-      "yearLabel": "{year}"
+      "future3": "250+ businesses onboarded, integrating carbon offsetting into their sustainability strategies"
     },
     "team": {
       "title": "Meet Our Team",
