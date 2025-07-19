@@ -243,95 +243,95 @@
       "procurementRequired": "Please select procurement status",
       "decarbonizationRequired": "Please select decarbonization status",
       "privacyConsentRequired": "You must agree to the privacy policy"
+    }
+  },
+  "integration": {
+    "direction": "ltr",
+    "hero": {
+      "title": "Embed Carbon offsetting into Every Transaction with AKHDAR API",
+      "subtitle": "Effortlessly integrate carbon offsetting into transactions, enhance sustainability, and showcase your commitment to the environment.",
+      "getStarted": "Get Started",
+      "learnMore": "Learn More"
     },
-    "integration": {
-      "direction": "ltr",
-      "hero": {
-        "title": "Embed Carbon offsetting into Every Transaction with AKHDAR API",
-        "subtitle": "Effortlessly integrate carbon offsetting into transactions, enhance sustainability, and showcase your commitment to the environment.",
-        "getStarted": "Get Started",
-        "learnMore": "Learn More"
-      },
-      "whyIntegrate": {
-        "title": "Why Integrate With AKHDAR?",
-        "subtitle": "Akhdar has facilitated thousands of transactions, contributing to global biodiversity and advancing climate action.",
-        "stats": [
-          {
-            "icon": "🌱",
-            "percentage": "+10%",
-            "description": "Increase in sales conversion with sustainability initiatives at checkout"
-          },
-          {
-            "icon": "🌍",
-            "percentage": "+29%",
-            "description": "Increase in customer acquisition using climate action incentives"
-          },
-          {
-            "icon": "🏆",
-            "percentage": "+23%",
-            "description": "Increase in average order experienced by climate positive brands"
-          }
-        ]
-      },
-      "howItWorks": {
-        "title": "How It Works?",
-        "steps": [
-          {
-            "number": "1",
-            "title": "Integrate",
-            "description": "Seamlessly embed AKHDAR's API into your e-commerce store or platform in under 10 minutes and start enabling carbon offsetting for your customers instantly."
-          },
-          {
-            "number": "2",
-            "title": "Contribute",
-            "description": "With every transaction, a micro-contribution is sent to verified carbon offset projects. Track and display your climate impact in real time, reinforcing your commitment to sustainability."
-          },
-          {
-            "number": "3",
-            "title": "Showcase Your Impact",
-            "description": "Embed our live carbon reduction tracker directly onto your website and watch it update with every offset. Our customizable impact dashboard allows you to share detailed sustainability insights with your customers."
-          }
-        ],
-        "congratulations": "Congratulations!",
-        "offsetMessage": "You have offset 1.8t of CO2",
-        "keepUp": "Keep up!",
-        "youAreOffsetting": "You are Offsetting",
-        "co2": "CO₂",
-        "offsetAmount": "100t offset",
-        "ofYourFootprint": "of your footprint.",
-        "talkToUs": "Talk to Us"
-      },
-      "empowerUsers": {
-        "empowerTitle": "Empower Your Users!",
-        "empowerDescription": "Akhdar's API lets you give your users the ability to take climate action that's important to them.",
-        "shareTitle": "Share Your Impact!",
-        "shareDescription": "Akhdar make it easy to share your impact with your customers in language they can understand."
-      },
-      "provideSolutions": {
-        "title": "We Provide Solutions for Different Industries",
-        "industries": [
-          {
-            "name": "E-Commerce",
-            "description": "Offer carbon-neutral products, enhancing customer satisfaction and brand loyalty by supporting sustainable shopping choice."
-          },
-          {
-            "name": "Fintech",
-            "description": "Seamlessly offer carbon offsetting services to meet growing consumer demand for climate-conscious financial products"
-          },
-          {
-            "name": "Logistics",
-            "description": "Offset their carbon emissions in real-time, providing transparency and accountability in their supply chains while enhancing your sustainability commitments"
-          },
-          {
-            "name": "Mobile Apps",
-            "description": "Enable real-time carbon emission offsets directly from your app, ensuring transparency and accountability across your supply chain while strengthening your sustainability goals."
-          }
-        ]
-      },
-      "trackYourCarbon": {
-        "title": "Track your carbon, support climate action, and sell sustainably.",
-        "cta": "Talk to Us"
-      }
+    "whyIntegrate": {
+      "title": "Why Integrate With AKHDAR?",
+      "subtitle": "Akhdar has facilitated thousands of transactions, contributing to global biodiversity and advancing climate action.",
+      "stats": [
+        {
+          "icon": "🌱",
+          "percentage": "+10%",
+          "description": "Increase in sales conversion with sustainability initiatives at checkout"
+        },
+        {
+          "icon": "🌍",
+          "percentage": "+29%",
+          "description": "Increase in customer acquisition using climate action incentives"
+        },
+        {
+          "icon": "🏆",
+          "percentage": "+23%",
+          "description": "Increase in average order experienced by climate positive brands"
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How It Works?",
+      "steps": [
+        {
+          "number": "1",
+          "title": "Integrate",
+          "description": "Seamlessly embed AKHDAR's API into your e-commerce store or platform in under 10 minutes and start enabling carbon offsetting for your customers instantly."
+        },
+        {
+          "number": "2",
+          "title": "Contribute",
+          "description": "With every transaction, a micro-contribution is sent to verified carbon offset projects. Track and display your climate impact in real time, reinforcing your commitment to sustainability."
+        },
+        {
+          "number": "3",
+          "title": "Showcase Your Impact",
+          "description": "Embed our live carbon reduction tracker directly onto your website and watch it update with every offset. Our customizable impact dashboard allows you to share detailed sustainability insights with your customers."
+        }
+      ],
+      "congratulations": "Congratulations!",
+      "offsetMessage": "You have offset 1.8t of CO2",
+      "keepUp": "Keep up!",
+      "youAreOffsetting": "You are Offsetting",
+      "co2": "CO₂",
+      "offsetAmount": "100t offset",
+      "ofYourFootprint": "of your footprint.",
+      "talkToUs": "Talk to Us"
+    },
+    "empowerUsers": {
+      "empowerTitle": "Empower Your Users!",
+      "empowerDescription": "Akhdar's API lets you give your users the ability to take climate action that's important to them.",
+      "shareTitle": "Share Your Impact!",
+      "shareDescription": "Akhdar make it easy to share your impact with your customers in language they can understand."
+    },
+    "provideSolutions": {
+      "title": "We Provide Solutions for Different Industries",
+      "industries": [
+        {
+          "name": "E-Commerce",
+          "description": "Offer carbon-neutral products, enhancing customer satisfaction and brand loyalty by supporting sustainable shopping choice."
+        },
+        {
+          "name": "Fintech",
+          "description": "Seamlessly offer carbon offsetting services to meet growing consumer demand for climate-conscious financial products"
+        },
+        {
+          "name": "Logistics",
+          "description": "Offset their carbon emissions in real-time, providing transparency and accountability in their supply chains while enhancing your sustainability commitments"
+        },
+        {
+          "name": "Mobile Apps",
+          "description": "Enable real-time carbon emission offsets directly from your app, ensuring transparency and accountability across your supply chain while strengthening your sustainability goals."
+        }
+      ]
+    },
+    "trackYourCarbon": {
+      "title": "Track your carbon, support climate action, and sell sustainably.",
+      "cta": "Talk to Us"
     }
   },
   "calcHome": {
@@ -538,5 +538,67 @@
         "description": "Your projects will contribute directly to the Kingdom's ambitious climate and sustainability goals, further increasing their value."
       }
     ]
+  },
+  "userSettings": {
+    "direction": "ltr",
+    "editProfile": {
+      "title": "Edit Your Personal Profile",
+      "formTitle": "Edit Profile",
+      "companyName": "Company Name",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "password": "Password",
+      "industry": "2- Industry",
+      "companySize": "3- Company Size",
+      "country": "4- Country",
+      "selectIndustry": "Select industry",
+      "selectSize": "Select size",
+      "selectCountry": "Select country",
+      "saveChanges": "Save Changes",
+      "saving": "Saving...",
+      "successMessage": "Profile updated successfully!",
+      "errors": {
+        "companyNameMin": "Please enter your company name (at least 2 characters)",
+        "companyNameMax": "Company name is too long",
+        "firstNameMin": "Please enter your first name (at least 2 characters)",
+        "firstNameMax": "First name is too long",
+        "lastNameMin": "Please enter your last name (at least 2 characters)",
+        "lastNameMax": "Last name is too long",
+        "emailInvalid": "Please enter a valid email address",
+        "phoneMin": "Please enter a valid phone number (at least 8 digits)",
+        "passwordMin": "Password must be at least 6 characters",
+        "industryRequired": "Please select an industry",
+        "companySizeRequired": "Please select a company size",
+        "countryRequired": "Please select a country"
+      }
+    },
+    "changePassword": {
+      "title": "Change Password",
+      "currentPassword": "Your Old Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm New Password",
+      "saveChanges": "Save Changes",
+      "saving": "Saving...",
+      "successMessage": "Password changed successfully!",
+      "requirements": {
+        "minLength": "8 characters minimum",
+        "oneNumber": "One number",
+        "oneSpecial": "One special character",
+        "oneLowercase": "One lowercase character",
+        "oneUppercase": "One uppercase character"
+      },
+      "errors": {
+        "currentPasswordRequired": "Please enter your current password",
+        "newPasswordMin": "8 characters minimum",
+        "newPasswordNumber": "One number",
+        "newPasswordSpecial": "One special character",
+        "newPasswordLowercase": "One lowercase character",
+        "newPasswordUppercase": "One uppercase character",
+        "confirmPasswordRequired": "Please confirm your new password",
+        "passwordsDoNotMatch": "Passwords do not match"
+      }
+    }
   }
 }

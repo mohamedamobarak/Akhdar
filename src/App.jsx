@@ -10,6 +10,9 @@ import Integration from './Modules/Integration/Integration';
 import CalcCompany from './Modules/CalcCompany/CalcCompany';
 import ProjectOwner from './Modules/ProjectOwner/ProjectOwner';
 import Login from './Modules/Auth/Login/Login';
+import DashboardHome from './Modules/DashboardHomePage/DashboardHome';
+import EditProfile from './Modules/user-settings/EditProfile';
+import ChangePassword from './Modules/user-settings/ChangePassword';
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
         <Route path="/egs-interactive-form" element={<EGSInteractiveForm />} />
         <Route path="/api-integration" element={<Integration />} />
         <Route path="/calc-company" element={<CalcCompany />} />
+        <Route path="/dashboard" element={<DashboardHome />} />
+        <Route path="/settings/edit-profile" element={<EditProfile />} />
+        <Route path="/settings/change-password" element={<ChangePassword />} />
       </Routes>
     </Router>
   )

@@ -169,3 +169,6 @@
   --bg: #F0F5EF;
   --text-hero: #013229;
 }
+html {
+  scroll-behavior: smooth;
+}
