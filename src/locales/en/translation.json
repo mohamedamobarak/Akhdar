@@ -511,10 +511,8 @@
         "amount": "Collection"
       }
     }
-  ]
-}
 },
-  "esg": {
+ "esg": {
   "hero": {
     "title": "Empower your Business with Sustainable Strategies.",
     "subtitle": "(Measure - Act - Comply)",
@@ -530,9 +528,7 @@
       "button": "Book a Meeting"
     }
   }
-}
-}
-  },
+},
   "ownerMain": {
     "heading": "Monetize Your Carbon Reduction Efforts",
     "description": "List your sustainability projects, generate carbon credits, and connect with buyers seamlessly.",
@@ -561,3 +557,5 @@
     ]
   }
 }
+ 
+
