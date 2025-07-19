@@ -7,6 +7,7 @@ import ImpactPlatform from './Modules/ImpactPlatform/ImpactPlatform';
 import SignUp from './Modules/Auth/Signup/SignUp';
 import EGSInteractiveForm from './Modules/EGSInteractiveForm/EGSInteractiveForm';
 import Integration from './Modules/Integration/Integration';
+import ESG from './Modules/ESG/ESG';
 import CalcCompany from './Modules/CalcCompany/CalcCompany';
 import ProjectOwner from './Modules/ProjectOwner/ProjectOwner';
 import Login from './Modules/Auth/Login/Login';
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/esg" element={<ESG />} />
         <Route path="/project" element={<ProjectOwner />} />
         <Route path="/impact-platform" element={<ImpactPlatform />} />
         <Route path="/signup" element={<SignUp />} />

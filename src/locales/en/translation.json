@@ -511,6 +511,27 @@
         "amount": "Collection"
       }
     }
+  ]
+}
+},
+  "esg": {
+  "hero": {
+    "title": "Empower your Business with Sustainable Strategies.",
+    "subtitle": "(Measure - Act - Comply)",
+    "desc": "At AKHDAR, we help your business thrive through sustainability. Our ESG & Climate Strategy Consulting services guide you in measuring, acting, and complying with environmental, social, and governance (ESG) standards to unlock growth opportunities and achieve long-term success."
+  },
+  "netZeroJourney": {
+    "title": "The Way to Become a Net-Zero Company",
+    "subtitle1": "Join forward-thinking businesses and individuals investing in a greener future. Adjust your timeline and discover the best carbon credit options for your journey to net zero.",
+    "subtitle2": "Select your offset strategy and see the impact unfold!",
+    "offsetNow": {
+      "title": "Offset Now (2025)",
+      "description": "Take immediate action by purchasing verified carbon credits to balance your current emissions.",
+      "button": "Book a Meeting"
+    }
+  }
+}
+}
   },
   "ownerMain": {
     "heading": "Monetize Your Carbon Reduction Efforts",
