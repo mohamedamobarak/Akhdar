@@ -1,10 +1,22 @@
 import React from 'react';
-import { offsetHistoryData, subscriptionsData, dashboardConfig } from '../data/mockData';
+import { offsetHistoryData, subscriptionsData } from '../data/mockData';
+import Papa from 'papaparse';
 
 const OffsetHistory = () => {
-  const hasData = dashboardConfig.hasHistoryData;
 
-
+  const handleDownloadCSV = () => {
+    if (!offsetHistoryData || offsetHistoryData.length === 0) return;
+    const csv = Papa.unparse(offsetHistoryData);
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'offset_history.csv');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <section className="space-y-8">
@@ -12,7 +24,10 @@ const OffsetHistory = () => {
       <div className="p-8">
         <div className="flex justify-between items-center my-12 min-h-11 ">
           <h2 className=" text-2xl lg:text-4xl font-bold text-primary">Your Offset History</h2>
-          <button className="text-primary bg-[#E6E6E6] cursor-pointer mr-0 lg:mr-16  px-6 py-2 rounded-lg hover:border-b-4 hover:border-b-black transition-colors">
+          <button
+            className="text-primary bg-[#E6E6E6] cursor-pointer mr-0 lg:mr-16  px-6 py-2 rounded-lg hover:border-b-4 hover:border-b-black transition-colors"
+            onClick={handleDownloadCSV}
+          >
             Download
           </button>
         </div>
