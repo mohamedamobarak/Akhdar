@@ -7,12 +7,15 @@ import ImpactPlatform from './Modules/ImpactPlatform/ImpactPlatform';
 import SignUp from './Modules/Auth/Signup/SignUp';
 import EGSInteractiveForm from './Modules/EGSInteractiveForm/EGSInteractiveForm';
 import Integration from './Modules/Integration/Integration';
+import ESG from './Modules/ESG/ESG';
 import CalcCompany from './Modules/CalcCompany/CalcCompany';
 import ProjectOwner from './Modules/ProjectOwner/ProjectOwner';
 import Login from './Modules/Auth/Login/Login';
 import DashboardHome from './Modules/DashboardHomePage/DashboardHome';
 import EditProfile from './Modules/user-settings/EditProfile';
 import ChangePassword from './Modules/user-settings/ChangePassword';
+import DashboardLayout from './Modules/DashboardLayout/DashboardLayout';
+import CarbonImpactDashboard from './Modules/CalcCompany/components/CarbonImpactDashboard';
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
         <Route path="/dashboard" element={<DashboardHome />} />
         <Route path="/settings/edit-profile" element={<EditProfile />} />
         <Route path="/settings/change-password" element={<ChangePassword />} />
+        {/* Dashboard Routes */}
+        <Route path="/dashboard" element={<DashboardLayout><CarbonImpactDashboard /></DashboardLayout>} />
+        <Route path="/dashboard/impact" element={<DashboardLayout><CarbonImpactDashboard /></DashboardLayout>} />
       </Routes>
     </Router>
   )
