@@ -57,6 +57,14 @@ function SidebarProvider({
   // We use openProp and setOpenProp for control from outside the component.
   const [_open, _setOpen] = React.useState(defaultOpen)
   const open = openProp ?? _open
+
+  // Ensure sidebar is always visible on mobile (collapsed state)
+  React.useEffect(() => {
+    if (isMobile && !open) {
+      // On mobile, ensure we're in collapsed state but sidebar is visible
+      _setOpen(false)
+    }
+  }, [isMobile, open])
   const setOpen = React.useCallback((value) => {
     const openState = typeof value === "function" ? value(open) : value
     if (setOpenProp) {
@@ -106,7 +114,8 @@ function SidebarProvider({
 
   // We add a state so that we can do data-state="expanded" or "collapsed".
   // This makes it easier to style the sidebar with Tailwind classes.
-  const state = open ? "expanded" : "collapsed"
+  // On mobile, always show as collapsed unless sheet is open
+  const state = isMobile ? (openMobile ? "expanded" : "collapsed") : (open ? "expanded" : "collapsed")
 
   const contextValue = React.useMemo(() => ({
     state,
