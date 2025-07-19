@@ -12,6 +12,7 @@ const HeroSection = ({
   firstButtonLink,
   firstButtonLabel,
   secondButtonLabel,
+  secondButtonLink,
   firstLineEn,
   firstLineAr,
   secondLineEn,
@@ -143,11 +144,14 @@ const HeroSection = ({
         >
           {firstButtonLabel}
         </Link>
-        <button
-          className="px-6 md:px-8 py-3 md:py-4 bg-[#E6E6E6] text-primary text-base md:text-lg rounded-[19px] text-center font-medium cursor-pointer hover:bg-primary hover:text-white transition-all duration-300 min-w-[150px]"
-        >
-          {secondButtonLabel}
-        </button>
+        {secondButtonLabel && secondButtonLink && (
+          <Link
+            to={secondButtonLink}
+            className="px-6 md:px-8 py-3 md:py-4 bg-[#E6E6E6] text-primary text-base md:text-lg rounded-[19px] text-center font-medium cursor-pointer hover:bg-primary hover:text-white transition-all duration-300 min-w-[150px]"
+          >
+            {secondButtonLabel}
+          </Link>
+        )}
       </div>
        )
 }

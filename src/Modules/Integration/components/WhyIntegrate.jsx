@@ -21,7 +21,7 @@ const WhyIntegrate = () => {
       <p className="text-black text-center max-w-2xl mb-24 text-base md:text-lg font-medium">
         {t('integration.whyIntegrate.subtitle')}
       </p>
-      <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 ">
+      <div id ="whyIntegrate" className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 ">
         {stats.map((stat, index) => (
           <div
             key={index}
