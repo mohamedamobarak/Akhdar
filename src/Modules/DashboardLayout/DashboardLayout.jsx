@@ -12,7 +12,7 @@ export default function MasterLayout({ children }) {
           <SidebarInset className="flex flex-col flex-1">
             
             <Header />
-            <main className="flex-1 p-4">
+            <main className="flex-1 ">
               {children}
             </main>
           </SidebarInset>

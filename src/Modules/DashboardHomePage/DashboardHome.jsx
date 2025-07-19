@@ -8,7 +8,7 @@ import logo from '../../assets/Dashboard-home-page-14/Akhdar-01.png'
 const DashboardHome = () => {
   return (
     <>
-    <main className='flex flex-col gap-8 px-4 min-h-screen bg-[#f5fbf7] md:px-8 py-8'>
+    <main className='flex flex-col gap-8 px-4 min-h-screen bg-[#f5fbf7]  py-8'>
       {/* Dashboard Header */}
       <div className="text-center ">
         <img src={logo} alt="Akhdar Logo" className="mx-auto w-32 h-auto my-4" />
@@ -29,7 +29,6 @@ const DashboardHome = () => {
         <OffsetHistory />
       </div>
     </main>
-    <Footer />
   </>  )
 }
 
