@@ -20,7 +20,6 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/esg" element={<ESG />} />
         <Route path="/project" element={<ProjectOwner />} />
         <Route path="/impact-platform" element={<ImpactPlatform />} />
         <Route path="/signup" element={<SignUp />} />
@@ -28,7 +27,6 @@ function App() {
         <Route path="/egs-interactive-form" element={<EGSInteractiveForm />} />
         <Route path="/api-integration" element={<Integration />} />
         <Route path="/calc-company" element={<CalcCompany />} />
-
         {/* Dashboard Routes */}
         <Route path="/dashboard" element={<DashboardLayout><CarbonImpactDashboard /></DashboardLayout>} />
         <Route path="/dashboard/impact" element={<DashboardLayout><CarbonImpactDashboard /></DashboardLayout>} />
