@@ -10,6 +10,9 @@ import Integration from './Modules/Integration/Integration';
 import ESG from './Modules/ESG/ESG';
 import CalcCompany from './Modules/CalcCompany/CalcCompany';
 import ProjectOwner from './Modules/ProjectOwner/ProjectOwner';
+import Login from './Modules/Auth/Login/Login';
+import DashboardLayout from './Modules/DashboardLayout/DashboardLayout';
+import CarbonImpactDashboard from './Modules/CalcCompany/components/CarbonImpactDashboard';
 
 function App() {
   return (
@@ -21,9 +24,14 @@ function App() {
         <Route path="/project" element={<ProjectOwner />} />
         <Route path="/impact-platform" element={<ImpactPlatform />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/egs-interactive-form" element={<EGSInteractiveForm />} />
         <Route path="/api-integration" element={<Integration />} />
         <Route path="/calc-company" element={<CalcCompany />} />
+
+        {/* Dashboard Routes */}
+        <Route path="/dashboard" element={<DashboardLayout><CarbonImpactDashboard /></DashboardLayout>} />
+        <Route path="/dashboard/impact" element={<DashboardLayout><CarbonImpactDashboard /></DashboardLayout>} />
       </Routes>
     </Router>
   )

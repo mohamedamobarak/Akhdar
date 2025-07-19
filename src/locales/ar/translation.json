@@ -1,6 +1,21 @@
 {
   "welcome": "مرحباً",
   "login": "تسجيل الدخول",
+  "Login":{
+    "direction": "rtl",
+    "NoAccount": "ليس لديك حساب بعد؟",
+    "createOne": "أنشئ حساباً مجاناً.",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "rememberMe": "تذكرني",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "loginButton": "تسجيل الدخول",
+    "loggingIn": "جاري تسجيل الدخول...",
+    "login": "تسجيل الدخول",
+    "emailRequired": "البريد الإلكتروني مطلوب",
+    "emailInvalid": "يرجى إدخال عنوان بريد إلكتروني صحيح",
+    "passwordRequired": "كلمة المرور مطلوبة"
+  },
   "aboutus": {
     "hero": {
       "title": "حلول ذكية لتعويض الكربون بسهولة",
