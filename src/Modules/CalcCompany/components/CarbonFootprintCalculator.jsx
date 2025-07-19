@@ -12,6 +12,7 @@ import { z } from 'zod';
 import { puplicAxiosInstance } from '@/services/api/apiInstance';
 import { CALCULATOR_ULRS } from '@/services/api/apiConfig';
 import { Toaster, toast } from 'sonner'
+import { useLocation } from 'react-router-dom';
 
 // Schemas per step
 const stepSchemas = [
@@ -38,6 +39,8 @@ const defaultStepValues = [
 
 const CarbonFootprintCalculator = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+
   const [activeTab, setActiveTab] = useState('Companies');
   const [step, setStep] = useState(0);
   const [collectedData, setCollectedData] = useState({});
@@ -69,6 +72,14 @@ const CarbonFootprintCalculator = () => {
     reset(currentStepDefaultValues);
   }, [step, collectedData, reset]);
 
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.getElementById(location.hash.replace("#", ""));
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   const onNext = async (data) => {
     // Save current step data to collectedData
     const newData = { ...collectedData, ...data };
@@ -187,7 +198,7 @@ const CarbonFootprintCalculator = () => {
     <>
       <Toaster position="top-center" />
       <div className="bg-[#f5fbf7]">
-        <div className="max-w-4xl mx-auto py-1 bg-gray-50 ">
+        <div  className="max-w-4xl mx-auto py-1 bg-gray-50 ">
           {/* Tabs */}
           <div className="flex justify-center mb-10 mt-4">
             <div className="bg-gray-300 rounded-full p-1 flex">
@@ -227,7 +238,7 @@ const CarbonFootprintCalculator = () => {
 
         </div>
           {/* Form */}
-          <div className="min-h-[500px] sm:min-h-auto rounded-[40px] flex flex-col justify-center bg-[#004D40] mt-20">
+          <div id='calc' className="min-h-[500px] sm:min-h-auto rounded-[40px] flex flex-col justify-center bg-[#004D40] mt-20">
             <div className="sm:hidden flex justify-center gap-1 mb-8 mt-4">
               {[...Array(4)].map((_, i) => (
                 <div key={i} className={`h-1.5 w-6 rounded-full ${i === step ? "bg-[#6CFF9E]" : "bg-gray-400"}`} />

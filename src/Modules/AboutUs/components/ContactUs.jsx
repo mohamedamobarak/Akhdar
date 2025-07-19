@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import axios from 'axios';
 import { useMutation } from '@tanstack/react-query';
+import { useLocation } from 'react-router-dom';
 
 const sendContactUs = async (payload) => {
     const response = await axios.post(
@@ -20,6 +21,8 @@ const sendContactUs = async (payload) => {
 
 const ContactUs = () => {
     const { t, i18n } = useTranslation();
+    const location = useLocation();
+
     const lang = i18n.language || 'en';
     const isRTL = lang === 'ar';
     const dir = isRTL ? 'rtl' : 'ltr'
@@ -101,10 +104,18 @@ const ContactUs = () => {
         mutation.mutate(payload);
     }
 
+    useEffect(() => {
+        if (location.hash) {
+          const el = document.getElementById(location.hash.replace("#", ""));
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }, [location]);
     return (
         <>
             <Toaster position="top-center" />
-            <form dir={dir} onSubmit={handleSubmit(onSubmit)} className="bg-white my-12 rounded-3xl shadow-lg p-8 w-full max-w-4xl mx-auto">
+            <form id="contact-us" dir={dir} onSubmit={handleSubmit(onSubmit)} className="bg-white my-12 rounded-3xl shadow-lg p-8 w-full max-w-4xl mx-auto">
                 <h2 className={`text-2xl font-bold text-center mb-8  text-primary`}>{t('aboutus.contact.title')}</h2>
                 <div className="flex flex-col md:flex-row gap-4 mb-4">
                     <div className="flex-1 mb-3">
