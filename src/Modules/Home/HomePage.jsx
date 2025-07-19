@@ -10,12 +10,14 @@ import Automations from './Automations/Automations';
 import HowToStart from './HowToStart/HowToStart';
 import CallToAction from './CallToAction/CallToAction';
 import Footer from '../../shared/Footer/Footer';
+import NetZeroJourney from '../ESG/components/NetZeroJourney';
 
 const HomePage = () => (
   <div className="bg-[#F6F7F6]">
     <Header/>
     <HeroSection />
     <Partners />
+    <NetZeroJourney/>
     <WhatIsOffsetting />
     <BuildPortfolio />
     <ShareYourImpact />

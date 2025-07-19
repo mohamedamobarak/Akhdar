@@ -87,7 +87,7 @@ function NetZeroJourney() {
     };
   };
   return (
-    <div className='max-w-full overflow-x-hidden px-4 md:max-w-4xl lg:max-w-[1166px] m-auto' dir={isRTL ? 'rtl' : 'ltr'} style={{ direction: isRTL ? 'rtl' : 'ltr' }}>
+    <div className='max-w-full overflow-x-hidden px-4 md:max-w-4xl lg:max-w-[1166px] m-auto my-10 md:my-20 lg:my-32' dir={isRTL ? 'rtl' : 'ltr'} style={{ direction: isRTL ? 'rtl' : 'ltr' }}>
     <h3 className='text-primary  font-bold lg:text-[45px] text-center mb-4'>{t('esg.netZeroJourney.title')}</h3>
     <h3 className='font-medium lg:text-2xl text-center mb-8'>{t('esg.netZeroJourney.subtitle1')}</h3>
     <h3 className='font-medium lg:text-2xl text-center mb-16'>{t('esg.netZeroJourney.subtitle2')}</h3>
