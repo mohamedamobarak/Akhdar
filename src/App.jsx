@@ -7,6 +7,7 @@ import ImpactPlatform from './Modules/ImpactPlatform/ImpactPlatform';
 import SignUp from './Modules/Auth/Signup/SignUp';
 import EGSInteractiveForm from './Modules/EGSInteractiveForm/EGSInteractiveForm';
 import Integration from './Modules/Integration/Integration';
+import ESG from './Modules/ESG/ESG';
 import CalcCompany from './Modules/CalcCompany/CalcCompany';
 import ProjectOwner from './Modules/ProjectOwner/ProjectOwner';
 import Login from './Modules/Auth/Login/Login';
@@ -26,7 +27,6 @@ function App() {
         <Route path="/egs-interactive-form" element={<EGSInteractiveForm />} />
         <Route path="/api-integration" element={<Integration />} />
         <Route path="/calc-company" element={<CalcCompany />} />
-
         {/* Dashboard Routes */}
         <Route path="/dashboard" element={<DashboardLayout><CarbonImpactDashboard /></DashboardLayout>} />
         <Route path="/dashboard/impact" element={<DashboardLayout><CarbonImpactDashboard /></DashboardLayout>} />
