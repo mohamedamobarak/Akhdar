@@ -169,3 +169,7 @@
   --bg: #F0F5EF;
   --text-hero: #013229;
 }
+
+.active{
+  color: #004D40;
+}
