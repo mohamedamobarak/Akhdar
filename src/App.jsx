@@ -16,6 +16,12 @@ import EditProfile from './Modules/user-settings/EditProfile';
 import ChangePassword from './Modules/user-settings/ChangePassword';
 import DashboardLayout from './Modules/DashboardLayout/DashboardLayout';
 import CarbonImpactDashboard from './Modules/CalcCompany/components/CarbonImpactDashboard';
+import DashboardProject from './Modules/DashboardProject/DashboardProject';
+import UNSDGs from './Modules/DashboardProject/components/TabsContent/UNSDGs';
+import ProjectInfo from './Modules/DashboardProject/components/TabsContent/ProjectInfo';
+import ProjectCertification from './Modules/DashboardProject/components/TabsContent/ProjectCertification';
+import ProjectGallery from './Modules/DashboardProject/components/TabsContent/ProjectGallery';
+import ProjectDescription from './Modules/DashboardProject/components/TabsContent/ProjectDescription';
 
 function App() {
   return (
@@ -35,8 +41,21 @@ function App() {
         {/* Dashboard Routes */}
         <Route path="/dashboard" element={<DashboardLayout><CarbonImpactDashboard /></DashboardLayout>} />
         <Route path="/dashboard/impact" element={<DashboardLayout><CarbonImpactDashboard /></DashboardLayout>} />
-      </Routes>
+
+  {/* Dashboard Project with nested children */}
+        <Route
+          path="/dashboard/project"
+          element={<DashboardLayout><DashboardProject /></DashboardLayout>}
+        >
+          <Route index path='description' element={<ProjectDescription />} /> {/* default child */}
+          <Route path="unSdgs" element={<UNSDGs />} />
+          <Route path="projectInfo" element={<ProjectInfo />} />
+          <Route path="gallery" element={<ProjectGallery />} />
+          <Route path="certification" element={<ProjectCertification />} />
+        </Route>
+       </Routes>
     </Router>
+   
   )
 }
 export default App
