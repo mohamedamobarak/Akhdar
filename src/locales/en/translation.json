@@ -656,6 +656,47 @@
         "passwordsDoNotMatch": "Passwords do not match"
       }
     }
+  },
+   "projectdashboard": {
+    "hero": {
+      "title": "Catalytic N2O",
+      "subtitle": "Destruction Project",
+      "location": "Location: Egypt",
+      "carbonOffsetting": "Carbon Offsetting"
+    },
+    "projectDescription": {
+      "title": "Project Description",
+      "paragraph1": "The CDM project activity for GHG emission reduction by catalytic N2O destruction was implemented in Abu Qir, Egypt in year 2006. The project activity includes development, design, engineering, procurement, finance, construction, operation and maintenance of a system for catalytic reduction of N2O.",
+      "paragraph2": "The EnviNOx® process used in the nitric acid (hereinafter called \"N4\") plant II of Abu Qir Fertilizer Co. (hereinafter called \"AFC\") is based on the catalytic reduction of NOx (NO and NO2) with ammonia (NH3) and of nitrous oxide (N2O) with a hydrocarbon. The hydrocarbon used is natural gas of which the main constituent is methane (CH4). The reactions take place over two iron zeolite catalyst beds.",
+      "imageAlt": "background cover"
+    },
+     "projectOwnersCard": {
+      "title": "For Project Owners",
+      "description": "If you're a developer looking to share your project, you've come to the right place.",
+      "button": "List Your Project"
+    },
+    "projectTabs": {
+      "description": "Description",
+      "unSdgs": "UN SDGs",
+      "projectInfo": "Project Info",
+      "gallery": "Gallery",
+      "certification": "Certification"
+    },
+       "purchaseCard": {
+      "title": "Buy Credit",
+      "oneOff": "One-off",
+      "monthly": "Monthly",
+      "perTon": "/ 1 CO2 ton",
+      "vintage": "Vintage",
+      "amount": "Amount",
+      "unit": "CO2 ton",
+      "available": "Available stock",
+      "minimum": "Minimum purchases",
+      "transactionFee": "Transaction fee:",
+      "vat": "VAT:",
+      "total": "Total:",
+      "buyNow": "Buy now"
+    }
   }
 }
  
