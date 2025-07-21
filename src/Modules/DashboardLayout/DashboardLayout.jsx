@@ -11,16 +11,16 @@ export default function MasterLayout({ children }) {
           <AppSidebar />
           <SidebarInset className="flex flex-col flex-1 w-full min-w-0 overflow-hidden">
 
-            <Header />
+            {/* <Header /> */}
             <div className="flex-1 w-full min-w-0">
               {children}
             </div>
           </SidebarInset>
         </div>
       </SidebarProvider>
-      <div className="relative z-20">
+      {/* <div className="relative z-20">
         <Footer rounded={false} />
-      </div>
+      </div> */}
     </div>
   )
 }

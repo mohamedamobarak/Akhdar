@@ -39,7 +39,7 @@ function App() {
         <Route path="/settings/edit-profile" element={<EditProfile />} />
         <Route path="/settings/change-password" element={<ChangePassword />} />
         {/* Dashboard Routes */}
-        <Route path="/dashboard" element={<DashboardLayout><CarbonImpactDashboard /></DashboardLayout>} />
+        <Route path="/dashboard" element={<DashboardLayout><DashboardHome /></DashboardLayout>} />
         <Route path="/dashboard/impact" element={<DashboardLayout><CarbonImpactDashboard /></DashboardLayout>} />
 
   {/* Dashboard Project with nested children */}
